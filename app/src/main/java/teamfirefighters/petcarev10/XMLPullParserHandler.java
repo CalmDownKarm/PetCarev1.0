@@ -9,6 +9,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -19,8 +20,24 @@ public class XMLPullParserHandler {
     private Card card;
     private String text;
     List<String> foo;
-
-    public XMLPullParserHandler(){Cards = new ArrayList<Card>();}
+    private HashSet<String> classifications;
+    public HashSet<String> getClassifications(){
+        return classifications;
+    }
+    private HashSet<String> subclassifications;
+    public HashSet<String> getSubclassifications(){
+        return subclassifications;
+    }
+    private HashSet<String> subsubclassifications;
+    public HashSet<String>getSubsubclassifications(){
+        return subsubclassifications;
+    }
+    public XMLPullParserHandler(){
+        Cards = new ArrayList<Card>();
+        classifications = new HashSet<String>();
+        subclassifications = new HashSet<String>();
+        subsubclassifications = new HashSet<String>();
+    }
 
     public List<Card> getCards(){return Cards;}
     public List<Card> parse(InputStream is) {
@@ -64,8 +81,15 @@ public class XMLPullParserHandler {
                             card.setText(text);
                         } else if (tagname.equalsIgnoreCase("image")) {
                             card.setImage(text);
-                        } else if (tagname.equalsIgnoreCase("classify")) {
+                        } else if (tagname.equalsIgnoreCase("classification")) {
                             card.setClassification(text);
+                            classifications.add(text);
+                        } else if (tagname.equalsIgnoreCase("subclassification")) {
+                            card.setSubclassification(text);
+                            subclassifications.add(text);
+                        } else if (tagname.equalsIgnoreCase("subsubclassification")) {
+                            card.setSubsubclassification(text);
+                            subsubclassifications.add(text);
                         } else if (tagname.equalsIgnoreCase("list")) {
                             card.setList(foo);
                         } else if(tagname.equalsIgnoreCase("li")){

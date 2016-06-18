@@ -69,4 +69,21 @@ public class Card {
     public List<String> getList() {
         return list;
     }
+    @Override
+    public String toString(){
+        String temp="";
+        if(title!=null)
+            temp+=("TITLE: "+title);
+        if(text!=null)
+            temp+=("TXT: "+text);
+        if(image!=null)
+            temp+=("IMG: "+image);
+        if(classification!=null)
+            temp+=("CLASS: "+classification);
+        if( subclassification!=null)
+            temp+=("SUBCLASS: "+subclassification);
+        if(subsubclassification!=null)
+            temp+=("SUBSUBCLASS: "+subsubclassification);
+        return temp;
+    }
 }

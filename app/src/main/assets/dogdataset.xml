@@ -1,0 +1,133 @@
+<records>
+    <card>
+        <subsubclassification>Top card</subsubclassification>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <image>labrador_retriever</image>
+        <text>
+            Labrador Retriever\n
+            The perfect family pet
+        </text>
+        <list>
+            <li>Active</li>
+            <li>Aquatic</li>
+            <li>Outgoing</li>
+            <li>Spirited</li>
+        </list>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Basic Info</subsubclassification>
+    <list>
+        <li>classification: Sporting</li>
+        <li>Origin: Canada</li>
+        <li>Life Span: 13 to 14 years</li>
+        <li>Monthly keeping cost: ₹3,010</li>
+    </list>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Introduction</subsubclassification>
+        <text>Labrador retriever is one of the most loved breeds around the world.  The breed is easily trainable and makes a perfect family dog. It is one of the most common options for a breed around the world when you are considering keeping a pet. They are extremely fond of children and love to make people around them happy.
+        </text>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Unique Aspects</subsubclassification>
+        <list>
+            <ul>A soft mouth that helps them to even hold a raw egg without breaking it.</ul>
+            <ul>They have been given strong haunches to leap into water.</ul>
+            <ul>Labradors are the best guide and also a good drug sniffing dog.</ul>
+            <ul>They are intelligent, lovable and the best family pet.</ul>
+        </list>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Pros</subsubclassification>
+        <list>
+            <li>Excellent family pets</li>
+            <li>Can adapt to all weather</li>
+            <li>Easy to maintain</li>
+        </list>
+    </card>
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Cons</subsubclassification>
+        <list>
+            <li>Needs regular exercise to maintain weight</li>
+            <li>Shed a lot, needs grooming</li>
+        </list>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Maintenance &#38; Effort</subsubclassification>
+        <list>
+            <li>Visits to Groomer: Medium</li>
+            <li>Bath: Regular</li>
+            <li>Tolerance to heat: </li>
+            <li>Tolerance to cold:</li>
+            <li>Exercise Requirement: </li>
+            <li>Veterinarian Visits: Frequent</li>
+            <li>Prone to obesity: Yes</li>
+        </list>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Grooming</subsubclassification>
+        <text>The adult Labrador has a slightly hard coat, whereas if you have a puppy then it will have a soft coat, which will not require much brushing. If you do not brush the undercoat on a regular basis then soon your clothes will have hair all	over it. This will help your labrador to stay clean and also help to remove dead fur from underneath.
+        </text>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Common Health Issues</subsubclassification>
+        <image>hip dysplasia</image>
+        <text>Hip Dysplasia\nA genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
+        </text>
+    </card>
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Common Health Issues</subsubclassification>
+        <image>epilepsy</image>
+        <text>Epilepsy or Seizures\nThey may experience mild or severe seizures followed by frantic and abnormal behaviour such as running or falling or even being unable to move their limbs.
+        </text>
+    </card>
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Common Health Issues</subsubclassification>
+        <text>Eye Defect\nLabrador Retriever has a high chance of developing an eye defect as well, which has been caused genetically in them called the retinal dysplasia. This causes blind spots in them.
+        </text>
+    </card>
+
+    <card>
+        <classification>Sporting</classification>
+        <subclassification>Labrador Retriever</subclassification>
+        <subsubclassification>Behaviour</subsubclassification>
+        <list>
+            <li>Friendliness: </li>
+            <li>Guarding Potential: </li>
+            <li>Trainability: </li>
+            <li>Playfullness:</li>
+            <li>Noisy: </li>
+            <li>Compatibility with other pets: </li>
+            <li>Compatibility with other dogs: </li>
+            <li>Affection: </li>
+        </list>
+    </card>
+</records>

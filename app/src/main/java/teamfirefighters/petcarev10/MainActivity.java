@@ -19,13 +19,19 @@ public class MainActivity extends AppCompatActivity {
         editor.putBoolean("DB_READY",true);
         editor.commit();*/
 
-        DB_READY_FLAG=Flag.getBoolean("DB_READY",false);
-        if(DB_READY_FLAG)//Data has been parsed
-            Log.d("DB READY","True");
-        else {
-            //Start AsyncThread to Parse.
-            Log.d("DB_READY", "False");
+       // DB_READY_FLAG=Flag.getBoolean("DB_READY",false);
+        if(DB_READY_FLAG) {//Data has been parsed
+            Log.d("DB READY", "True");
+
+        }else {
+            XMLAssetHandler abc = new XMLAssetHandler(getApplicationContext(),MainActivity.this);
+            abc.execute();
+            Log.d("DB_READY", "Called ASYNC THREAD");
         }
+        //if(DB_READY_FLAG){//Check Flag Again to ensure that the data
+
+        //}
+
 
     }
 }
