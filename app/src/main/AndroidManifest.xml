@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Nav"></activity>
+        <activity android:name=".Home_Activity" />
+        <activity android:name=".Breeds_list"></activity>
     </application>
 
 </manifest>

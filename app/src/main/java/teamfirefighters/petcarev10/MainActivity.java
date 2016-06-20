@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO Add Flag and intent to tutorial activity. Store Flag into Shared Preferences
         if(checkDBFLAG()) {//Data has been parsed
             Log.d("DB READY", "True");
-            Intent foo = new Intent(getApplicationContext(),Nav.class);
+            Intent foo = new Intent(getApplicationContext(),Home_Activity.class);
             startActivity(foo);
 
         }else {
