@@ -3,6 +3,7 @@ package teamfirefighters.petcarev10;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.CursorJoiner;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,6 +12,7 @@ import android.util.Log;
 
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -18,15 +20,21 @@ import java.util.List;
  */
 public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     Context context;
+    MainActivity activity;
     CardDBHelper cardbhelper;
-    HashSet<String> classifications;
-    HashSet<String> subclassifications;
-    HashSet<String> subsubclassifications;
+    //HashSet<String> classifications;
+    //HashSet<String> subclassifications;
+    //HashSet<String> subsubclassifications;
+    //HashSet<String> images;
+    /*This is probably a stupid way to implement this, since it means that Image Names need to be Identical to SubClassificationNames
+     * But it's computationally better than running through my list of cards to find the associated image
+     * and easier than changing my parser to pick up the image or to use a String Array HashSet */
     ProgressDialog pd;
     public static final String SHARED_PREFERENCES_KEY = "petcareflags";
 
     public XMLAssetHandler(Context foo, MainActivity activity){//constructor to pass it an application context
         context = foo;
+        this.activity = activity;
         pd=new ProgressDialog(activity);
     }
     @Override
@@ -39,25 +47,24 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //Populate Cards and call XML Handler
             Cards = parser.parse(context.getAssets().open("dogdataset.xml"));
-            classifications = parser.getClassifications();
-            Log.d("CLASSIFICATIONS",classifications.toString());
-            subclassifications = parser.getSubclassifications();
-            Log.d("SUBCLASSIFICATIONS",subclassifications.toString());
-
-            subsubclassifications = parser.getSubsubclassifications();
-            Log.d("SUBSUBCLASSIFICATIONS",subsubclassifications.toString());
-
-            //TODO WRITE ALL OF THE 3 to DB
-            //Write all cards to database
-            for(int i=0;i<Cards.size();i++){
-                Card temp = Cards.get(i);
-                if(temp!=null)
-                    writetodb(temp);
-            }
+            writetodb(parser,Cards);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return null;//why does this function need a return?
+    }
+
+    private void writetodb(XMLPullParserHandler parser, List<Card> Cards) {
+        //TODO Take a Parser Handler and Write Cards, Images, Classifications, SubClassifications and SubSubClassifications to db
+        for(int i=0;i<Cards.size();i++){
+            Card newb = Cards.get(i);
+            Log.i("BOOBS CARDS",newb.toString());
+            writetodb(newb);
+
+        }
+            //writetodb(card_iterator.next());
+
     }
 
     private void writetodb(Card temp) {
@@ -103,6 +110,9 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         SharedPreferences.Editor editor = Flag.edit();
         editor.putBoolean("DB_READY",true); //set flag to true in shared preferences so I don't reparse everytime
         editor.commit();
+        Intent foo = new Intent(context,Nav.class);
+        foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(foo);
     }
 
 }
