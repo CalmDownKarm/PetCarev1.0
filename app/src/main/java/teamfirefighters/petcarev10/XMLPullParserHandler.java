@@ -20,23 +20,8 @@ public class XMLPullParserHandler {
     private Card card;
     private String text;
     List<String> foo;
-    private HashSet<String> classifications;
-    public HashSet<String> getClassifications(){
-        return classifications;
-    }
-    private HashSet<String> subclassifications;
-    public HashSet<String> getSubclassifications(){
-        return subclassifications;
-    }
-    private HashSet<String> subsubclassifications;
-    public HashSet<String>getSubsubclassifications(){
-        return subsubclassifications;
-    }
-    public XMLPullParserHandler(){
+        public XMLPullParserHandler(){
         Cards = new ArrayList<Card>();
-        classifications = new HashSet<String>();
-        subclassifications = new HashSet<String>();
-        subsubclassifications = new HashSet<String>();
     }
 
     public List<Card> getCards(){return Cards;}
@@ -83,13 +68,10 @@ public class XMLPullParserHandler {
                             card.setImage(text);
                         } else if (tagname.equalsIgnoreCase("classification")) {
                             card.setClassification(text);
-                            classifications.add(text);
                         } else if (tagname.equalsIgnoreCase("subclassification")) {
                             card.setSubclassification(text);
-                            subclassifications.add(text);
                         } else if (tagname.equalsIgnoreCase("subsubclassification")) {
                             card.setSubsubclassification(text);
-                            subsubclassifications.add(text);
                         } else if (tagname.equalsIgnoreCase("list")) {
                             card.setList(foo);
                         } else if(tagname.equalsIgnoreCase("li")){

@@ -18,7 +18,7 @@ public class CardDBContract {
         public static final String COLUMN_NAME_SUBSUBCLASSIFICATION="subsubclassification";
         public static final String COLUMN_NAME_CARD_TEXT="cardtext";
         public static final String COLUMN_NAME_CARD_LIST="cardlist";
-    }
+    }/*
     public static abstract class Classifications implements BaseColumns{
         public static final String TABLE_NAME="classifications";
         public static final String COLUMN_NAME_CLASS_ID = "classid";
@@ -29,6 +29,7 @@ public class CardDBContract {
         public static final String TABLE_NAME="subclassifications";
         public static final String COLUMN_NAME_CLASS_ID = "subclassid";
         public static final String COLUMN_NAME_SUBCLASSIFICATION="subclassification";
+        public static final String COLUMN_NAME_SUBCLASS_IMAGE = "image";
 
     }
     public static abstract class SubSubClassifications implements BaseColumns{
@@ -36,5 +37,5 @@ public class CardDBContract {
         public static final String COLUMN_NAME_CLASS_ID = "subsubclassid";
         public static final String COLUMN_NAME_SUBSUBCLASSIFICATION="subsubclassification";
 
-    }
+    }*/
 }

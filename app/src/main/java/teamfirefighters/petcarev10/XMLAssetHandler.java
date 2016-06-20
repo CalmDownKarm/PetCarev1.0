@@ -11,6 +11,7 @@ import android.util.Log;
 
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -19,9 +20,13 @@ import java.util.List;
 public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     Context context;
     CardDBHelper cardbhelper;
-    HashSet<String> classifications;
-    HashSet<String> subclassifications;
-    HashSet<String> subsubclassifications;
+    //HashSet<String> classifications;
+    //HashSet<String> subclassifications;
+    //HashSet<String> subsubclassifications;
+    //HashSet<String> images;
+    /*This is probably a stupid way to implement this, since it means that Image Names need to be Identical to SubClassificationNames
+     * But it's computationally better than running through my list of cards to find the associated image
+     * and easier than changing my parser to pick up the image or to use a String Array HashSet */
     ProgressDialog pd;
     public static final String SHARED_PREFERENCES_KEY = "petcareflags";
 
@@ -39,25 +44,19 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //Populate Cards and call XML Handler
             Cards = parser.parse(context.getAssets().open("dogdataset.xml"));
-            classifications = parser.getClassifications();
-            Log.d("CLASSIFICATIONS",classifications.toString());
-            subclassifications = parser.getSubclassifications();
-            Log.d("SUBCLASSIFICATIONS",subclassifications.toString());
-
-            subsubclassifications = parser.getSubsubclassifications();
-            Log.d("SUBSUBCLASSIFICATIONS",subsubclassifications.toString());
-
-            //TODO WRITE ALL OF THE 3 to DB
-            //Write all cards to database
-            for(int i=0;i<Cards.size();i++){
-                Card temp = Cards.get(i);
-                if(temp!=null)
-                    writetodb(temp);
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return null;//why does this function need a return?
+    }
+
+    private void writetodb(XMLPullParserHandler parser, List<Card> Cards) {
+        //TODO Take a Parser Handler and Write Cards, Images, Classifications, SubClassifications and SubSubClassifications to db
+        Iterator<Card> card_iterator = Cards.iterator();
+        while(card_iterator.hasNext())
+            writetodb(card_iterator.next());
+
     }
 
     private void writetodb(Card temp) {
