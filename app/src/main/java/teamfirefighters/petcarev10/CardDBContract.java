@@ -7,6 +7,7 @@ import android.provider.BaseColumns;
  */
 public class CardDBContract {
     public CardDBContract(){}
+    public static final String SHARED_PREFERENCES_KEY = "petcareflags";
     //empty constructor to prevent instantiation
     public static abstract class CardTable implements BaseColumns {
         public static final String TABLE_NAME="cards";

@@ -3,6 +3,7 @@ package teamfirefighters.petcarev10;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.CursorJoiner;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,6 +20,7 @@ import java.util.List;
  */
 public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     Context context;
+    MainActivity activity;
     CardDBHelper cardbhelper;
     //HashSet<String> classifications;
     //HashSet<String> subclassifications;
@@ -32,6 +34,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
 
     public XMLAssetHandler(Context foo, MainActivity activity){//constructor to pass it an application context
         context = foo;
+        this.activity = activity;
         pd=new ProgressDialog(activity);
     }
     @Override
@@ -44,6 +47,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //Populate Cards and call XML Handler
             Cards = parser.parse(context.getAssets().open("dogdataset.xml"));
+            writetodb(parser,Cards);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -53,9 +57,13 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
 
     private void writetodb(XMLPullParserHandler parser, List<Card> Cards) {
         //TODO Take a Parser Handler and Write Cards, Images, Classifications, SubClassifications and SubSubClassifications to db
-        Iterator<Card> card_iterator = Cards.iterator();
-        while(card_iterator.hasNext())
-            writetodb(card_iterator.next());
+        for(int i=0;i<Cards.size();i++){
+            Card newb = Cards.get(i);
+            Log.i("BOOBS CARDS",newb.toString());
+            writetodb(newb);
+
+        }
+            //writetodb(card_iterator.next());
 
     }
 
@@ -102,6 +110,9 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         SharedPreferences.Editor editor = Flag.edit();
         editor.putBoolean("DB_READY",true); //set flag to true in shared preferences so I don't reparse everytime
         editor.commit();
+        Intent foo = new Intent(context,Nav.class);
+        foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(foo);
     }
 
 }
