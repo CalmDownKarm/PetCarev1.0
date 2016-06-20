@@ -110,7 +110,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         SharedPreferences.Editor editor = Flag.edit();
         editor.putBoolean("DB_READY",true); //set flag to true in shared preferences so I don't reparse everytime
         editor.commit();
-        Intent foo = new Intent(context,Nav.class);
+        Intent foo = new Intent(context,Home_Activity.class);
         foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(foo);
     }
