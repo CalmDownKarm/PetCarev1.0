@@ -38,8 +38,6 @@ public class Breeds_list extends AppCompatActivity {
     public String Category_name;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +79,16 @@ public class Breeds_list extends AppCompatActivity {
 //        breeds_list.setAdapter(breeds_adapter);
 
         set_category_list(categories, Cat_list);
+        breeds_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent toCard = new Intent(Breeds_list.this,CardsActivity.class);
+                toCard.putExtra("Category",Category_name);
+                toCard.putExtra("Breed",breeds_adapter.getItem(position));
+                startActivity(toCard);
 
+            }
+        });
 
         assert Cat_list != null;
         Cat_list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
