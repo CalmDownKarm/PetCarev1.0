@@ -67,6 +67,7 @@ public class Home_Activity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(Home_Activity.this, Breeds_list.class);
                 i.putExtra("Category", adapter.getItem(position));
+                i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
                 startActivity(i);
             }
         });
