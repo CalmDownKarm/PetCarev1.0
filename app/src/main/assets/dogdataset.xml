@@ -3,7 +3,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Sporting</classification>
         <subclassification>Labrador Retriever</subclassification>
-        <image>labrador_retriever</image>
+        <image>Labrador_Retriever</image>
         <text>
             Labrador Retriever\n
             The perfect family pet
@@ -141,8 +141,8 @@
     <card>
         <subsubclassification>Top Card</subsubclassification>
         <classification>Sporting</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <image>cocker_spaniel</image>
+        <subclassification>American Cocker Spaniel</subclassification>
+        <image>American_Cocker_Spaniel</image>
         <text>
             American Cocker Spaniel\n
             Small on size but big on fun
@@ -310,7 +310,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Sporting</classification>
         <subclassification>Irish Setter</subclassification>
-        <image>Irish Setter</image>
+        <image>Irish_Setter</image>
         <text>
             Irish Setter\n
             The perfect companion to the active family
@@ -448,7 +448,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Sporting</classification>
         <subclassification>Golden Retriever</subclassification>
-        <image>golden retriever</image>
+        <image>Golden_Retriever</image>
         <text>
             Golden Retriever\n
             This one is for the keeps
@@ -729,194 +729,8 @@
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <image>bull mastiff</image>
-        <text>
-            Bull Mastiff\n
-            Do not judge a book by its cover
-        </text>
-        <list>
-            <li>Affectionate</li>
-            <li>Alert</li>
-            <li>Courageous</li>
-            <li>Vigilant</li>
-        </list>
-    </card>
-
-    <card>
-        <subsubclassification>Basic Info</subsubclassification>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <list>
-            <li>Category: Guard Dog</li>
-            <li>Origin: England</li>
-            <li>Life Span: 9 to 10 years</li>
-            <li>Monthly keeping cost: ₹3,784</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            A Bullmastiff is tall, proud, courageous and yet one of the gentle giants of the canine world.
-            It falls in the category of dogs that bark very less. Even while on
-            guard, it would not bite their prey but rather pin them down for as long as required.
-        </text>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Unless alarmed, Bullmastiffs can go on days without barking.</ul>
-            <ul>Despite their large size and formidable built they are one of the most gentle dogs around.</ul>
-            <ul>Their large size also makes them low energy lazy dogs.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Perfect guard dog for the family</li>
-            <li>Does not bite or harm its prey just pins it down</li>
-            <li>Easy maintenance does not require much grooming</li>
-        </list>
-    </card>
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>It is not easy to train, needs persistence</li>
-            <li>Does not fare well to heat,and are prone to heat exhaustion</li>
-            <li>Drools,thus there is a need to carry a towel at all times</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Frequent</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Bullmastiffs are one of the easiest dogs to maintain and groom. They do not shed a lot, so brushing the coat with a brush is suitable. Bathing is recommended as and when
-            needed. The ears can be wiped clean using a soft cleaning ear pad. For comfort in walking, it will be imperative to trim the nails of the dog
-            regularly. Dental grooming is also a must for them.
-        </text>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs.
-        </text>
-    </card>
-    <card>
-
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hypothyroidism</image>
-        <text>
-            Hypothyroidism\n
-            The hormone gland of the dog does not function well and as a result, the growth and the development of the dog gets affected. Common symptoms of hypothyroidism include dull fur, extreme lethargy, obesity / weight loss and mental dullness.
-        </text>
-    </card>
-    <card>
-
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>entropion</image>
-        <text>
-            Entropion\n
-            It causes the eyelid to roll inwards thereby irritating and injuring the eyeball. Surgical intervention may be required to correct the problem.
-        </text>
-    </card>
-    <card>
-
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Gastric Dilation Volvulus\n
-            This commonly occurs in breeds where the stomach is not attached to the ribs. This can cut off the blood supply to various other parts of the body, which further shuts down the digestion process. Such a situation leads to bloating. It is advisable to not exercise your dog for at least an hour after they have food.
-        </text>
-    </card>
-    <card>
-
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Aortic Stenosis\n
-            They may feel lethargic all the time and have have episodes of fainting. When a dog has Aortic Stenosis, the heart works at twice the normal rate to pump blood. It can prove lethal for the dog.
-        </text>
-    </card>
-    <card>
-
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Elbow Dysplasia\n
-            It is a genetic disorder where the bones that comprise the elbow do not join uniformly in the elbow joint causing painful lameness.
-        </text>
-    </card>
-    <card>
-
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Cancer\n
-            They are more prone to cancer and tumours than any other breed. Some of the common forms of cancer that may inflict a Bullmastiff are lymphosarcoma, mast cell tumours, osteosarcoma and hemangiosarcoma.
-        </text>
-    </card>
-
-    <card>
-        <classification>Guard</classification>
-        <subclassification>Bull Mastiff</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Moody</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Guard</classification>
         <subclassification>Chow Chow</subclassification>
-        <image>chow chow</image>
+        <image>Chow_Chow</image>
         <text>
             Chow Chow\n
             A bear and a lion in a dog suit
@@ -1053,7 +867,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Guard</classification>
         <subclassification>Dobermann</subclassification>
-        <image>doberman</image>
+        <image>Doberman</image>
         <text>
             Dobermann Pinscher\n
             Do not be intimidated by the looks of this one
@@ -1228,7 +1042,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Guard</classification>
         <subclassification>French Mastiff</subclassification>
-        <image>dogue de</image>
+        <image>French_Mastiff</image>
         <text>
             Dogue de Bordeaux (French Mastiff)\n
             The fancy name is the cover for this French Mastiff
@@ -1390,7 +1204,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Guard</classification>
         <subclassification>German Shepherd</subclassification>
-        <image>german shepherd</image>
+        <image>German_Shepherd</image>
         <text>
             German Shepherd Dog (Alsatian)\n
             Bring home your very own deputy sergeant
@@ -1541,7 +1355,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Guard</classification>
         <subclassification>Neapolitan Mastiff</subclassification>
-        <image>Neapolitan Mastiff</image>
+        <image>Neapolitan_Mastiff</image>
         <text>
             Neapolitan Mastiff (Italian Mastiff)\n
             You will fall in love with its clumsiness
@@ -1693,7 +1507,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Guard</classification>
         <subclassification>Rottweiler</subclassification>
-        <image>rottweiler</image>
+        <image>Rottweiler</image>
         <text>
             Rottweiler\n
             The guard dog with an iron jaw
@@ -1836,7 +1650,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Watchdog</classification>
         <subclassification>Chihuahua</subclassification>
-        <image>chihuahua</image>
+        <image>Chihuahua</image>
         <text>
             Chihuahua\n
             Is it a toy or is it a dog?
@@ -1972,154 +1786,11 @@
 
 
 
-
-
-
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <image>chow chow</image>
-        <text>
-            Chow Chow\n
-            A bear and a lion in a dog suit
-        </text>
-        <list>
-            <li>Fierce</li>
-            <li>Furry</li>
-            <li>Intense</li>
-            <li>Loyal</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Watchdog</li>
-            <li>Origin: China</li>
-            <li>Life Span: 13 to 14 years</li>
-            <li>Monthly keeping cost: ₹2,960</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Chow Chow or Chow as they are popularly known are one of the most beautiful and admired dogs in the world.
-            On first glance, the dog looks like a cross between a lion and a bear as it has a
-            beautiful mane of fur around its head and the facial features resemble that of a bear.
-            Though they look extremely cute and cuddly, but are quite aggresive.
-        </text>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Black and blue tongue.</ul>
-            <ul>Straight hind legs which can swing back and forth like a pendulum.</ul>
-            <ul>Possesses a denture of 44 teeth while other breeds have 42 teeth.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Excellent guard dog</li>
-            <li>Has remarkable appearance</li>
-            <li>Easy to train</li>
-        </list>
-    </card>
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Not for first time owners</li>
-            <li>Grooming will be a task</li>
-            <li>Not good with young children</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: High</li>
-            <li>Bath: Regular</li>
-            <li>Tolerance to heat: Heatstroke</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Rare</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            A Chow Chow has a two layered coat - one rough and one smooth. The top layer of the fur is the
-            rough and requires frequent brushing to keep it tangle free and clean.
-            Chows are seasonal shedders and shed heavily. They require regular baths as their fur gets
-            dirty when they play in the yard or garden.
-            Dental grooming is also a must for the Chow Chow. Regular brushing will ensure that there is no
-            tartar or plaque buildup.
-        </text>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs.
-        </text>
-    </card>
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>entropion</image>
-        <text>
-            Entropion\n
-            It causes the eyelid to roll inwards thereby irritating and injuring the eyeball. Surgical intervention may be required to correct the problem.
-        </text>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>Chow Chow</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: More friendly</li>
-            <li>Guarding Potential: Good</li>
-            <li>Playfullness: Moody</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Watchdog</classification>
-        <subclassification>Dachshund	</subclassification>
-        <image>dachshund</image>
+        <subclassification>Dachshund</subclassification>
+        <image>Dachshund</image>
         <text>
             Dachshund\n
             A hotdog that the whole family can enjoy
@@ -2245,166 +1916,11 @@
     </card>
 
 
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <image>german shepherd</image>
-        <text>
-            German Shepherd Dog (Alsatian)\n
-            Bring home your very own deputy sergeant
-        </text>
-        <list>
-            <li>Alert</li>
-            <li>Handsome</li>
-            <li>Loyal</li>
-            <li>Possessive</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Watchdog</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹3,010</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            The German Shepherd is one of the most handsome dogs around.Their agility and good looks made them the first canine stars.GSDs are one of the most intelligent dogs.It is a common sight to see them being used a lot in the armed and police forces.
-        </text>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Most loyal pets around and are highly protective of their family members.</ul>
-            <ul>Very athletic dogs and their intelligence makes them unique.</ul>
-            <ul>Can be trained to do anything and their ability to stop at command makes them one of the easiest breeds to train.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Extremely intelligent and easy to train</li>
-            <li>Great guide dogs, search and rescue and police dogs</li>
-            <li>Amazing family pets</li>
-        </list>
-    </card>
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Vary of strangers and can attack to protect family</li>
-            <li>Need regular exercise to ensure health</li>
-            <li>Shed heavily and need brushing everyday</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Medium</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            This breed sheds heavily , those who have them at home would know that hair can be seen everywhere.The easiest way to avoid this is to brush them everyday. If not brushed regularly then your pet can develop clumps of dirty hair, which will not only make the coat look dull but also make it a breeding ground for infections.
-        </text>
-    </card>
-
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>epilepsy</image>
-        <text>
-            Epilepsy or Seizures\n
-            They may experience mild or severe seizures followed by frantic and abnormal behaviour such as running or falling or even being unable to move their limbs.
-        </text>
-    </card>
-    <card>
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>multiple sclerosis</image>
-        <text>
-            Multiple Sclerosis\n
-            This mostly leads to paralysis in the hind legs and generally strikes in the middle age.
-        </text>
-    </card>
-    <card>
-
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Progressive Retinal Atrophy\n
-            It involves gradual deterioration of the retina. As the disease progresses, the dogs may suffer from night blindness or lose sight during the day.
-        </text>
-    </card>
-
-    <card>
-
-        <classification>Watchdog</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Ready most of the time</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Watchdog</classification>
         <subclassification>Mastiff</subclassification>
-        <image>mastiff</image>
+        <image>Mastiff</image>
         <text>
             Mastiff\n
             This giant can accommodate anywhere
@@ -2558,7 +2074,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Watchdog</classification>
         <subclassification>Shih Tzu</subclassification>
-        <image>shih tzu</image>
+        <image>Shih_Tzu</image>
         <text>
             Shih Tzu\n
             Welcome Nobility into your home
@@ -2708,7 +2224,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Watchdog</classification>
         <subclassification>Lhasa Apso</subclassification>
-        <image>lhasa apso</image>
+        <image>Lhasa_Apso</image>
         <list>
             Lhasa Apso\n
             Looks are deceptive
@@ -2842,7 +2358,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Watchdog</classification>
         <subclassification>Yorkshire</subclassification>
-        <image>yorkshire</image>
+        <image>Yorkshire</image>
         <text>
             Yorkshire Terrier\n
             Bring home this hypoallergenic dog that does not shed
@@ -2910,7 +2426,7 @@
 
     <card>
         <classification>Watchdog</classification>
-        <subclassification>Yorkshire	</subclassification>
+        <subclassification>Yorkshire</subclassification>
         <subsubclassification>Maintenance (AND) Effort</subsubclassification>
         <list>
             <li>Visits to Groomer: High</li>
@@ -3131,7 +2647,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
         <subclassification>Afghan Hound</subclassification>
-        <image>afghan hound</image>
+        <image>Afghan_Hound</image>
         <text>
             Afghan Hound\n
             Even Noah found them worth saving
@@ -3292,7 +2808,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
         <subclassification>Beagle</subclassification>
-        <image>beagle</image>
+        <image>Beagle</image>
         <text>
             Beagle\n
             Prepare yourself for a thrill ride
@@ -3456,7 +2972,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
         <subclassification>Borzoi</subclassification>
-        <image>borzoi</image>
+        <image>Borzoi</image>
         <text>
             Borzoi\n
             If Greyhound is the Ferrari, then this one is a Lamborghini
@@ -3598,7 +3114,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
         <subclassification>Kombai</subclassification>
-        <image>kombai</image>
+        <image>Kombai</image>
         <text>
             Kombai\n
             A sighthound that is different from the others
@@ -3740,7 +3256,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
         <subclassification>Dachshund</subclassification>
-        <image>dachshund</image>
+        <image>Dachshund</image>
         <text>
             Dachshund\n
             A hotdog that the whole family can enjoy
@@ -3874,7 +3390,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
         <subclassification>Greyhound</subclassification>
-        <image>grey hound</image>
+        <image>Greyhound</image>
         <text>
             Greyhound\n
             Get home your very own Ferrari
@@ -4008,8 +3524,8 @@
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Hound</classification>
-        <subclassification>Indian Pariah Dog</subclassification>
-        <image>indian pariah</image>
+        <subclassification>Indian Pariah </subclassification>
+        <image>Indian_Pariah</image>
         <text>
             Indian Pariah Dog\n
             One of our own
@@ -4129,7 +3645,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Utility</classification>
         <subclassification>Bull Dog</subclassification>
-        <image>bulldog</image>
+        <image>Bull_Dog</image>
         <text>
             Bull Dog\n
             Get home your very own mascot
@@ -4283,7 +3799,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Utility</classification>
         <subclassification>Dalmatian</subclassification>
-        <image>dalmatian</image>
+        <image>Dalmatian</image>
         <text>
             Dalmatian\n
             Get your very own celebrity
@@ -4445,7 +3961,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Utility</classification>
         <subclassification>German Spitz</subclassification>
-        <image>german spitz</image>
+        <image>German_Spitz</image>
         <text>
             German Spitz\n
             The furry living toy
@@ -4579,7 +4095,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Toy Dog</classification>
         <subclassification>Pug</subclassification>
-        <image>pug</image>
+        <image>Pug</image>
         <text>
             Pug\n
             This little pooch is a piece of history
@@ -4742,314 +4258,8 @@
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier</subclassification>
-        <image>yorkshire</image>
-        <text>
-            Yorkshire Terrier\n
-            Bring home this hypoallergenic dog that does not shed
-        </text>
-        <list>
-            <li>Energetic</li>
-            <li>Fearless</li>
-            <li>Furry</li>
-            <li>Vivacious</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Toy Dog</li>
-            <li>Origin: England</li>
-            <li>Life Span: 9 to 10 years</li>
-            <li>Monthly keeping cost: ₹2,278</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            The Yorkshire Terrier is the most popular toy breed in the US. They are the most popular breed due to their affectionate and playful nature, small size, big personality, and beautiful coat. With the courage of a terrier, and the heart of a lion, this intelligent breed is truly a large dog in a small body.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Fearless and have little problem taking on adversaries– real or imagined – several times their size.</ul>
-            <ul>Difficult to house train.</ul>
-            <ul>Have delicate digestive systems and are known to be picky eaters.</ul>
-        </list>
-    </card>
-
-    <card>
-
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Guaranteed to turn heads with their beauty</li>
-            <li>Perfect apartment dogs and family dogs</li>
-            <li>Quiet intelligent and can be easily trained</li>
-        </list>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Grooming requires a lot of time and effort</li>
-            <li>Not the best dog to have around small children</li>
-            <li>Do not fare well in extremely cold weather</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: High</li>
-            <li>Bath: No</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Little</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Yorkies are high-maintenance dogs with luxurious coats. Several families resort to keeping the coat on their Yorkies short to facilitate easier grooming. Use a wire pin brush and a stainless steel coat to remove excess hair and keep the coat tangle-free. A Yorkie with dreadlocks is a receptacle for parasites like ticks and fleas. Bathe your Yorkie once a week.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>patellar luxation</image>
-        <text>
-            Patellar Luxation\n
-            In this the knee joint is displaced which causes a lot of pain to the dog. There are times when the regular rubbing caused by the patella can lead to arthritis in a pet. This can be corrected easily through surgery.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Hypoglycemia\n
-            They are prone to Hypoglycemia i.e low blood sugar. This is seen in toy breed puppies. It can be easily treatable in early stages but if not treated in time it can be fatal to the health of your pet.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Progressive Retinal Atrophy\n
-            It involves gradual deterioration of the retina. As the disease progresses, the dogs may develop night blindness or lose sight during the day.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Gum problems\n
-            They are prone to various teeth and gum problems that at times can result in difficulty in chewing food. They can have early tooth decay as well, so it is important to ensure that the oral hygiene of this breed is maintained at all times.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Yorkshire Terrier	</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: More friendly</li>
-            <li>Guarding Potential: Medium</li>
-            <li>Playfullness: Ready most of the time</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu</subclassification>
-        <image>shih tzu</image>
-        <text>
-            Shih Tzu\n
-            Welcome Nobility into your home
-        </text>
-        <list>
-            <li>Affectionate</li>
-            <li>Furry</li>
-            <li>Petite</li>
-            <li>Playful</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Toy Dog</li>
-            <li>Origin: Tibet</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹2,822</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            With their beautiful flowing hair and upturned nose, Shih Tzus wear the air of snobbish royalty. They love nothing more than to adore their family and make new friends wherever they go. They can easily adapt to most places, and are equally comfortable in a small apartment or a big house.They are one of the most popular breeds.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Amongst the purest breeds in the world.</ul>
-            <ul>Wheeze and snore a lot.</ul>
-            <ul>Are drawn towards coprophagia that is the habit of eating their own faeces or that of other animals.</ul>
-        </list>
-    </card>
-
-    <card>
-
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Perfect for apartments and condominiums</li>
-            <li>One of the purest breed in the world, with the safest breeding practices</li>
-            <li>Do not shed much, makes them perfect for people with allergies</li>
-        </list>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Grooming requires a lot of time and may need professional help</li>
-            <li>Not an easy breed to train, requiring regular and persistence training</li>
-            <li>Do not fare well in hot climates</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: High</li>
-            <li>Bath: Regular</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Good</li>
-            <li>Exercise Requirement: Little</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Shih Tzus have a beautiful coat and a matching personality. Daily brushing and combing is necessary to prevent tangles and mats. Shih Tzu coats are often buzzed short, especially in warm places. When Shih Tzus are about a year old, the coat changes from soft puppy fluff to the silken adult coat. Grooming might be even more challenging at this time, because the matting will increase.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>epilepsy</image>
-        <text>
-            Epilepsy or Seizures\n
-            They may experience mild or severe seizures followed by frantic and abnormal behaviour such as running or falling or even being unable to move their limbs.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Elbow Dysplasia\n
-            It is a genetic disorder where the bones that comprise the elbow do not join uniformly in the elbow joint causing painful lameness.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Dilated Cardiomyopathy\n
-            A condition in which heart muscles become very thin and are unable to contract normally.It is also common in St. Bernards. This can be controlled through medication and diet.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Shih Tzu	</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: More friendly</li>
-            <li>Guarding Potential: Medium</li>
-            <li>Playfullness: Ready most of the time</li>
-            <li>Noisy: Less noisy</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Toy Dog</classification>
         <subclassification>Pomeranian</subclassification>
-        <image>pomeranian</image>
+        <image>Pomeranian</image>
         <text>
             Pomeranian\n
             Bring home a living toy
@@ -5196,156 +4406,11 @@
 
 
 
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua</subclassification>
-        <image>chihuahua</image>
-        <text>
-            Chihuahua\n
-            Is it a toy or is it a dog?
-        </text>
-        <list>
-            <li>Loyal</li>
-            <li>Lovable</li>
-            <li>Petite</li>
-            <li>Protective</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Toy Dog</li>
-            <li>Origin: Mexico</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹1,236</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Chihuahua is the world’s smallest breed dog, their antics and compact size can easily pass them as a child’s toy. They are excellent family pets and thrive in human companionship. Their portability and desire to be a lap dog make them a hit with celebrities around the world.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>World's smallest breed.</ul>
-            <ul>Perfect companions for apartments and condominiums due to their size and low activity requirements.</ul>
-            <ul>One of the only breeds in the world that comes with a soft spot on the head better known as a molera.</ul>
-        </list>
-    </card>
-
-    <card>
-
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Size makes them perfectly desirable for pocket dogs</li>
-            <li>Grooming is a breeze with this toy breed</li>
-            <li>Does not require much exercise so the perfect dog for small spaces</li>
-        </list>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Very difficult to train need patience and consistency</li>
-            <li>Cannot be left outdoor for long because of the prey animals</li>
-            <li>Not viable for cold weather environments, prone to frost bites</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Does not affect</li>
-            <li>Exercise Requirement: Little</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            The Chihuahua comes in two different coat types i.e smooth and long, and, short and glossy. The smooth coated Chihuahua is easy to maintain. They have to be brushed on a weekly basis. In addition to this you will need to follow the regular grooming regime for your pet like brushing the teeth of your Chihuahua.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>patellar luxation</image>
-        <text>
-            Patellar Luxation\n
-            Here the knee joint is displaced causing a lot of pain to the dog. There are times when the regular rubbing caused by the patella can lead to arthritis in a pet. This can be corrected easily through surgery.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Hypoglycemia\n
-            They are prone to Hypoglycemia i.e low blood sugar. This is seen in toy breed puppies. This can be easily treatable in early stages but if not treated in time it can be fatal to the health of your pet.
-        </text>
-    </card>
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Heart Murmur\n
-            It is caused when there is a disturbance in the blood flow through the chambers of the heart. It is mostly graded by its loudness with one being very soft to very loud.
-        </text>
-    </card>
-
-    <card>
-        <classification>Toy Dog</classification>
-        <subclassification>Chihuahua	</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: More friendly</li>
-            <li>Guarding Potential: Medium</li>
-            <li>Playfullness: Ready most of time</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Toy Dog</classification>
         <subclassification>Pekingese</subclassification>
-        <image>pekingese</image>
+        <image>Pekingese</image>
         <text>
             Pekingese\n
             Bow down to Royalty
@@ -5480,7 +4545,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Working</classification>
         <subclassification>Akita</subclassification>
-        <image>akita</image>
+        <image>Akita</image>
         <text>
             Akita\n
             Welcome both Health and Well Being into your home
@@ -5635,7 +4700,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Working</classification>
         <subclassification>Boxer</subclassification>
-        <image>boxer</image>
+        <image>Boxer</image>
         <text>
             Boxer\n
             Boxing its way into your home
@@ -5807,7 +4872,7 @@
         <subsubclassification>Top card</subsubclassification>
         <classification>Working</classification>
         <subclassification>Bull Mastiff</subclassification>
-        <image>bull mastiff</image>
+        <image>Bull_Mastiff</image>
         <text>
             Bull Mastiff\n
             Do not judge a book by its cover
@@ -5989,193 +5054,11 @@
 
 
 
-
-
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <image>doberman</image>
-        <text>
-            Dobermann Pinscher\n
-            Do not be intimidated by the looks of this one
-        </text>
-        <list>
-            <li>Agile</li>
-            <li>Elegant</li>
-            <li>Fearless</li>
-            <li>Sharp</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Working</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 13 to 14 years</li>
-            <li>Monthly keeping cost: ₹3,162</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            A Doberman Pinscher is a relatively new breed on the block.It possesses an athletic body, sharp ears and high agility.Dobermanns are known for their strength, ferociousness, intelligence,fearlessness and undying loyalty to their family. They are formidable guardians and with their people i.e their family. Doberman Pinschers are gentle, watchful and loving companions.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Their athletic body is built for speed and endurance giving them a ferocious yet elegant appearance.</ul>
-            <ul>Powerful wedge shaped head that gives it a strong profile.</ul>
-            <ul>Strongly developed wide scissors teeth bite that attributes to the dog’s ferocious look.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Exceptional guard dogs for family</li>
-            <li>Minimal shedders and coat does not require much maintenance</li>
-            <li>Easy to train and have amazing grasping power</li>
-        </list>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Not for first time owners, need experience handling</li>
-            <li>Does not withstand extreme cold weather</li>
-            <li>Requires extreme and vigorous exercise not for less active families</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Does not affect</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Doberman are one of the most easiest breeds to groom. The coat of a Doberman Pinscher is short and does not shed much, so they require very little grooming.The skin of the Doberman is extremely sensitive to extreme cold or heat.Dental grooming is also a must for the Dobermann. Cleaning of ears using a ear wipes will also help avoid any ear infections or wax buildup.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hypothyroidism</image>
-        <text>
-            Hypothyroidism\n
-            The hormone gland of the dog does not function well and as a result, the growth and the development of the dog gets affected. Common symptoms of hypothyroidism include dull fur, extreme lethargy, obesity / weight loss and mental dullness.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Gastric Dilation Volvulus\n
-            This commonly occurs in breeds where the stomach is not attached to the ribs. This can cut off the blood supply to various other parts of the body, which further shuts down the digestion process. Such a situation leads to bloating. It is advisable to not exercise your dog for at least an hour after they have food.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Progressive Retinal Atrophy\n
-            It involves gradual deterioration of the retina. As the disease progresses, the dogs may become night blind or lose sight during the day.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Narcolepsy\n
-            It is a neurological condition that results in the brain’s inability to regulate wake sleep patterns. A dog with this syndrome may suddenly become sleepy and fall asleep.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Wobbler's Syndrome\n
-            It is an inherited syndrome where the spinal canal is malformed causing cervical vertebral instability.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Von Willebrand’s Disease\n
-            It is an inherited blood disorder that interferes with the blood’s ability to clot. As a result of this, the dog may bleed excessively after an injury or a surgery. There is no cure for this disease. Dogs with this disease should not be bred.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Working</classification>
-        <subclassification>Great Dane		</subclassification>
-        <image>great dane</image>
+        <subclassification>Great Dane</subclassification>
+        <image>Great_Dane</image>
         <text>
             Great Dane\n
             Befriending a gentle giant for life
@@ -6307,470 +5190,12 @@
 
 
 
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <image>rottweiler</image>
-        <text>
-            Rottweiler\n
-            The guard dog with an iron jaw
-        </text>
-        <list>
-            <li>Courageous</li>
-            <li>Intelligent</li>
-            <li>Protective</li>
-            <li>Robust</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Working</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹3,393</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Rottweilers are strong, loyal and affectionate dogs.With proper training,they can make excellent pets. They are not ideal for first-time dog families or people who intend to train a dog to be a guard dog, especially if their training methods are aggressive.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Large head and strong jaw.</ul>
-            <ul>Amongst the few breeds that come only in one colour.</ul>
-            <ul>Excellent guard dogs and companion dogs.</ul>
-            <ul>Leaving them alone for long periods of time can lead them to become destructive.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Excellent guard dogs and protective towards their family</li>
-            <li>Easy to groom</li>
-            <li>Remarkable dogs for high activity people</li>
-        </list>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Regular training required right from the beginning</li>
-            <li>Not ideal for apartment living</li>
-            <li>Need to be socialized early with people and other animals</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            They shed heavily throughout the year, so a thorough brushing once or twice a week is a must. As with all other dogs, you will need to concentrate on the oral health of your Rottie.Make sure you familiarise the dog with being groomed from a young age, so that he or she does not have issues with being touch near their ears, eyes and paws.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>bloating</image>
-        <text>
-            Bloating\n
-            Bloat occurs when the stomach is filled with gas and it twists. It advisable to give this pet food in a high stand bowl and you should rest for at least half an hour before their exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Osteosarcoma\n
-            A kind of aggressive bone cancer.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <image>Neapolitan Mastiff</image>
-        <text>
-            Neapolitan Mastiff (Italian Mastiff)\n
-            You will fall in love with its clumsiness
-        </text>
-        <list>
-            <li>Grump</li>
-            <li>Intelligent</li>
-            <li>Lovable</li>
-            <li>Protective</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Working</li>
-            <li>Origin: Italy</li>
-            <li>Life Span: 9 to 10 years</li>
-            <li>Monthly keeping cost: ₹3,934</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Their affectionate nature often leads us to believe that they are massive lap dogs.
-            Neos are family's unwavering guarding, with stares more fearful than their intentions.
-            They are quick to protect their family, but are rarely fearsome without good reason.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Most defining feature is its numerous luscious folds of skin.</ul>
-            <ul>Make great guard dogs, although they are not quick to bite or physically harm strangers.</ul>
-            <ul>Known to be silent (AND) stealthy dogs</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>While walks are essential, they’re happy to lurk about a lawn or sprawl in the kitchen</li>
-            <li>There stare is bad than their bark is worse than their bite! Even a sleeping Neo is a great guard dog because of size.</li>
-            <li>Love to cuddle and are full of affection.</li>
-        </list>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>You’ll need a big house if a Neo’s got to be wandering around. Small spaces can frustrate them.</li>
-            <li>Grooming will be time consuming even though Neos are not big shedders.</li>
-            <li>They’re prone to bloat, which can sometimes be fatal.</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Medium</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Frequent</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Grooming your Neapolitan Mastiff is not an easy task. Their short coat requires minimal grooming, but the loose skin and wrinkles can trap a lot of dirt and microbes. These have to be cleaned regularly to prevent diseases.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>fold dermatitis</image>
-        <text>
-            Fold Dermatitis\n
-            A skin infection peculiar to animals with loose and wrinkled coats, caused by moisture trapped in the folks of the skin. Redness, soreness and a sickly sweet odour are all symptoms of the condition.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>cherry eye</image>
-        <text>
-            Cherry Eye\n
-            The gland under the eye protrudes and looks like a cherry. Surgery will be required to remove the infected gland.
-        </text>
-    </card>
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Elbow Dysplasia\n
-            It is a genetic disorder where the bones that comprise the elbow do not join uniformly in the elbow joint causing painful lameness.
-        </text>
-    </card>
-
-    <card>
-        <classification>Working</classification>
-        <subclassification>Neapolitan Mastiff</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Moody</li>
-            <li>Noisy: Less noisy</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Finds difficult to adjust</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <image>mastiff</image>
-        <text>
-            Mastiff\n
-            This giant can accommodate anywhere
-        </text>
-        <list>
-            <li>Couch Potato</li>
-            <li>Gentle Giant</li>
-            <li>Humongous</li>
-            <li>Quiet</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: England</li>
-            <li>Life Span: 7 to 8 years</li>
-            <li>Monthly keeping cost: ₹3,784</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            This fantastic dog is one of the most massive dogs when it comes to their size.
-            These are great watchdogs and no one dares to enter their territory because of their massive size.
-            They are big on size and attack only for self defense.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Broad head and the shape give rise to massive amounts of drool in your pet.</ul>
-            <ul>One of the few giant breeds that do not require a lot of exercise.</ul>
-            <ul>Excellent watch dogs and will go and bark at the door whenever someone comes through it.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>They do not need much exercise</li>
-            <li>Excellent watch dogs and their size can be intimidating</li>
-            <li>Affectionate pets for the family</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>You need to have space in the house for them to move around</li>
-            <li>Grooming will be time consuming</li>
-            <li>Prone to bloat</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Frequent</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            You need to brush the coat once a week with a rubber hound glove. This will help to keep the shedding under control. Wrinkles need to be cleaned on regular basis in order to prevent infections.Brush the teeth regularly to prevent tartar buildup. The toe nails will also be required to be trimmed on a regular basis.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>bloating</image>
-        <text>
-            Bloating\n
-            Bloating occurs when the stomach is filled with gas and it twists. It advisable to give the pet food in a high stand bowl and they should rest for at least half an hour before exercising.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Gastric Torsion\n
-            This is a common problem in giant breed dogs. It usually happens when the dog is fed once a day and drinks or eats too fast. At times it can result due to immediate exercising after eating.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Progressive Retinal Atrophy\n
-            It involves gradual deterioration of the retina. As the disease progresses, the dogs may develop night blindness or lose sight during the day.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Mastiff</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Moody</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-
-
-
 
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Working</classification>
         <subclassification>Saint Bernard</subclassification>
-        <image>saint bernard</image>
+        <image>Saint_Bernard</image>
         <text>
             St.Bernard\n
             The Four Legged Angel of Life
@@ -6923,8 +5348,8 @@
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Working</classification>
-        <subclassification>Siberian Husky	</subclassification>
-        <image>siberian husky</image>
+        <subclassification>Siberian Husky</subclassification>
+        <image>Siberian_Husky</image>
         <text>
             Siberian Husky\n
             They will behold you with those penetrating eyes
@@ -7066,8 +5491,8 @@
     <card>
         <subsubclassification>Top card</subsubclassification>
         <classification>Smart</classification>
-        <subclassification>Border Collie	</subclassification>
-        <image>border</image>
+        <subclassification>Border Collie</subclassification>
+        <image>Border_Collie</image>
         <text>
             Border Collie\n
             An IQ that can leave you with envy
@@ -7214,1242 +5639,6 @@
 
 
 
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <image>doberman</image>
-        <text>
-            Dobermann Pinscher\n
-            Do not be intimidated by the looks of this one
-        </text>
-        <list>
-            <li>Agile</li>
-            <li>Elegant</li>
-            <li>Fearless</li>
-            <li>Sharp</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 13 to 14 years</li>
-            <li>Monthly keeping cost: ₹3,162</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            A Doberman Pinscher is a relatively new breed on the block.It possesses an athletic body, sharp ears and high agility.Dobermanns are known for their strength, ferociousness, intelligence,fearlessness and undying loyalty to their family. They are formidable guardians and with their people i.e their family. Doberman Pinschers are gentle, watchful and loving companions.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Their athletic body is built for speed and endurance giving them a ferocious yet elegant appearance.</ul>
-            <ul>Powerful wedge shaped head that gives it a strong profile.</ul>
-            <ul>Strongly developed wide scissors teeth bite that attributes to the dog’s ferocious look.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Exceptional guard dogs for family</li>
-            <li>Minimal shedders and coat does not require much maintenance</li>
-            <li>Easy to train and have amazing grasping power</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Not for first time owners, need experience handling</li>
-            <li>Does not withstand extreme cold weather</li>
-            <li>Requires extreme and vigorous exercise not for less active families</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Does not affect</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Doberman are one of the easiest breeds to groom. The coat of a Doberman Pinscher is short and does not shed much, so they require very little grooming.The skin of the Doberman is extremely sensitive to extreme cold or heat.Dental grooming is also a must for the Dobermann. Cleaning of ears using a ear wipes will help avoid any ear infections or wax buildup.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hypothyroidism</image>
-        <text>
-            Hypothyroidism\n
-            The hormone gland of the dog does not function well and as a result, the growth and the development of the dog gets affected. Common symptoms of hypothyroidism include dull fur, extreme lethargy, obesity / weight loss and mental dullness.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Gastric Dilation Volvulus\n
-            This commonly occurs in breeds where the stomach is not attached to the ribs. This can cut off the blood supply to various other parts of the body, which further shuts down the digestion process. Such a situation leads to bloating. It is advisable to not exercise your dog for at least an hour after they have food.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Progressive Retinal Atrophy\n
-            It involves gradual deterioration of the retina. As the disease progresses, the dogs may become night blind or lose sight during the day.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Narcolepsy\n
-            It is a neurological condition that results in the brain’s inability to regulate wake sleep patterns. A dog with this syndrome may suddenly become sleepy and fall asleep.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Wobbler's Syndrome\n
-            It is an inherited syndrome where the spinal canal is malformed causing cervical vertebral instability.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Von Willebrand’s Disease\n
-            It is an inherited blood disorder that interferes with the blood’s ability to clot. As a result of this, the dog may bleed excessively after an injury or a surgery. There is no cure for this disease. Dogs with this disease should not be bred.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Dobermann</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <image>golden retriever</image>
-        <text>
-            Golden Retriever\n
-            This one is for the keeps
-        </text>
-        <list>
-            <li>Friendly</li>
-            <li>Humble</li>
-            <li>Pleasant</li>
-            <li>Soft</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Scotland</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹3,010</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Fondly called Goldens, these retriever dogs are one of the most popular pets in the world. They are easy to train, and love their families. Their zeal to please their owners makes them one of the most perfect pets to have at home.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Lowest ranking barkers.</ul>
-            <ul>Freshest smelling dogs as they do not suffer from bad breath.</ul>
-            <ul>Soft mouth that helps them to hold even a raw egg without breaking it.</ul>
-            <ul>Exemplary obedience level and intelligence have won them many laurels over the years.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Affectionate pet for the whole family</li>
-            <li>One of the most obedient dogs, so training will be easy</li>
-            <li>Low barkers; make them perfect dog for apartments in gated communities</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Do not make good watch or guard dogs</li>
-            <li>An active dog needs exercise everyday</li>
-            <li>Tend to get hyper-active or over-weight if not properly exercised</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Medium</li>
-            <li>Bath: Regular</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Frequent</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            If you want to maintain that beautiful coat of your Golden then it will require regular grooming. You
-            have to brush their hair regularly. They generally shed hair in spring and fall so be ready to have some dog hair on
-            your clothes and upholstery during this time. The ears of the golden require special attention at all times.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>cataract</image>
-        <text>Cataract/n
-            In case of cataract, a cloudy film forms over the eye of the dog while in case of glaucoma, there is a buildup of fluid pressure inside the eyeball.
-        </text>
-    </card>
-
-    <card>
-
-        <classification>Smart</classification>
-        <subclassification>Golden Retriever</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Best Buddy</li>
-            <li>Guarding Potential: Good</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Less noisy</li>
-            <li>Compatibility with other pets: Best buddies</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top Card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <image>cocker_spaniel</image>
-        <text>
-            American Cocker Spaniel\n
-            Small on size but big on fun
-        </text>
-        <list>
-            <li>Adorable</li>
-            <li>Affectionate</li>
-            <li>Intelligent</li>
-            <li>Lively</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: USA</li>
-            <li>Life Span: 13 to 14 years</li>
-            <li>Monthly keeping cost: ₹2,822</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            A Cocker Spaniel has an amenable, cheerful and affectionate disposition. A well bred and socialised Cocker Spaniel is gentle, loving, sweet, affectionate and playful and a joyous little bundle. They are one of the most popular breeds in various Dog Shows where they are used as show dogs and also are a part of agility and obedience activities.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Long, floppy, silky ears that fall gracefully to the side of the face.</ul>
-            <ul>Beautiful silky coat and they are quite popular for their ever wagging tails.</ul>
-            <ul>Adorable facial expressions and melting dark almond ring eyes.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Small size makes them perfect for apartment living.</li>
-            <li>Always ready to play with their wagging tails.</li>
-            <li>Intelligent breed and is easy to train.</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Grooming is not easy, will require a lot of time.</li>
-            <li>Not the perfect lap dog will need exercise.</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: High</li>
-            <li>Bath: Regular</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Frequent</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Grooming a Cocker Spaniel is one of the most tedious and time consuming tasks. Their long silky fur has to be brushed and groomed regularly else it will get tangled and become extremely painful for the dog. Regular brushing will ensure that there is no tartar or plaque buildup and the mouth of the Cocker Spaniel remains clean .This will also prevent the onset of any periodontal problems.To avoid any injury to the feet especially during running or playing, the nails of the dog should be regularly trimmed and kept short.Many vets advise the trimming of the hair in the inside of the ear so that there is ventilation under the ears,whcih would avoid the onset of ear infections.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hypothyroidism</image>
-        <text>Hypothyroidism\n
-            The hormone gland of the dog does not function well and as a result, the growth and the development of the dog gets affected. Common symptoms of hypothyroidism include dull fur, extreme lethargy, obesity / weight loss and mental dullness.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>epilepsy</image>
-        <text>Epilepsy\n
-            They may experience mild or severe seizures followed by frantic and abnormal behaviour such as running or falling or even being unable to move their limbs.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>cataract</image>
-        <text>Cataracts and Glaucoma\n
-            In case of cataract, a cloudy film forms over the eye of the dog while in case of glaucoma, there is a buildup of fluid pressure inside the eyeball.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>patellar luxation</image>
-        <text>Patellar Luxation\n
-            It is the dislocation of the kneecap and can cause crippling in the dog.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>Progressive Retinal Atrophy\n
-            PRA is a degenerative disease of the retinal cells that can cause blindness in the dog.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>Autoimmune Anemia\n
-            It is a serious condition where the dog’s immune system starts to attack its own blood cells. Visible symptoms include pale gums, fatigue and jaundice.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>American Cocker Spaniel	</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: More friendly</li>
-            <li>Guarding Potential: Good</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Less noisy</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian</subclassification>
-        <image>pomeranian</image>
-        <text>
-            Pomeranian\n
-            Bring home a living toy
-        </text>
-        <list>
-            <li>Active</li>
-            <li>Courageous</li>
-            <li>Furry</li>
-            <li>Vigilant</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹1,893</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Pomeranians are known all over the world as perhaps the most popular toy breed. Their ancestors were much larger than them. The breed gained popularity in the 17th century, thanks to Queen Victoria who fell in love with them and bred and raised several Pomeranians.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Small and compact size.</ul>
-            <ul>Can easily find their way between your feet and even get stepped on.</ul>
-            <ul>Best avoided when very small children are around, more so for the safety of the dog than the child.</ul>
-        </list>
-    </card>
-
-    <card>
-
-        <classification>Smart</classification>
-        <subclassification>Pomeranian</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Look like an adorable toy and lap up love</li>
-            <li>Fit into tiny apartments and big hearts just as easily</li>
-            <li>Excellent companions for older children and senior citizens</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Not the best guard dogs, although quick to bark</li>
-            <li>Known to be stubborn during training</li>
-            <li>High-maintenance in their desire for love and grooming</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: High</li>
-            <li>Bath: Regular</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Does not affect</li>
-            <li>Exercise Requirement: Little</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            Poms require low maintanence but grooming them isn’t the easiest thing. They need to be groomed at least twice a week. They are moderate seasonal shedders. Males shed once a year, while females shed when in heat, soon after they’ve given birth to a litter and when they’re stressed out. During the summer months, it is best to crop the hair shorter.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>cataract</image>
-        <text>
-            Cataract\n
-            In case of cataract, a cloudy film forms over the eye of the dog while in case of Glaucoma, there is a buildup of fluid pressure inside the eyeball.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>patellar luxation</image>
-        <text>
-            Patellar Luxation\n
-            Here the knee joint is displaced causing a lot of pain to the dog. There are times when the regular rubbing caused by the patella can lead to arthritis in a pet. This can be corrected easily through surgery.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Allergies\n
-            Your dog can suffer from allergies from mere contact or can just have food allergies. The most common sign of an allergy will be when your dog starts to lick his paws or rubs its face a great deal.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Pomeranian	</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Medium</li>
-            <li>Playfullness: Ready most of the time</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Finds difficult to adjust</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <image>rottweiler</image>
-        <text>
-            Rottweiler\n
-            The guard dog with an iron jaw
-        </text>
-        <list>
-            <li>Courageous</li>
-            <li>Intelligent</li>
-            <li>Protective</li>
-            <li>Robust</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹3,393</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Rottweilers are strong, loyal and affectionate dogs.With proper training,they can make excellent pets. They are not ideal for first-time dog families or people who intend to train a dog to be a guard dog, especially if their training methods are aggressive.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Large head and strong jaw.</ul>
-            <ul>Amongst the few breeds that come only in one colour.</ul>
-            <ul>Excellent guard dogs and companion dogs.</ul>
-            <ul>Leaving them alone for long periods of time can lead them to become destructive.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Excellent guard dogs and protective towards their family</li>
-            <li>Easy to groom</li>
-            <li>Remarkable dogs for high activity people</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Regular training required right from the beginning</li>
-            <li>Not ideal for apartment living</li>
-            <li>Need to be socialized early with people and other animals</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Low</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            They shed heavily throughout the year, so a thorough brushing once or twice a week is a must. As with all other dogs, you will need to concentrate on the oral health of your Rottie.Make sure you familiarise the dog with being groomed from a young age, so that he or she does not have issues with being touch near their ears, eyes and paws.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>bloating</image>
-        <text>
-            Bloating\n
-            Bloat occurs when the stomach is filled with gas and it twists. It advisable to give this pet food in a high stand bowl and you should rest for at least half an hour before their exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Osteosarcoma\n
-            A kind of aggressive bone cancer.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Rottweiler</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever</subclassification>
-        <image>labrador_retriever</image>
-        <text>
-            Labrador Retriever\n
-            The perfect family pet
-        </text>
-        <list>
-            <li>Active</li>
-            <li>Aquatic</li>
-            <li>Outgoing</li>
-            <li>Spirited</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Canada</li>
-            <li>Life Span: 13 to 14 years</li>
-            <li>Monthly keeping cost: ₹3,010</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            Labrador Retriever is one of the most loved breeds around the world.The breed is easily trainable and makes a perfect family dog. It is one of the most common breeds kept as a pet. They are extremely fond of children and love to make people around them happy.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Soft mouth that helps them to even hold a raw egg without breaking it.</ul>
-            <ul>Strong haunches help them to leap into water.</ul>
-            <ul>Best guide and also a good drug sniffing dog.</ul>
-            <ul>Intelligent, lovable and the best family pet.</ul>
-        </list>
-    </card>
-
-    <card>
-
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Excellent family pets</li>
-            <li>Can adapt to all weather</li>
-            <li>Easy to maintain</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Needs regular exercise to maintain weight</li>
-            <li>Shed a lot, needs grooming</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Medium</li>
-            <li>Bath: Regular</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: Yes</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            The adult Labrador has a slightly hard coat, whereas a puppy posseses a soft coat, which does not require much brushing. The undercoat should be brushed regularly to prevent your clothes from having hair all	over it. This will also help your Labrador to stay clean as dead fur is removed from the undercoat.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>epilepsy</image>
-        <text>
-            Epilepsy or Seizures\n
-            They may experience mild or severe seizures followed by frantic and abnormal behaviour such as running or falling or even being unable to move their limbs.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Eye Defect\n
-            Labrador Retriever has a high chance of developing an eye defect as well, which has been caused genetically in them called the Retinal Dysplasia. This causes blind spots in them.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Labrador Retriever	</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Best Buddy</li>
-            <li>Guarding Potential: Good</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Less noisy</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <image>Poodle</image>
-        <text>
-            Poodle (Standard)\n
-            Get a Foo Foo for your home
-        </text>
-        <list>
-            <li>Elegant</li>
-            <li>Intelligent</li>
-            <li>Loyal</li>
-            <li>Watchful</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 13 to 14 years</li>
-            <li>Monthly keeping cost: ₹3,512</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            This is the only dog in the dog kingdom that comes in three sizes i.e. standard, miniature and toy. When it comes to their upkeep then this might be one of the most expensive dog to keep because of its grooming requirements.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>Does not shed, their hair grows like humans and the inner coat of fur just falls by itself after some time.</ul>
-            <ul>Are one of the most intelligent breed.</ul>
-            <ul>Perfect breed to train for tricks.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>This is second most intelligent breed in the dog world</li>
-            <li>Excellent family pets and looks good</li>
-            <li>Generally an active breed but can be inactive indoors</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>One of the most expensive breed when it comes to grooming</li>
-            <li>Not for first time owners</li>
-            <li>Can be a little protective about the family</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: High</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Does not affect</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Frequent</li>
-            <li>Veterinarian Visits: Rare</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            This breed will rake up your bills when it comes to grooming.It needs to be clipped every six to eight weeks. You need to wipe around the eyes and face every day with an alcohol free wipe. Brushing the teeth of your Poodle on a weekly basis will help to remove all tartar buildup. Also the toe nails will require clipping on regular basis.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hypothyroidism</image>
-        <text>
-            Hypothyroidism/n
-            The hormone gland of the dog does not function well and as a result, the growth and the development of the dog gets affected. Common symptoms of hypothyroidism include dull fur, extreme lethargy, obesity / weight loss and mental dullness.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>addison</image>
-        <text>
-            Addison disease\n
-            In this the adrenal glands do not produce the right amount of hormone cortisol and the dog becomes lethargic and depressed. This will have a lifelong treatment.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Legg Calve Perthes disease\n
-            It reduces the blood supply to the head of the thigh bone; this at times can cause it to be deformed. If your puppy starts to limp at an early age then we advise you to take him or her to a vet soon so that it can be corrected early.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>Poodle</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: More friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Always ready</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Finds difficult to adjust</li>
-            <li>Compatibility with other dogs: Adjusts easily</li>
-            <li>Affection: Strong attachment</li>
-        </list>
-    </card>
-
-
-
-
-
-
-
-    <card>
-        <subsubclassification>Top card</subsubclassification>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <image>german shepherd</image>
-        <text>
-            German Shepherd Dog (Alsatian)\n
-            Bring home your very own deputy sergeant
-        </text>
-        <list>
-            <li>Alert</li>
-            <li>Handsome</li>
-            <li>Loyal</li>
-            <li>Possessive</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Basic Info</subsubclassification>
-        <list>
-            <li>Category: Smart</li>
-            <li>Origin: Germany</li>
-            <li>Life Span: 11 to 12 years</li>
-            <li>Monthly keeping cost: ₹3,010</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Introduction</subsubclassification>
-        <text>
-            The German Shepherd is one of the most handsome dogs around.Their agility and good looks made them the first canine stars.GSDs are one of the most intelligent dogs.It is a common sight to see them being used a lot in the armed and police forces.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Unique Aspects</subsubclassification>
-        <list>
-            <ul>One of the most loyal pets around and are highly protective of their family members.</ul>
-            <ul>Very athletic dogs and their intelligence makes them unique.</ul>
-            <ul>Can be trained to do anything and their ability to stop at command makes them one of the easiest breeds to train.</ul>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Pros</subsubclassification>
-        <list>
-            <li>Extremely intelligent and easy to train</li>
-            <li>Great guide dogs, search and rescue and police dogs</li>
-            <li>Amazing family pets</li>
-        </list>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Cons</subsubclassification>
-        <list>
-            <li>Vary of strangers and can attack to protect family</li>
-            <li>Need regular exercise to ensure health</li>
-            <li>Shed heavily and need brushing everyday</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Maintenance (AND) Effort</subsubclassification>
-        <list>
-            <li>Visits to Groomer: Medium</li>
-            <li>Bath: Rare</li>
-            <li>Tolerance to heat: Loves warm weather</li>
-            <li>Tolerance to cold: Loves snow</li>
-            <li>Exercise Requirement: Lots</li>
-            <li>Veterinarian Visits: Frequent</li>
-            <li>Prone to obesity: No</li>
-        </list>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Grooming</subsubclassification>
-        <text>
-            This breed sheds heavily , those who have them at home would know that hair can be seen everywhere.The easiest way to avoid this is to brush them everyday. If not brushed regularly then your pet can develop clumps of dirty hair, which will not only make the coat look dull but also make it a breeding ground for infections.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>hip dysplasia</image>
-        <text>
-            Hip Dysplasia\n
-            A genetic disorder where the hip bone has a defect in connecting with the hip joint as a result of which the dog may experience pain or lameness in either of the rear legs. One has to ensure that they get a lot of exercise.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>epilepsy</image>
-        <text>
-            Epilepsy or Seizures\n
-            They may experience mild or severe seizures followed by frantic and abnormal behaviour such as running or falling or even being unable to move their limbs.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <image>multiple sclerosis</image>
-        <text>
-            Multiple Sclerosis\n
-            This mostly paralysis the hind legs and generally strikes in the middle age.
-        </text>
-    </card>
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Common Health Issues</subsubclassification>
-        <text>
-            Progressive Retinal Atrophy\n
-            It involves gradual deterioration of the retina. As the disease progresses, the dogs may develop night blindness or lose sight during the day.
-        </text>
-    </card>
-
-    <card>
-        <classification>Smart</classification>
-        <subclassification>German Shepherd</subclassification>
-        <subsubclassification>Behaviour</subsubclassification>
-        <list>
-            <li>Friendliness: Less friendly</li>
-            <li>Guarding Potential: Excellent</li>
-            <li>Playfullness: Ready most of the time</li>
-            <li>Noisy: Loud</li>
-            <li>Compatibility with other pets: Adjusts easily</li>
-            <li>Compatibility with other dogs: Best buddies</li>
-            <li>Affection: More affectionate</li>
-        </list>
-    </card>
 
 
 
