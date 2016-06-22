@@ -59,27 +59,34 @@ public class XMLPullParserHandler {
                         if (tagname.equalsIgnoreCase("card")) {
                             // add employee object to list
                             Cards.add(card);
-                            Log.d("Card: ",card.toString());
-                        } else if (tagname.equalsIgnoreCase("title")) {
-                            card.setTitle(text);
-                        } else if (tagname.equalsIgnoreCase("text")) {
-                            card.setText(text);
-                        } else if (tagname.equalsIgnoreCase("image")) {
-                            card.setImage(text);
-                        } else if (tagname.equalsIgnoreCase("classification")) {
-                            card.setClassification(text);
-                        } else if (tagname.equalsIgnoreCase("subclassification")) {
-                            card.setSubclassification(text);
-                        } else if (tagname.equalsIgnoreCase("subsubclassification")) {
-                            card.setSubsubclassification(text);
-                        } else if (tagname.equalsIgnoreCase("list")) {
-                            card.setList(foo);
-                        } else if(tagname.equalsIgnoreCase("li")){
-                            foo.add(text);
+                            //Log.d("Card: ",card.toString());
+                        } else{
+                            if(text!=null){
+                                if (tagname.equalsIgnoreCase("title")) {
+                                    card.setTitle(text.trim());
+                                } else if (tagname.equalsIgnoreCase("text")) {
+                                    card.setText(text.trim());
+                                } else if (tagname.equalsIgnoreCase("image")) {
+                                    card.setImage(text.trim());
+                                } else if (tagname.equalsIgnoreCase("classification")) {
+                                    card.setClassification(text.trim());
+                                } else if (tagname.equalsIgnoreCase("subclassification")) {
+                                    card.setSubclassification(text.trim());
+                                } else if (tagname.equalsIgnoreCase("subsubclassification")) {
+                                    card.setSubsubclassification(text.trim());
+                                } else if (tagname.equalsIgnoreCase("list")) {
+                                    card.setList(foo);
+                                } else if(tagname.equalsIgnoreCase("li")){
+                                    foo.add(text.trim());
+                                } else if(tagname.equalsIgnoreCase("ul")){
+                                    foo.add("\u2022"+text.trim());
+                                } else if(tagname.equalsIgnoreCase("position")){
+                                    card.setCardPosition(Integer.parseInt(text));
+                                }
+
+                            }
                         }
-
                         break;
-
                     default:
                         break;
                 }

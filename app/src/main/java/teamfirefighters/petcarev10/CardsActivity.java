@@ -27,12 +27,13 @@ public class CardsActivity extends AppCompatActivity {
                 CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE,
                 CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT,
                 CardDBContract.CardTable.COLUMN_NAME_CARD_LIST,
-                CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE
+                CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION
         };
         String selection= CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION+" =?";
         String[] selectionargs = {
                 Breed_name};
-        String sortOrder = CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION + " DESC";
+        String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION + " ASC";
         Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionargs,null,null,sortOrder);
         if(c!=null){
             Log.d("CARDACTIVITYCURSOR",c.toString());

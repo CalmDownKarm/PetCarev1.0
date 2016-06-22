@@ -78,13 +78,14 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
             if (temp.getImage()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE, temp.getImage());
             if (temp.getList()!=null)
-                values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST, temp.getList().toString());
+                values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST, temp.getListAsString());
             if (temp.getClassification()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION, temp.getClassification());
             if (temp.getSubclassification()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION, temp.getSubclassification());
             if (temp.getSubsubclassification()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION, temp.getSubsubclassification());
+                values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION,temp.getCardPosition());
             long newRowId = db.insert(CardDBContract.CardTable.TABLE_NAME,
                     CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT,
                     values);
