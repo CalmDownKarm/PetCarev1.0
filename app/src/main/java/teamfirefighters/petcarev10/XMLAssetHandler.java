@@ -46,7 +46,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         try {
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //Populate Cards and call XML Handler
-            Cards = parser.parse(context.getAssets().open("dogdataset.xml"));
+            Cards = parser.parse(context.getAssets().open("try1.xml"));
             writetodb(parser,Cards);
         } catch (IOException e) {
             e.printStackTrace();

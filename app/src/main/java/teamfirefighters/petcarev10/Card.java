@@ -42,6 +42,8 @@ public class Card {
         classification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
         subclassification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
         subsubclassification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION));
+        if(title==null)
+            title=subsubclassification;
         setCardLayoutType();
     }
 

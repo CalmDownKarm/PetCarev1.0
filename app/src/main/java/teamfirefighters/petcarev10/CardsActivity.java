@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.wenchao.cardstack.CardStack;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +48,11 @@ public class CardsActivity extends AppCompatActivity {
     }
 
 
+    private CardStack mCardStack;
+    private CardDataAdapter mCardAdapter;
+    public List<Card> cards = null;
+    public int last_card_swiped = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +63,68 @@ public class CardsActivity extends AppCompatActivity {
         Log.d("IN CARDS",Category_name);
         Log.d("IN CARDS",Breed_name);
         Log.d("LIST OF CARDS BABE",getCardsFromDB().toString());
+
+        cards = getCardsFromDB();
+
+        mCardStack = (CardStack)findViewById(R.id.container);
+        mCardStack.setContentResource(R.layout.card_layout);
+        mCardStack.setStackMargin(20);
+        mCardAdapter = new CardDataAdapter(CardsActivity.this);
+
+        for (int i=0; i< cards.size();i++)
+            mCardAdapter.add(cards.get(i));
+
+        mCardStack.setAdapter(mCardAdapter);
+
+
+
+
+        mCardStack.setListener(new CardStack.CardEventListener() {
+            @Override
+            public boolean swipeEnd(int section, float distance) {
+
+                if(distance>100.0)
+                    return true;
+
+
+                return false;
+            }
+
+            @Override
+            public boolean swipeStart(int section, float distance) {
+
+                return false;
+            }
+
+            @Override
+            public boolean swipeContinue(int section, float distanceX, float distanceY) {
+
+                return true;
+            }
+
+            @Override
+            public void discarded(int mIndex, int direction) {
+                last_card_swiped++;
+
+
+            }
+
+            @Override
+            public void topCardTapped() {
+
+                if(last_card_swiped>0){
+
+                    mCardAdapter.insert(cards.get(last_card_swiped-1),0);
+
+
+
+                    mCardStack.setAdapter(mCardAdapter);
+                    last_card_swiped--;
+
+                }
+
+            }
+        });
 
     }
 }

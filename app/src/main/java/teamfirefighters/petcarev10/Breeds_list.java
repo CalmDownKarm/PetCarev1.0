@@ -69,16 +69,12 @@ public class Breeds_list extends AppCompatActivity {
 
         breeds = getBreedsFromDb(Category_name);
         breeds_list = (ParallaxListView) findViewById(R.id.breed_list);
-        breeds_adapter = new breed_list_view_adapter(Breeds_list.this);
+        breeds_adapter = new breed_list_view_adapter(Breeds_list.this,breeds);
 
-        set_breeds_list(breeds);
-
-       // for (int i=0; i< breeds.size();i++)
-         //   breeds_adapter.add(breeds.get(i));
-
-//        breeds_list.setAdapter(breeds_adapter);
+        breeds_list.setAdapter(breeds_adapter);
 
         set_category_list(categories, Cat_list);
+
         breeds_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -95,21 +91,9 @@ public class Breeds_list extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 breeds = getBreedsFromDb(cat_adapter.getItem(position));
-                set_breeds_list(breeds);
-                //breeds_adapter.clear();
-                //for (int i=0; i< breeds.size();i++)
-                  //  breeds_adapter.add(breeds.get(i));
 
-               // breeds_list.setAdapter(breeds_adapter);
-                //recreate();
-                //breeds_list.refreshDrawableState();
+                breeds_adapter.refresh(breeds);
 
-
-               // ViewGroup foo = (ViewGroup) findViewById(R.id.sliding_down_toolbar_layout);
-                //foo.invalidate();
-               // Log.i("##########","##############");
-                //breeds_list.requestLayout();
-                // breeds_list.setVisibility(view.VISIBLE);
                 toolbarPanelLayout.closePanel();
             }
         });
@@ -234,13 +218,6 @@ public class Breeds_list extends AppCompatActivity {
         return Breeds;
     }
 
-    private void set_breeds_list(List<String> list){
-        breeds_adapter.clear();
-        for (int i=0; i< list.size();i++)
-            breeds_adapter.add(list.get(i));
-
-        breeds_list.setAdapter(breeds_adapter);
-    }
 
     private void set_category_list(List<String> categories, ListView listView){
 
