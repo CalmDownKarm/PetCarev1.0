@@ -86,6 +86,10 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public boolean swipeEnd(int section, float distance) {
 
+                if(last_card_swiped+1 == cards.size() )
+                    return false;
+
+
                 if(distance>100.0)
                     return true;
 

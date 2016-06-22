@@ -57,7 +57,7 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
         viewHolder.mTVItem.setTypeface(font);
 
         Resources res = context.getResources();
-        String mDrawableName = "foo";
+        String mDrawableName = getItem(position).replaceAll(" ","_").toLowerCase();
         int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
         viewHolder.mIMGItem.setImageResource(resID);
 

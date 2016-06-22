@@ -7,6 +7,7 @@ package teamfirefighters.petcarev10;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,7 +60,17 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
 
                 }
 
-                dog_img.setImageResource(R.drawable.foo);
+                if(getItem(position).getImage() !=null){
+
+                    Resources res = context.getResources();
+                    String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
+                    int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
+                    dog_img.setImageResource(resID);
+                }
+
+
+
+
 
                 break;
 
