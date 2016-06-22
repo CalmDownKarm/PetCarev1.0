@@ -8,12 +8,4 @@
 
     <color name="black_overlay">#66000000</color>
 
-    <color name="cat_1">#15a084</color>
-    <color name="cat_2">#18a682</color>
-    <color name="cat_3">#1cac80</color>
-    <color name="cat_4">#1fb27d</color>
-    <color name="cat_5">#22b97b</color>
-    <color name="cat_6">#26bf77</color>
-    <color name="cat_7">#2ac574</color>
-    <color name="cat_8">#2dcc70</color>
 </resources>
