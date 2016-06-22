@@ -1,6 +1,8 @@
 package teamfirefighters.petcarev10;
 
 import android.graphics.Typeface;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -9,6 +11,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -93,11 +96,23 @@ public class Breeds_list extends AppCompatActivity {
         breeds_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent toCard = new Intent(Breeds_list.this,CardsActivity.class);
-                toCard.putExtra("Category",Category_name);
-                toCard.putExtra("Breed",breeds_adapter.getItem(position));
-                Log.d("sheep", "breed sent is========> " + breeds_adapter.getItem(position));
-                startActivity(toCard);
+
+                Intent intent = new Intent(Breeds_list.this, CardsActivity.class);
+                intent.putExtra("Category",Category_name);
+                intent.putExtra("Breed",breeds_adapter.getItem(position));
+
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        // the context of the activity
+                        Breeds_list.this,
+
+
+                        new Pair<View, String>(view.findViewById(R.id.img),
+                                getString(R.string.transition_name_image))
+
+                );
+                ActivityCompat.startActivity(Breeds_list.this, intent, options.toBundle());
+
+
 
             }
         });

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PetCarev1.0</string>
 
-    <string name="transition_name_name">transition:NAME</string>
+    <string name="transition_name_image">transition:IMAGE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
