@@ -1,5 +1,7 @@
 package teamfirefighters.petcarev10;
 
+import android.graphics.Typeface;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
@@ -32,10 +34,15 @@ public class Breeds_list extends AppCompatActivity {
     public ToolbarPanelLayout toolbarPanelLayout;
     public boolean menu_button_state = true; //true: menu    false: arrow
     public cat_list_view_adapter cat_adapter;
-    private List<String> breeds;
-    private ParallaxListView breeds_list;
-    private breed_list_view_adapter breeds_adapter;
+
+   private List<String> breeds = new ArrayList<String >();
+    ParallaxListView breeds_list;
+   private breed_list_view_adapter breeds_adapter;
     public String Category_name;
+
+    public TextView cat_tag;
+
+
 
 
     @Override
@@ -57,23 +64,31 @@ public class Breeds_list extends AppCompatActivity {
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
 
+        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
+        cat_tag = (TextView) findViewById(R.id.cat_tag);
+        cat_tag.setText("Breeds");
+        cat_tag.setTypeface(font);
+
+
 
         Category_name = getIntent().getExtras().getString("Category");
         final List<String> categories = getIntent().getStringArrayListExtra("Category_list");
         ListView Cat_list = (ListView) findViewById(R.id.cat_list);
 
+        set_category_list(categories, Cat_list);
 
 
 
 
-
-        breeds = getBreedsFromDb(Category_name);
         breeds_list = (ParallaxListView) findViewById(R.id.breed_list);
-        breeds_adapter = new breed_list_view_adapter(Breeds_list.this,breeds);
-
+        breeds = getBreedsFromDb(Category_name);
+        breeds_adapter = new breed_list_view_adapter(this);
+        breeds_adapter.addAll(breeds);
         breeds_list.setAdapter(breeds_adapter);
 
-        set_category_list(categories, Cat_list);
+
+
+
 
         breeds_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -81,6 +96,7 @@ public class Breeds_list extends AppCompatActivity {
                 Intent toCard = new Intent(Breeds_list.this,CardsActivity.class);
                 toCard.putExtra("Category",Category_name);
                 toCard.putExtra("Breed",breeds_adapter.getItem(position));
+                Log.d("sheep", "breed sent is========> " + breeds_adapter.getItem(position));
                 startActivity(toCard);
 
             }
@@ -90,11 +106,20 @@ public class Breeds_list extends AppCompatActivity {
         Cat_list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                breeds = getBreedsFromDb(cat_adapter.getItem(position));
 
-                breeds_adapter.refresh(breeds);
+
+                breeds.clear();
+                breeds_adapter.clear();
+                    breeds = getBreedsFromDb(cat_adapter.getItem(position));
+                    breeds_adapter.addAll(breeds);
+
+                Log.d("sheep", "breeds is @@$$==> " + breeds);
+                Log.d("sheep", "adapter is @@$$==> " + breeds_adapter.getItem(0));
+                Category_name = cat_adapter.getItem(position);
+                breeds_list.setAdapter(breeds_adapter);
 
                 toolbarPanelLayout.closePanel();
+
             }
         });
 
@@ -133,7 +158,7 @@ public class Breeds_list extends AppCompatActivity {
             @Override
             public void onPanelOpened(Toolbar toolbar, View panelView) {
 
-
+                cat_tag.setText("Categories");
                 isPanelOpen = true;
 
             }
@@ -145,6 +170,16 @@ public class Breeds_list extends AppCompatActivity {
                 toolbar.setY((float) 0.0);
 
                 findViewById(R.id.cat_list).setAlpha(slideOffset);
+
+                if(slideOffset<0.5){
+                    cat_tag.setText("Breeds");
+                    cat_tag.setAlpha(1-slideOffset);}
+
+
+
+                if(slideOffset>=0.5){
+                    cat_tag.setText("Categories");
+                    cat_tag.setAlpha(slideOffset);}
 
                 if(slideOffset>0.3 && !isPanelOpen){
                     menu_button_state = false;
@@ -179,7 +214,8 @@ public class Breeds_list extends AppCompatActivity {
                 }
 
                 panelView.setY((float) -(panelView.getHeight()-toolbarView.getHeight()));
-
+                cat_tag.setText("Breeds");
+                cat_tag.setAlpha((float) 1.0);
                 isPanelOpen = false;
 
             }
@@ -188,8 +224,6 @@ public class Breeds_list extends AppCompatActivity {
 
 
     }
-
-
 
 
 

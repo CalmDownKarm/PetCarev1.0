@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="400dp"
-    card_view:cardCornerRadius="2dp"
+    card_view:cardCornerRadius="3dp"
     card_view:cardElevation="2dp">
 
     <RelativeLayout
@@ -21,9 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="20dp"
+            android:padding="15dp"
             android:text="NAME"
-            android:textSize="20dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/dog_image"
             android:layout_centerHorizontal="true" />
@@ -33,9 +34,9 @@
             android:id="@+id/card_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textSize="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textSize="20dp"
             android:layout_gravity="center_horizontal"
             android:text="Random text"
             android:textColor="@color/panel_color"

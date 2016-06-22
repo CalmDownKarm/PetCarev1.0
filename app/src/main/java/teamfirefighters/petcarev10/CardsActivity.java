@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardsActivity extends AppCompatActivity {
-    private static String Category_name;
-    private static String Breed_name;
+    private  String Category_name;
+    private  String Breed_name;
     private List<Card> getCardsFromDB(){
         List<Card> Cards = new ArrayList<Card>();
         Log.d("HELLO WORLD","IN GET CATEGORIES");
@@ -30,9 +30,11 @@ public class CardsActivity extends AppCompatActivity {
                 CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE,
                 CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION
         };
-        String selection= CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION+" =?";
+        String selection= CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION+" =? AND "+ CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION+" =?";
         String[] selectionargs = {
-                Breed_name};
+                Breed_name,
+                Category_name
+        };
         String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION + " ASC";
         Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionargs,null,null,sortOrder);
         if(c!=null){

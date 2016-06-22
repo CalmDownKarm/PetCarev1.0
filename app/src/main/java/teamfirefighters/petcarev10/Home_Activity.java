@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.annotation.FloatRange;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -15,6 +17,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.nikoyuwono.toolbarpanel.ToolbarPanelLayout;
 import com.nikoyuwono.toolbarpanel.ToolbarPanelListener;
@@ -28,6 +31,7 @@ public class Home_Activity extends AppCompatActivity {
     public boolean isPanelOpen = false;
     public ToolbarPanelLayout toolbarPanelLayout;
     public boolean menu_button_state = true; //true: menu    false: arrow
+    public TextView cat_tag;
 
 
 
@@ -48,6 +52,11 @@ public class Home_Activity extends AppCompatActivity {
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
 
+        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
+        cat_tag = (TextView) findViewById(R.id.cat_tag);
+        cat_tag.setText("Categories");
+        cat_tag.setTypeface(font);
+        cat_tag.setAlpha((float)0.0);
 
         final cat_list_view_adapter adapter = new cat_list_view_adapter(Home_Activity.this);
 
@@ -121,6 +130,7 @@ public class Home_Activity extends AppCompatActivity {
                 toolbar.setY((float) 0.0);
 
                 findViewById(R.id.cat_list).setAlpha(slideOffset);
+                cat_tag.setAlpha(slideOffset);
 
                 if(slideOffset>0.3 && !isPanelOpen){
                     menu_button_state = false;
