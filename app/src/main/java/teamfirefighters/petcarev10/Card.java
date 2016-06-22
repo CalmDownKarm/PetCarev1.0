@@ -1,6 +1,7 @@
 package teamfirefighters.petcarev10;
 
 import android.database.Cursor;
+import android.util.Log;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,9 +36,11 @@ public class Card {
         title = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE));
         image = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE));
         String tempStr = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST));
-        if(tempStr!=null)
-            list = Arrays.asList(tempStr.split("\\s*,\\s*"));
-        else
+
+        if(tempStr!=null) {
+            Log.d("PrintList",tempStr);
+            list = Arrays.asList(tempStr.split("\\s*#\\s*"));
+        }else
             list = null;
         classification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
         subclassification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
@@ -114,7 +117,14 @@ public class Card {
     public void setSubsubclassification(String subsubclassification) {
         this.subsubclassification = subsubclassification;
     }
-
+    public String getListAsString(){
+        String strtemp = "";
+        for(int i=0;i<list.size();i++){
+            strtemp+=(list.get(i)+"#");
+        }
+        Log.d("OnStorage",strtemp);
+        return strtemp;
+    }
     public List<String> getList() {
         return list;
     }

@@ -1,11 +1,11 @@
 <record>
 	<card>
 
-		<classify>Top card</classify>
+		<subsubsubclassification>Top card</subsubsubclassification>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
 		<image>Labrador_Retriever</image>
 
@@ -32,15 +32,15 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Basic Info</classify>
+		<subsubsubclassification>Basic Info</subsubsubclassification>
 
-		<list>
+		<list>`
 
-			<li>Category: Sporting</li>
+			<li>subclassification: Sporting</li>
 
 			<li>Origin: Canada</li>
 
@@ -56,13 +56,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Introduction</classify>
+		<subsubsubclassification>Introduction</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			Labrador Retriever is one of the most loved breeds around the world.The breed is easily trainable and makes a perfect family dog. It is one of the most common breeds kept as a pet. Labradors are extremely fond of children and love to make people around them happy.
 
@@ -74,13 +74,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Unique Aspects</classify>
+		<subsubsubclassification>Unique Aspects</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<ul>Soft mouth that helps them to hold a raw egg without breaking it.</ul>
 
@@ -100,13 +100,13 @@
 
 
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Pros</classify>
+		<subsubsubclassification>Pros</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Excellent family pets</li>
 
@@ -120,13 +120,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Cons</classify>
+		<subsubsubclassification>Cons</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Needs regular exercise to maintain weight</li>
 
@@ -140,13 +140,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Maintenance and Effort</classify>
+		<subsubsubclassification>Maintenance and Effort</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Visits to Groomer: Once in 3 months</li>
 
@@ -170,13 +170,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Grooming</classify>
+		<subsubsubclassification>Grooming</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			The adult Labrador has a slightly hard coat, whereas a puppy posseses a soft coat, which does not require much brushing. The undercoat should be brushed regularly to prevent shedding. This will also help your Labrador to stay clean as dead fur is removed from the undercoat.
 
@@ -188,14 +188,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Diseases: Hip Dysplasia</classify>
+		<subsubsubclassification>Diseases: Hip Dysplasia</subsubsubclassification>
 		<title>Hip Dysplasia</title>
 
-		<image>hip_dysplasia</image>
+`		<image>hip_dysplasia</image>
 
 		<text>
 
@@ -207,14 +207,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Diseases: Epilepsy</classify>
+		<subsubsubclassification>Diseases: Epilepsy</subsubsubclassification>
 		<title>Epilepsy</title>
 
-		<image>epilepsy</image>
+`		<image>epilepsy</image>
 
 		<text>
 
@@ -226,14 +226,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Diseases: Eye Defect</classify>
+		<subsubsubclassification>Diseases: Eye Defect</subsubsubclassification>
 		<title>Eye Defect</title>
 		<text>
-
+`
 			Labrador Retriever has a high chance of developing an eye defect,called the Retinal Dysplasia which causes blind spots in them.It is a genetic defect and can only be prevented by avoiding breeding dogs that have been diagnosed as carrying its gene.
 
 		</text>
@@ -244,13 +244,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Labrador Retriever</subcategory>
+		<subclassification>Labrador Retriever</subclassification>
 
-		<classify>Behaviour</classify>
+		<subsubsubclassification>Behaviour</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Friendliness:Best Buddy </li>
 
@@ -274,9 +274,9 @@
 
 
 	<card>
-		<classify>Top card</classify>
-		<category>Sporting</category>
-		<subcategory>Irish Setter</subcategory>
+		<subsubsubclassification>Top card</subsubsubclassification>
+		<classification>Sporting</classification>
+		<subclassification>Irish Setter</subclassification>
 		<image>Irish_Setter</image>
 		<text>
 			The perfect companion to the active family
@@ -293,15 +293,15 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Basic Info</classify>
+		<subsubsubclassification>Basic Info</subsubsubclassification>
 
-		<list>
+		<list>`
 
-			<li>Category: Sporting</li>
+			<li>subclassification: Sporting</li>
 
 			<li>Origin: Ireland</li>
 
@@ -317,13 +317,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Introduction</classify>
+		<subsubsubclassification>Introduction</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			This is one of the most boisterous breeds.It loves to run and play. Many proud owners would say that these happy go lucky dogs thrive on physical exercise. The Irish Setter is an easy breed to train.It loves to please its owner, which makes it easy to train them.Its exuberance and abundant energy further helps in the training process.
 
@@ -335,13 +335,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Unique Aspects</classify>
+		<subsubsubclassification>Unique Aspects</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<ul>Zig zag pattern of running which helps them to catch the scent of the bird or the game.</ul>
 
@@ -357,13 +357,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Pros</classify>
+		<subsubsubclassification>Pros</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Affectionate and Loving</li>
 
@@ -377,13 +377,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Cons</classify>
+		<subsubsubclassification>Cons</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Grooming needs attention</li>
 
@@ -399,13 +399,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Maintenance and Effort</classify>
+		<subsubsubclassification>Maintenance and Effort</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Visits to Groomer: Once a month</li>
 			<li>Bath: Once a week</li>
@@ -423,13 +423,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Grooming</classify>
+		<subsubsubclassification>Grooming</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			Grooming your Irish Setter takes a lot of time and effort.The long and silky coat needs every day brushing to ensure that it remains soft and lustrous. You need to follow the regular grooming regime in your pet i.e brushing the teeth and clipping toe nails.Clipping nails is very important as dog nails have veins in them and if they get chipped then it can be very painful for your pet.
 
@@ -441,14 +441,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Diseases: Epilepsy</classify>
+		<subsubsubclassification>Diseases: Epilepsy</subsubsubclassification>
 		<title>Epilepsy</title>
 
-		<image>epilepsy</image>
+`		<image>epilepsy</image>
 
 		<text>
 
@@ -460,14 +460,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Diseases: Bloating</classify>
+		<subsubsubclassification>Diseases: Bloating</subsubsubclassification>
 		<title>Bloating</title>
 
-		<image>bloating</image>
+`		<image>bloating</image>
 
 		<text>
 
@@ -479,14 +479,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Diseases: Progressive Retinal Atrophy</classify>
+		<subsubsubclassification>Diseases: Progressive Retinal Atrophy</subsubsubclassification>
 		<title>Progressive Retinal Atrophy</title>
 		<text>
-
+`
 			PRA is a degenerative disease of the retinal cells that can cause blindness in the dog.
 
 		</text>
@@ -499,13 +499,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Irish Setter</subcategory>
+		<subclassification>Irish Setter</subclassification>
 
-		<classify>Behaviour</classify>
+		<subsubsubclassification>Behaviour</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Friendliness: More friendly</li>
 
@@ -529,11 +529,11 @@
 
 	<card>
 
-		<classify>Top card</classify>
+		<subsubsubclassification>Top card</subsubsubclassification>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>`
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
 		<image>Golden_Retriever</image>
 
@@ -561,15 +561,15 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Basic Info</classify>
+		<subsubsubclassification>Basic Info</subsubsubclassification>
 
-		<list>
+		<list>`
 
-			<li>Category: Sporting</li>
+			<li>subclassification: Sporting</li>
 
 			<li>Origin: Scotland</li>
 
@@ -585,13 +585,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Introduction</classify>
+		<subsubsubclassification>Introduction</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			Fondly called Goldens, these retriever dogs are one of the most popular pets in the world. They are easy to train, and love their families. Their zeal to please their owners makes them one of the most perfect pets to have at home.
 
@@ -603,13 +603,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Unique Aspects</classify>
+		<subsubsubclassification>Unique Aspects</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<ul>Lowest ranking barkers.</ul>
 
@@ -627,13 +627,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Pros</classify>
+		<subsubsubclassification>Pros</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Affectionate pet for the whole family</li>
 
@@ -647,13 +647,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Cons</classify>
+		<subsubsubclassification>Cons</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Do not make good watch or guard dogs</li>
 
@@ -669,13 +669,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Maintenance and Effort</classify>
+		<subsubsubclassification>Maintenance and Effort</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Visits to Groomer: Once in 3 months</li>
 
@@ -699,13 +699,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Grooming</classify>
+		<subsubsubclassification>Grooming</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			Golden Retrievers require regular grooming in order to maintain their beautiful coat.Their hair should be brushed regularly. They generally shed hair in spring and fall. Their ears require special attention at all times.
 
@@ -717,14 +717,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Diseases: Hip Dysplasia</classify>
+		<subsubsubclassification>Diseases: Hip Dysplasia</subsubsubclassification>
 		<title>Hip Dysplasia</title>
 
-		<image>hip_dysplasia</image>
+`		<image>hip_dysplasia</image>
 
 		<text>
 
@@ -736,14 +736,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Diseases: Cataract</classify>
+		<subsubsubclassification>Diseases: Cataract</subsubsubclassification>
 		<title>Cataract</title>
 
-		<image>cataract</image>
+`		<image>cataract</image>
 
 		<text>
 
@@ -759,13 +759,13 @@
 
 
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Golden Retriever</subcategory>
+		<subclassification>Golden Retriever</subclassification>
 
-		<classify>Behaviour</classify>
+		<subsubsubclassification>Behaviour</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Friendliness: Best Buddy</li>
 
@@ -788,11 +788,11 @@
 
 	<card>
 
-		<classify>Top Card</classify>
+		<subsubsubclassification>Top Card</subsubsubclassification>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>`
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
 		<image>American_Cocker_Spaniel</image>
 
@@ -821,15 +821,15 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Basic Info</classify>
+		<subsubsubclassification>Basic Info</subsubsubclassification>
 
-		<list>
+		<list>`
 
-			<li>Category: Sporting</li>
+			<li>subclassification: Sporting</li>
 
 			<li>Origin: USA</li>
 
@@ -845,13 +845,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Introduction</classify>
+		<subsubsubclassification>Introduction</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			A Cocker Spaniel is one of the smallest sporting dog breed.It has an amenable, cheerful and affectionate disposition. A well bred and socialised Cocker Spaniel is gentle, loving, sweet, affectionate and playful and a joyous little bundle.It is one of the most popular breeds in various dog shows where they are used as show dogs and also are a part of agility and obedience activities.
 
@@ -863,13 +863,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Unique Aspects</classify>
+		<subsubsubclassification>Unique Aspects</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<ul>Long, floppy, silky ears that fall gracefully to the side of the face.</ul>
 
@@ -885,13 +885,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Pros</classify>
+		<subsubsubclassification>Pros</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Small size makes them perfect for apartment living.</li>
 
@@ -905,13 +905,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Cons</classify>
+		<subsubsubclassification>Cons</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Grooming is not easy, as it requires a lot of time.</li>
 
@@ -925,13 +925,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Maintenance and Effort</classify>
+		<subsubsubclassification>Maintenance and Effort</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Visits to Groomer: Once a month</li>
 
@@ -955,13 +955,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Grooming</classify>
+		<subsubsubclassification>Grooming</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			Grooming a Cocker Spaniel is one of the most tedious and time consuming tasks. Its long silky fur has to be brushed and groomed regularly else it will get tangled and become extremely painful for the dog. Regular brushing will ensure that there is no tartar or plaque buildup and the mouth remains clean. Nails of the dog should be trimmed regularly.
 
@@ -971,13 +971,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Hip Dysplasia</classify>
+		<subsubsubclassification>Diseases: Hip Dysplasia</subsubsubclassification>
 
-		<image>hip_dysplasia</image>
+		<image>hip_dysplasia</image>`
 		<title>Hip Dysplasia</title>
 		<text>
 
@@ -989,13 +989,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Hypothyroidism</classify>
+		<subsubsubclassification>Diseases: Hypothyroidism</subsubsubclassification>
 
-		<image>hypothyroidism</image>
+		<image>hypothyroidism</image>`
 
 		<title>Hypothyroidism</title>
 		<text>
@@ -1008,13 +1008,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Epilepsy</classify>
+		<subsubsubclassification>Diseases: Epilepsy</subsubsubclassification>
 
-		<image>epilepsy</image>
+		<image>epilepsy</image>`
 		<title>Epilepsy</title>
 		<text>
 
@@ -1026,13 +1026,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Cataract</classify>
+		<subsubsubclassification>Diseases: Cataract</subsubsubclassification>
 
-		<image>cataract</image>
+		<image>cataract</image>`
 		<title>Cataracts and Glaucoma</title>
 		<text>
 
@@ -1044,13 +1044,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Patellar Luxation</classify>
+		<subsubsubclassification>Diseases: Patellar Luxation</subsubsubclassification>
 
-		<image>patellar_luxation</image>
+		<image>patellar_luxation</image>`
 		<title>Patellar Luxation</title>
 		<text>
 
@@ -1062,14 +1062,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Progressive Retinal Atrophy</classify>
+		<subsubsubclassification>Diseases: Progressive Retinal Atrophy</subsubsubclassification>
 		<title>Progressive Retinal Atrophy</title>
 		<text>
-
+`
 			PRA is a degenerative disease of the retinal cells that can cause blindness in the dog.
 
 		</text>
@@ -1078,14 +1078,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Diseases: Autoimmune Anemia</classify>
+		<subsubsubclassification>Diseases: Autoimmune Anemia</subsubsubclassification>
 		<title>Autoimmune Anemia</title>
 		<text>
-
+`
 			It is a serious condition where the dog’s immune system starts to attack its own blood cells. Visible symptoms include pale gums, fatigue and jaundice.
 
 		</text>
@@ -1096,13 +1096,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>American Cocker Spaniel</subcategory>
+		<subclassification>American Cocker Spaniel</subclassification>
 
-		<classify>Behaviour</classify>
+		<subsubsubclassification>Behaviour</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Friendliness: More friendly</li>
 
@@ -1125,11 +1125,11 @@
 
 	<card>
 
-		<classify>Top card</classify>
+		<subsubsubclassification>Top card</subsubsubclassification>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>`
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
 		<image>Weimaraner</image>
 
@@ -1157,15 +1157,15 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Basic Info</classify>
+		<subsubsubclassification>Basic Info</subsubsubclassification>
 
-		<list>
+		<list>`
 
-			<li>Category: Sporting</li>
+			<li>subclassification: Sporting</li>
 
 			<li>Origin: Germany</li>
 
@@ -1181,13 +1181,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Introduction</classify>
+		<subsubsubclassification>Introduction</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			Weimaraners are graceful, athletic dogs, originally bred to be hunting dogs.They are known for their
 
@@ -1203,13 +1203,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Unique Aspects</classify>
+		<subsubsubclassification>Unique Aspects</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<ul>Have a lot of energy, so be prepared to exercise them well.</ul>
 
@@ -1225,13 +1225,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Pros</classify>
+		<subsubsubclassification>Pros</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Grooming is a breeze</li>
 
@@ -1245,13 +1245,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Cons</classify>
+		<subsubsubclassification>Cons</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Not suitable for confined spaces</li>
 
@@ -1267,13 +1267,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Maintenance and Effort</classify>
+		<subsubsubclassification>Maintenance and Effort</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Visits to Groomer: Once in three months </li>
 
@@ -1297,13 +1297,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Grooming</classify>
+		<subsubsubclassification>Grooming</subsubsubclassification>
 
-		<text>
+		<text>`
 
 			The smooth and short hair coat does not need much
 
@@ -1321,13 +1321,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Diseases: Hip Dysplasia</classify>
+		<subsubsubclassification>Diseases: Hip Dysplasia</subsubsubclassification>
 
-		<image>hip_dysplasia</image>
+		<image>hip_dysplasia</image>`
 		<title>Hip Dysplasia</title>
 		<text>
 
@@ -1339,13 +1339,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Diseases: Entropion</classify>
+		<subsubsubclassification>Diseases: Entropion</subsubsubclassification>
 
-		<image>entropion</image>
+		<image>entropion</image>`
 		<title>Entropion</title>
 		<text>
 
@@ -1357,14 +1357,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Diseases: Elbow Dysplasia</classify>
+		<subsubsubclassification>Diseases: Elbow Dysplasia</subsubsubclassification>
 		<title>Elbow Dysplasia</title>
 		<text>
-
+`
 			It is a genetic disorder where the bones that comprise the elbow do not join uniformly in the elbow joint causing painful lameness.
 
 		</text>
@@ -1373,14 +1373,14 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Diseases: Gastric Dilation Volvulus</classify>
+		<subsubsubclassification>Diseases: Gastric Dilation Volvulus</subsubsubclassification>
 		<title>Gastric Dilation Volvulus</title>
 		<text>
-
+`
 			This commonly occurs in breeds where the stomach is not attached to the ribs. This can cut off the blood supply to various other parts of the body, which further shuts down the digestion process. Such a situation leads to bloating. It is advisable to not exercise your dog for at least an hour after they have food.
 
 		</text>
@@ -1391,13 +1391,13 @@
 
 	<card>
 
-		<category>Sporting</category>
+		<classification>Sporting</classification>
 
-		<subcategory>Weimaraner</subcategory>
+		<subclassification>Weimaraner</subclassification>
 
-		<classify>Behaviour</classify>
+		<subsubsubclassification>Behaviour</subsubsubclassification>
 
-		<list>
+		<list>`
 
 			<li>Friendliness: More friendly</li>
 
