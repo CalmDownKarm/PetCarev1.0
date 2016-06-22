@@ -129,7 +129,13 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                     disease_text.setTypeface(font);
                 }
 
-                disease_img.setImageResource(R.drawable.foo);
+                if(getItem(position).getImage() !=null){
+
+                    Resources res = context.getResources();
+                    String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
+                    int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
+                    disease_img.setImageResource(resID);
+                }
 
                 break;
             }

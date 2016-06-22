@@ -21,6 +21,7 @@
             android:layout_gravity="center_horizontal"
             android:text="NAME"
             android:padding="15dp"
+            android:paddingBottom="7dp"
             android:textAlignment="center"
             android:textSize="30dp"
             android:textColor="@color/panel_color"
@@ -29,9 +30,8 @@
 
         <!--disease image-->
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:src="@drawable/foo"
             android:id="@+id/disease_image"
             android:layout_below="@+id/card_title"
@@ -44,7 +44,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="15dp"
-            android:layout_marginTop="10dp"
             android:paddingRight="10dp"
             android:textSize="20dp"
             android:layout_gravity="center_horizontal"
