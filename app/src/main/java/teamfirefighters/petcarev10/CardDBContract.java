@@ -19,6 +19,7 @@ public class CardDBContract {
         public static final String COLUMN_NAME_SUBSUBCLASSIFICATION="subsubclassification";
         public static final String COLUMN_NAME_CARD_TEXT="cardtext";
         public static final String COLUMN_NAME_CARD_LIST="cardlist";
+        public static final String COLUMN_NAME_CARD_POSITION="pos";
     }/*
     public static abstract class Classifications implements BaseColumns{
         public static final String TABLE_NAME="classifications";

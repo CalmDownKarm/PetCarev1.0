@@ -10,6 +10,7 @@ import java.util.List;
  * Created by karm on 17/6/16.
  */
 public class Card {
+    private int CardPosition;
     private int CardLayoutType; //Card Layout Type should be 1,2,3,4 Too sleepy to write enum
     private String text;
     private String title;
@@ -144,5 +145,13 @@ public class Card {
         if(subsubclassification!=null)
             temp+=("SUBSUBCLASS: "+subsubclassification);
         return temp;
+    }
+
+    public int getCardPosition() {
+        return CardPosition;
+    }
+
+    public void setCardPosition(int cardPosition) {
+        CardPosition = cardPosition;
     }
 }

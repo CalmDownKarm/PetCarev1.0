@@ -13,6 +13,7 @@ public class CardDBHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_CARDS =
             "CREATE TABLE " + CardDBContract.CardTable.TABLE_NAME + " (" +
                     CardDBContract.CardTable.COLUMN_NAME_CARD_ID + " INTEGER PRIMARY KEY," +
+                    CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION+ " INTEGER,"+
                     CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE + TEXT_TYPE + COMMA_SEP +
                     CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE + TEXT_TYPE + COMMA_SEP +
                     CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT  + TEXT_TYPE + COMMA_SEP +

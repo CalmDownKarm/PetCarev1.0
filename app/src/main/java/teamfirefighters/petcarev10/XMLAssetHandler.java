@@ -85,6 +85,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
                 values.put(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION, temp.getSubclassification());
             if (temp.getSubsubclassification()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION, temp.getSubsubclassification());
+                values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION,temp.getCardPosition());
             long newRowId = db.insert(CardDBContract.CardTable.TABLE_NAME,
                     CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT,
                     values);

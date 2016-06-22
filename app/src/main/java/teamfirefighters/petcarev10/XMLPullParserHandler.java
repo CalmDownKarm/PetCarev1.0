@@ -80,6 +80,8 @@ public class XMLPullParserHandler {
                                     foo.add(text.trim());
                                 } else if(tagname.equalsIgnoreCase("ul")){
                                     foo.add("\u2022"+text.trim());
+                                } else if(tagname.equalsIgnoreCase("position")){
+                                    card.setCardPosition(Integer.parseInt(text));
                                 }
 
                             }
