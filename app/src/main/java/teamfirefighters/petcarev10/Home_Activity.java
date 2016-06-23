@@ -219,7 +219,6 @@ public class Home_Activity extends AppCompatActivity {
         } else {
             finish();
         }
-        super.onBackPressed();
     }
 
 

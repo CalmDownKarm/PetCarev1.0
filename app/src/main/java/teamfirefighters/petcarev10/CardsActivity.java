@@ -3,9 +3,14 @@ package teamfirefighters.petcarev10;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.wenchao.cardstack.CardStack;
 
@@ -55,10 +60,15 @@ public class CardsActivity extends AppCompatActivity {
     private CardDataAdapter mCardAdapter;
     public List<Card> cards = null;
     public int last_card_swiped = 0;
+    public TextView cardCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_cards);
         Intent foo = getIntent();
         Category_name = foo.getStringExtra("Category");
@@ -79,6 +89,35 @@ public class CardsActivity extends AppCompatActivity {
 
         mCardStack.setAdapter(mCardAdapter);
 
+
+        ImageButton backButton = (ImageButton) findViewById(R.id.backButton);
+        ImageButton homeButton = (ImageButton) findViewById(R.id.homeButton);
+        TextView breedName =(TextView) findViewById(R.id.breedName);
+        cardCount =(TextView) findViewById(R.id.cardCount);
+        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
+        breedName.setText(Breed_name);
+        breedName.setTypeface(font);
+        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+        cardCount.setTypeface(font);
+
+
+
+        assert  backButton !=null;
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        assert homeButton != null;
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CardsActivity.this ,Home_Activity.class);
+                startActivity(i);
+            }
+        });
 
 
 
@@ -112,6 +151,7 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
+                cardCount.setText(last_card_swiped+1 +"/"+cards.size());
 
 
             }
@@ -127,7 +167,7 @@ public class CardsActivity extends AppCompatActivity {
 
                     mCardStack.setAdapter(mCardAdapter);
                     last_card_swiped--;
-
+                    cardCount.setText(last_card_swiped+1 +"/"+cards.size());
                 }
 
             }

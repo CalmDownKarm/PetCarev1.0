@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             //Log.d("DB READY", "True");
             Intent foo = new Intent(getApplicationContext(),Home_Activity.class);
             startActivity(foo);
+            finish();
 
         }else {
             XMLAssetHandler abc = new XMLAssetHandler(getApplicationContext(),MainActivity.this);

@@ -17,6 +17,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mikhaellopez.circularimageview.CircularImageView;
+
 import java.util.List;
 
 public class breed_list_view_adapter extends ArrayAdapter<String> {
@@ -36,7 +38,6 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-
 
         View rowView = view;
         CompleteListViewHolder viewHolder;
@@ -61,7 +62,6 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
         int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
         viewHolder.mIMGItem.setImageResource(resID);
 
-
         return rowView;
     }
 
@@ -69,9 +69,9 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
 
 class CompleteListViewHolder {
     public TextView mTVItem;
-    public ImageView mIMGItem;
+    public CircularImageView mIMGItem;
     public CompleteListViewHolder(View base) {
         mTVItem = (TextView) base.findViewById(R.id.txt);
-        mIMGItem = (ImageView) base.findViewById(R.id.img);
+        mIMGItem = (CircularImageView)base.findViewById(R.id.img);
     }
 }

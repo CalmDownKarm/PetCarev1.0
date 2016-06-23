@@ -79,7 +79,7 @@ public class XMLPullParserHandler {
                                 } else if(tagname.equalsIgnoreCase("li")){
                                     tempList+=(text.trim()+"#");
                                 } else if(tagname.equalsIgnoreCase("ul")){
-                                    tempList+=("\u2022"+text.trim());
+                                    tempList+=("\u2022"+text.trim()+"#");
                                 } else if(tagname.equalsIgnoreCase("position")){
                                     card.setCardPosition(Integer.parseInt(text));
                                 }

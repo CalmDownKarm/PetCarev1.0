@@ -63,14 +63,12 @@ public class Breeds_list extends AppCompatActivity {
         toolbarPanelLayout = (ToolbarPanelLayout) findViewById(R.id.sliding_down_toolbar_layout);
 
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
+        final ImageButton home_button = (ImageButton) findViewById(R.id.homeButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
 
-        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
-        cat_tag = (TextView) findViewById(R.id.cat_tag);
-        cat_tag.setText("Breeds");
-        cat_tag.setTypeface(font);
+
 
 
 
@@ -80,7 +78,10 @@ public class Breeds_list extends AppCompatActivity {
 
         set_category_list(categories, Cat_list);
 
-
+        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
+        cat_tag = (TextView) findViewById(R.id.cat_tag);
+        cat_tag.setText(Category_name);
+        cat_tag.setTypeface(font);
 
 
         breeds_list = (ParallaxListView) findViewById(R.id.breed_list);
@@ -117,6 +118,16 @@ public class Breeds_list extends AppCompatActivity {
             }
         });
 
+
+        assert home_button != null;
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Breeds_list.this ,Home_Activity.class);
+                startActivity(i);
+            }
+        });
+
         assert Cat_list != null;
         Cat_list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -128,8 +139,6 @@ public class Breeds_list extends AppCompatActivity {
                     breeds = getBreedsFromDb(cat_adapter.getItem(position));
                     breeds_adapter.addAll(breeds);
 
-                Log.d("sheep", "breeds is @@$$==> " + breeds);
-                Log.d("sheep", "adapter is @@$$==> " + breeds_adapter.getItem(0));
                 Category_name = cat_adapter.getItem(position);
                 breeds_list.setAdapter(breeds_adapter);
 
@@ -186,8 +195,9 @@ public class Breeds_list extends AppCompatActivity {
 
                 findViewById(R.id.cat_list).setAlpha(slideOffset);
 
+
                 if(slideOffset<0.5){
-                    cat_tag.setText("Breeds");
+                    cat_tag.setText(Category_name);
                     cat_tag.setAlpha(1-slideOffset);}
 
 
@@ -229,7 +239,7 @@ public class Breeds_list extends AppCompatActivity {
                 }
 
                 panelView.setY((float) -(panelView.getHeight()-toolbarView.getHeight()));
-                cat_tag.setText("Breeds");
+                cat_tag.setText(Category_name);
                 cat_tag.setAlpha((float) 1.0);
                 isPanelOpen = false;
 

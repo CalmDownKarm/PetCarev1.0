@@ -98,6 +98,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         Intent foo = new Intent(context,Home_Activity.class);
         foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(foo);
+        activity.finish();
     }
 
 }
