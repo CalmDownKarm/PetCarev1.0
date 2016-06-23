@@ -3,7 +3,6 @@ package teamfirefighters.petcarev10;
 import android.database.Cursor;
 import android.util.Log;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,25 +11,26 @@ import java.util.List;
 public class Card {
     private int CardPosition;
     private int CardLayoutType; //Card Layout Type should be 1,2,3,4 Too sleepy to write enum
+    //Data Members
     private String text;
     private String title;
     private String image;
-    List<String> list;
+    private String List_string;
+    //MetaData Members
     private String classification;
     private String subclassification;
     private String subsubclassification;
-    private String string;
+
 
     public Card(){
         //DEFAULT CONSTRUCTOR SET EVERYTHING TO NULL
         text = null;
         title = null;
         image = null;
-        list = null;
+        List_string = null;
         classification = null;
         subclassification = null;
         subsubclassification = null;
-        string = null;
 
     }
 
@@ -39,13 +39,9 @@ public class Card {
         title = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE));
         image = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE));
         String tempStr = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST));
-        //TODO delete list of strings object
         if(tempStr!=null) {
-            Log.d("PrintList",tempStr);
-            string = tempStr.replaceAll("#","\n\n");
-           // list = Arrays.asList(tempStr.split("\\s*#\\s*"));
-        }else
-            list = null;
+            List_string = tempStr.replaceAll("#","\n\n");
+        }
         classification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
         subclassification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
         subsubclassification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION));
@@ -59,21 +55,18 @@ public class Card {
         if(     text!=null   &&
                 title!=null  &&
                 image!=null  &&
-                string!=null)
+                List_string !=null)
             CardLayoutType=1;//Card Layout Type 1 has everything.
         else if(text==null&&image==null)
             CardLayoutType=2;//Card Layout Type 2 should have only Title and List
-        else if(image==null&&string==null)
+        else if(image==null&& List_string ==null)
             CardLayoutType=3;//Card Layout Type 3 should have only Title and Text
-        else if(string==null)
+        else if(List_string ==null)
             CardLayoutType=4;//Card Layout Type 4 has image, title and text
     }
 
     public int getCardLayoutType(){return CardLayoutType;}
 
-    public void setList(List<String>foo){
-        this.list=foo;
-    }
     public String getText() {
         return text;
     }
@@ -121,17 +114,6 @@ public class Card {
     public void setSubsubclassification(String subsubclassification) {
         this.subsubclassification = subsubclassification;
     }
-    public String getListAsString(){
-        String strtemp = "";
-        for(int i=0;i<list.size();i++){
-            strtemp+=(list.get(i)+"#");
-        }
-        Log.d("OnStorage",strtemp);
-        return strtemp;
-    }
-    public List<String> getList() {
-        return list;
-    }
     @Override
     public String toString(){
         String temp="";
@@ -158,11 +140,11 @@ public class Card {
         CardPosition = cardPosition;
     }
 
-    public String getString() {
-        return string;
+    public String getList_string() {
+        return List_string;
     }
 
-    public void setString(String string) {
-        this.string = string;
+    public void setList_string(String list_string) {
+        this.List_string = list_string;
     }
 }

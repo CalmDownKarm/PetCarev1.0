@@ -22,13 +22,6 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     Context context;
     MainActivity activity;
     CardDBHelper cardbhelper;
-    //HashSet<String> classifications;
-    //HashSet<String> subclassifications;
-    //HashSet<String> subsubclassifications;
-    //HashSet<String> images;
-    /*This is probably a stupid way to implement this, since it means that Image Names need to be Identical to SubClassificationNames
-     * But it's computationally better than running through my list of cards to find the associated image
-     * and easier than changing my parser to pick up the image or to use a String Array HashSet */
     ProgressDialog pd;
     public static final String SHARED_PREFERENCES_KEY = "petcareflags";
 
@@ -39,7 +32,6 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     protected Void doInBackground(Void... params) {
-        //this.context = params[0];
 
         this.cardbhelper= new CardDBHelper(context);
         List<Card> Cards = null;
@@ -47,7 +39,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
             XMLPullParserHandler parser = new XMLPullParserHandler();
             //Populate Cards and call XML Handler
             Cards = parser.parse(context.getAssets().open("try1.xml"));
-            writetodb(parser,Cards);
+            writeCardstodb(Cards);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -55,16 +47,10 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         return null;//why does this function need a return?
     }
 
-    private void writetodb(XMLPullParserHandler parser, List<Card> Cards) {
-        //TODO Take a Parser Handler and Write Cards, Images, Classifications, SubClassifications and SubSubClassifications to db
+    private void writeCardstodb(List<Card> Cards) {
         for(int i=0;i<Cards.size();i++){
-            Card newb = Cards.get(i);
-            Log.i("BOOBS CARDS",newb.toString());
-            writetodb(newb);
-
+            writetodb(Cards.get(i));
         }
-            //writetodb(card_iterator.next());
-
     }
 
     private void writetodb(Card temp) {
@@ -77,8 +63,8 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
                 values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT, temp.getText());
             if (temp.getImage()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE, temp.getImage());
-            if (temp.getList()!=null)
-                values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST, temp.getListAsString());
+            if (temp.getList_string()!=null)
+                values.put(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST, temp.getList_string());
             if (temp.getClassification()!=null)
                 values.put(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION, temp.getClassification());
             if (temp.getSubclassification()!=null)
@@ -90,15 +76,13 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
                     CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT,
                     values);
         }
-        else{
-            Log.d("CARD","CARD IS NULL");
-        }
     }
     @Override
     protected void onPreExecute(){
         pd.setMessage("Letting the Dogs out...");
         pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         pd.setIndeterminate(true);
+        pd.setCancelable(false);
         pd.show();
 
     }

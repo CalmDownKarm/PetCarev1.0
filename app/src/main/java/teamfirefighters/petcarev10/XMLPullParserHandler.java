@@ -19,7 +19,7 @@ public class XMLPullParserHandler {
     List<Card> Cards;
     private Card card;
     private String text;
-    List<String> foo;
+    private String tempList;
         public XMLPullParserHandler(){
         Cards = new ArrayList<Card>();
     }
@@ -47,7 +47,7 @@ public class XMLPullParserHandler {
                             // create a new instance of employee
                             card = new Card();
                         }else if(tagname.equalsIgnoreCase("list")){
-                            foo=new ArrayList<String>();
+                            tempList="";
                         }
                         break;
 
@@ -75,15 +75,14 @@ public class XMLPullParserHandler {
                                 } else if (tagname.equalsIgnoreCase("subsubclassification")) {
                                     card.setSubsubclassification(text.trim());
                                 } else if (tagname.equalsIgnoreCase("list")) {
-                                    card.setList(foo);
+                                    card.setList_string(tempList);
                                 } else if(tagname.equalsIgnoreCase("li")){
-                                    foo.add(text.trim());
+                                    tempList+=(text.trim()+"#");
                                 } else if(tagname.equalsIgnoreCase("ul")){
-                                    foo.add("\u2022"+text.trim());
+                                    tempList+=("\u2022"+text.trim());
                                 } else if(tagname.equalsIgnoreCase("position")){
                                     card.setCardPosition(Integer.parseInt(text));
                                 }
-
                             }
                         }
                         break;

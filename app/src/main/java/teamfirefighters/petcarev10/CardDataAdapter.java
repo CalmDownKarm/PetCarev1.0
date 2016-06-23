@@ -9,13 +9,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class CardDataAdapter extends ArrayAdapter<Card> {
@@ -54,8 +52,8 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
 
 
 
-                if(getItem(position).getString() != null) {
-                     card_list.setText(getItem(position).getString());
+                if(getItem(position).getList_string() != null) {
+                     card_list.setText(getItem(position).getList_string());
                     card_list.setTypeface(font);
 
                 }
@@ -85,9 +83,9 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                     card_title.setTypeface(font);
                }
 
-                if(getItem(position).getString() != null) {
+                if(getItem(position).getList_string() != null) {
 
-                    card_list.setText(getItem(position).getString());
+                    card_list.setText(getItem(position).getList_string());
                     card_list.setTypeface(font);
 
 
