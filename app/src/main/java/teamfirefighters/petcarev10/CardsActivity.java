@@ -45,8 +45,8 @@ public class CardsActivity extends AppCompatActivity {
                 Log.d("RETREIVE CARD FROM DB",Temp.toString());
                 Log.d("CARD TYPE", String.valueOf(Temp.getCardLayoutType()));
             }
-        }else
-            Log.d("ALL THIS SHIT","CURSOR IS NULL");
+        }
+        db.close();
         return Cards;
     }
 

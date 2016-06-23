@@ -195,10 +195,11 @@ public class Home_Activity extends AppCompatActivity {
                     String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
                     Categories.add(temp);
                 }
-            }else
-                Log.d("ALL THIS SHIT","CURSOR IS NULL");
+            }
+            db.close();
         }
         Log.d("TITS",Categories.toString());
+
         return Categories;
     }
     public boolean checkDBFLAG(){

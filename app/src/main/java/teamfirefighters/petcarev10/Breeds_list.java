@@ -262,6 +262,7 @@ public class Breeds_list extends AppCompatActivity {
                     String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
                     Breeds.add(temp);
                 }
+            db.close();
         }
         Log.d("ALL BREEDS",Breeds.toString());
         return Breeds;
@@ -280,7 +281,7 @@ public class Breeds_list extends AppCompatActivity {
     }
 
 
-    @Override
+    @   Override
     public void onBackPressed(){
         if (isPanelOpen) {
 
