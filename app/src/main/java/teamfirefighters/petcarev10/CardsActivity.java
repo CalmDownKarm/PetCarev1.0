@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.wenchao.cardstack.CardStack;
 
@@ -70,7 +71,6 @@ public class CardsActivity extends AppCompatActivity {
         Intent foo = getIntent();
         Category_name = foo.getStringExtra("Category");
         Breed_name = foo.getStringExtra("Breed");
-
 
         cards = getCardsFromDB();
 
@@ -143,6 +143,10 @@ public class CardsActivity extends AppCompatActivity {
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
                 cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+                //TODO ADD SHARED FLAG For first time app use
+                if(last_card_swiped == 1)
+                    Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
+
             }
 
             @Override

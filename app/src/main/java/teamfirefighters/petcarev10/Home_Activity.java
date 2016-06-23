@@ -74,10 +74,17 @@ public class Home_Activity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(Home_Activity.this, Breeds_list.class);
-                i.putExtra("Category", adapter.getItem(position));
-                i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
-                startActivity(i);
+                if(adapter.getItem(position).equals("Diet")){
+                    Intent i = new Intent(Home_Activity.this, CardsActivity.class);
+                    i.putExtra("Category", adapter.getItem(position));
+                    startActivity(i);
+                }else{
+                    Intent i = new Intent(Home_Activity.this, Breeds_list.class);
+                    i.putExtra("Category", adapter.getItem(position));
+                    i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
+                    startActivity(i);
+                }
+
             }
         });
 
