@@ -59,7 +59,7 @@ public class XMLPullParserHandler {
                         if (tagname.equalsIgnoreCase("card")) {
                             // add employee object to list
                             Cards.add(card);
-                            //Log.d("Card: ",card.toString());
+
                         } else{
                             if(text!=null){
                                 if (tagname.equalsIgnoreCase("title")) {

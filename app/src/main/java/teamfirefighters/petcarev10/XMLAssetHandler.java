@@ -90,7 +90,6 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     protected void  onPostExecute(Void res){
         if(pd.isShowing())
             pd.dismiss();
-        Log.d("TAG","DB PARSING DONE");
         SharedPreferences Flag = context.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = Flag.edit();
         editor.putBoolean("DB_READY",true); //set flag to true in shared preferences so I don't reparse everytime

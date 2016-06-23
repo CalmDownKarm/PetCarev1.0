@@ -255,7 +255,6 @@ public class Breeds_list extends AppCompatActivity {
     private List<String> getBreedsFromDb(String foo){
         List<String> Breeds = new ArrayList<String>();
         //Check Flag Again to ensure that the database is ready
-            Log.d("HELLO WORLD","IN GET BREEDS");
             CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
             SQLiteDatabase db = cdbhelper.getReadableDatabase();
             String[] projection={
@@ -265,16 +264,15 @@ public class Breeds_list extends AppCompatActivity {
             String[] selectionArgs = {foo};
             String sortOrder = CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION + " DESC";
             Cursor c = db.query(true, CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionArgs,null,null,sortOrder,null);
-            Log.d("TITS Cursor","SHIT IN BREEDS");
+
             if(c!=null){
-                Log.d("TITS Cursor BREEDS",c.toString());
+
                 for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
                     String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
                     Breeds.add(temp);
                 }
             db.close();
         }
-        Log.d("ALL BREEDS",Breeds.toString());
         return Breeds;
     }
 

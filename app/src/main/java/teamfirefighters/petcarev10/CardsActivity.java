@@ -22,7 +22,6 @@ public class CardsActivity extends AppCompatActivity {
     private  String Breed_name;
     private List<Card> getCardsFromDB(){
         List<Card> Cards = new ArrayList<Card>();
-        Log.d("HELLO WORLD","IN GET CATEGORIES");
         CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
         SQLiteDatabase db = cdbhelper.getReadableDatabase();
         String[] projection={
@@ -43,12 +42,10 @@ public class CardsActivity extends AppCompatActivity {
         String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION + " ASC";
         Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionargs,null,null,sortOrder);
         if(c!=null){
-            Log.d("CARDACTIVITYCURSOR",c.toString());
             for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
                 Card Temp = new Card(c);
                 Cards.add(Temp);
-                Log.d("RETREIVE CARD FROM DB",Temp.toString());
-                Log.d("CARD TYPE", String.valueOf(Temp.getCardLayoutType()));
+
             }
         }
         db.close();
@@ -73,9 +70,7 @@ public class CardsActivity extends AppCompatActivity {
         Intent foo = getIntent();
         Category_name = foo.getStringExtra("Category");
         Breed_name = foo.getStringExtra("Breed");
-        Log.d("IN CARDS",Category_name);
-        Log.d("IN CARDS",Breed_name);
-        Log.d("LIST OF CARDS BABE",getCardsFromDB().toString());
+
 
         cards = getCardsFromDB();
 
@@ -128,23 +123,19 @@ public class CardsActivity extends AppCompatActivity {
                 if(last_card_swiped+1 == cards.size() )
                     return false;
 
-
                 if(distance>100.0)
                     return true;
-
 
                 return false;
             }
 
             @Override
             public boolean swipeStart(int section, float distance) {
-
                 return false;
             }
 
             @Override
             public boolean swipeContinue(int section, float distanceX, float distanceY) {
-
                 return true;
             }
 
@@ -152,8 +143,6 @@ public class CardsActivity extends AppCompatActivity {
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
                 cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-
-
             }
 
             @Override
@@ -162,9 +151,6 @@ public class CardsActivity extends AppCompatActivity {
                 if(last_card_swiped>0){
 
                     mCardAdapter.insert(cards.get(last_card_swiped-1),0);
-
-
-
                     mCardStack.setAdapter(mCardAdapter);
                     last_card_swiped--;
                     cardCount.setText(last_card_swiped+1 +"/"+cards.size());
