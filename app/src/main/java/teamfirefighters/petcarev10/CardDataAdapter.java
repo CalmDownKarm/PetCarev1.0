@@ -7,6 +7,8 @@ package teamfirefighters.petcarev10;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +22,7 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
 
 
     Activity context;
+
     public CardDataAdapter(Context context) {
 
             super(context, R.layout.card_layout_1);
@@ -30,26 +33,44 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
     public View getView(int position, View contentView, ViewGroup parent){
 
         LayoutInflater inflater = context.getLayoutInflater();
-        Log.d("sheep","####"+getItem(position).getCardLayoutType()+"    "+getItem(position).getSubsubclassification());
+        Typeface font = Typeface.createFromAsset(context.getAssets(), "raleway.ttf");
+    //TODO Delete list adapter
         switch (getItem(position).getCardLayoutType()){
             case 1:{
                 contentView = inflater.inflate(R.layout.card_layout, null, true);
                 ImageView dog_img = (ImageView) contentView.findViewById(R.id.dog_image);
                 TextView dog_name = (TextView) contentView.findViewById(R.id.card_title);
                 TextView dog_text = (TextView) contentView.findViewById(R.id.card_text);
-                ListView card_list = (ListView) contentView.findViewById(R.id.card_list);
+                TextView card_list = (TextView) contentView.findViewById(R.id.card_list);
 
-                if(getItem(position).getSubclassification() != null)
+                if(getItem(position).getSubclassification() != null){
                 dog_name.setText(getItem(position).getSubclassification());
-                if(getItem(position).getText() != null)
+                dog_name.setTypeface(font);
+                }
+                if(getItem(position).getText() != null){
                 dog_text.setText(getItem(position).getText());
-
-                if(getItem(position).getList() != null) {
-                    ArrayAdapter adapter = new ArrayAdapter<String>(context, R.layout.card_list_item_layout, getItem(position).getList());
-                    card_list.setAdapter(adapter);
+                dog_text.setTypeface(font);
                 }
 
-                dog_img.setImageResource(R.drawable.foo);
+
+
+                if(getItem(position).getString() != null) {
+                     card_list.setText(getItem(position).getString());
+                    card_list.setTypeface(font);
+
+                }
+
+                if(getItem(position).getImage() !=null){
+
+                    Resources res = context.getResources();
+                    String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
+                    int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
+                    dog_img.setImageResource(resID);
+                }
+
+
+
+
 
                 break;
 
@@ -57,15 +78,19 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
             case 2:{
                 contentView = inflater.inflate(R.layout.card_layout_1, null, true);
                 TextView card_title = (TextView) contentView.findViewById(R.id.card_title);
-                ListView card_list = (ListView) contentView.findViewById(R.id.card_list);
+                TextView card_list = (TextView) contentView.findViewById(R.id.card_list);
 
-               if(getItem(position).getSubsubclassification()!= null)
-                   card_title.setText(getItem(position).getSubsubclassification());
+               if(getItem(position).getTitle()!= null) {
+                   card_title.setText(getItem(position).getTitle());
+                    card_title.setTypeface(font);
+               }
+
+                if(getItem(position).getString() != null) {
+
+                    card_list.setText(getItem(position).getString());
+                    card_list.setTypeface(font);
 
 
-                if(getItem(position).getList() != null) {
-                    ArrayAdapter adapter = new ArrayAdapter<String>(context, R.layout.card_list_item_layout, getItem(position).getList());
-                    card_list.setAdapter(adapter);
                 }
 
                 break;
@@ -76,10 +101,14 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                 TextView dog_name = (TextView) contentView.findViewById(R.id.card_title);
                 TextView dog_text = (TextView) contentView.findViewById(R.id.card_text);
 
-                if(getItem(position).getSubsubclassification() != null)
-                    dog_name.setText(getItem(position).getSubsubclassification());
-                if(getItem(position).getText() != null)
+                if(getItem(position).getTitle() != null){
+                    dog_name.setText(getItem(position).getTitle());
+                    dog_name.setTypeface(font);
+                }
+                if(getItem(position).getText() != null){
                     dog_text.setText(getItem(position).getText());
+                    dog_text.setTypeface(font);
+                }
 
                 break;
             }
@@ -90,13 +119,23 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                 TextView disease_name = (TextView) contentView.findViewById(R.id.card_title);
                 TextView disease_text = (TextView) contentView.findViewById(R.id.card_text);
 
-                if(getItem(position).getSubsubclassification() != null)
-                    disease_name.setText(getItem(position).getSubsubclassification());
+                if(getItem(position).getTitle() != null){
+                    disease_name.setText(getItem(position).getTitle());
+                    disease_name.setTypeface(font);
+                }
 
-                if(getItem(position).getText() != null)
+                if(getItem(position).getText() != null){
                     disease_text.setText(getItem(position).getText());
+                    disease_text.setTypeface(font);
+                }
 
-                disease_img.setImageResource(R.drawable.foo);
+                if(getItem(position).getImage() !=null){
+
+                    Resources res = context.getResources();
+                    String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
+                    int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
+                    disease_img.setImageResource(resID);
+                }
 
                 break;
             }

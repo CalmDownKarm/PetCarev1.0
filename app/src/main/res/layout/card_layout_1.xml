@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="400dp"
-    card_view:cardCornerRadius="2dp"
+    card_view:cardCornerRadius="3dp"
     card_view:cardElevation="2dp">
 
     <RelativeLayout
@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:minHeight="50dp"
         android:background="#ffffff"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:contextClickable="false">
 
 
         <!--card title-->
@@ -21,21 +22,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="10dp"
+            android:padding="15dp"
             android:text="NAME"
-            android:textSize="20dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
             android:textColor="@color/panel_color"
             android:layout_centerHorizontal="true" />
 
         <!--card list-->
-        <ListView
+        <TextView
             android:id="@+id/card_list"
-            android:paddingLeft="30dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_below="@+id/card_title">
-        </ListView>
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:textSize="20dp"
+            android:text="Random text"
+            android:textColor="@color/panel_color"
+            android:layout_below="@+id/card_title"
+            >
+        </TextView>
 
 
     </RelativeLayout>

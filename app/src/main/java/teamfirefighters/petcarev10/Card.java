@@ -19,6 +19,7 @@ public class Card {
     private String classification;
     private String subclassification;
     private String subsubclassification;
+    private String string;
 
     public Card(){
         //DEFAULT CONSTRUCTOR SET EVERYTHING TO NULL
@@ -29,6 +30,7 @@ public class Card {
         classification = null;
         subclassification = null;
         subsubclassification = null;
+        string = null;
 
     }
 
@@ -37,10 +39,11 @@ public class Card {
         title = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE));
         image = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE));
         String tempStr = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CARD_LIST));
-
+        //TODO delete list of strings object
         if(tempStr!=null) {
             Log.d("PrintList",tempStr);
-            list = Arrays.asList(tempStr.split("\\s*#\\s*"));
+            string = tempStr.replaceAll("#","\n\n");
+           // list = Arrays.asList(tempStr.split("\\s*#\\s*"));
         }else
             list = null;
         classification = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
@@ -56,13 +59,13 @@ public class Card {
         if(     text!=null   &&
                 title!=null  &&
                 image!=null  &&
-                list!=null)
+                string!=null)
             CardLayoutType=1;//Card Layout Type 1 has everything.
         else if(text==null&&image==null)
             CardLayoutType=2;//Card Layout Type 2 should have only Title and List
-        else if(image==null&&list==null)
+        else if(image==null&&string==null)
             CardLayoutType=3;//Card Layout Type 3 should have only Title and Text
-        else if(list==null)
+        else if(string==null)
             CardLayoutType=4;//Card Layout Type 4 has image, title and text
     }
 
@@ -153,5 +156,13 @@ public class Card {
 
     public void setCardPosition(int cardPosition) {
         CardPosition = cardPosition;
+    }
+
+    public String getString() {
+        return string;
+    }
+
+    public void setString(String string) {
+        this.string = string;
     }
 }

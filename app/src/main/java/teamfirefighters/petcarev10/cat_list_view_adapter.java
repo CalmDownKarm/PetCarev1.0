@@ -1,6 +1,7 @@
 package teamfirefighters.petcarev10;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,9 @@ public class cat_list_view_adapter extends ArrayAdapter<String>{
         rowview= inflater.inflate(R.layout.cat_list_item_layout, null, true);
 
         TextView list_item = (TextView) rowview.findViewById(R.id.cat_list_item);
+        Typeface font = Typeface.createFromAsset(context.getAssets(), "raleway.ttf");
         list_item.setText(getItem(position));
+        list_item.setTypeface(font);
 
         return rowview;
     }

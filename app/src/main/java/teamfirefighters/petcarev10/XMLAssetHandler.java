@@ -96,7 +96,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     protected void onPreExecute(){
-        pd.setMessage("Parsing");
+        pd.setMessage("Letting the Dogs out...");
         pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         pd.setIndeterminate(true);
         pd.show();
