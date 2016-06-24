@@ -46,6 +46,8 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                 if(getItem(position).getSubclassification() != null){
                 dog_name.setText(getItem(position).getSubclassification());
                 dog_name.setTypeface(font);
+                    if(getItem(position).getSubclassification().equals("American Cocker Spaniel"))
+                        dog_name.setTextSize((float) 27.0);
                 }
                 if(getItem(position).getText() != null){
                 dog_text.setText(getItem(position).getText());
