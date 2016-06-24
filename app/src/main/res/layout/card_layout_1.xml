@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="15dp"
-            android:text="NAME"
             android:textSize="30dp"
             android:textAlignment="center"
             android:textColor="@color/panel_color"

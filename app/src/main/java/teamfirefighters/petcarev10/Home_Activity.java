@@ -77,6 +77,7 @@ public class Home_Activity extends AppCompatActivity {
                 if(adapter.getItem(position).equals("Diet")){
                     Intent i = new Intent(Home_Activity.this, CardsActivity.class);
                     i.putExtra("Category", adapter.getItem(position));
+                    i.putExtra("Breed", adapter.getItem(position));
                     startActivity(i);
                 }else{
                     Intent i = new Intent(Home_Activity.this, Breeds_list.class);

@@ -9072,7 +9072,7 @@
 
 		<list>
 
-			<li>Classification: Smart</li>
+			<li>Classification: Toy Dog</li>
 
 			<li>Origin: Germany</li>
 
@@ -16558,7 +16558,9 @@
 	<card>
 		<position>1</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 
+		<title>What should I feed my Dog?</title>
 		<text>
 
 			The most important thing you need to know is that the diet for dogs doesn’t change much according to the breed type. All the dogs share almost a common diet plan. The only thing that varies is the quantity of food they should have depending on their age or their health conditions.
@@ -16574,6 +16576,7 @@
 	<card>
 		<position>2</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>A puppy's diet</title>
 		<text>
 
@@ -16588,6 +16591,7 @@
 	<card>
 		<position>3</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>Transistion from a puppy to dog</title>
 		<text>
 
@@ -16602,6 +16606,7 @@
 	<card>
 		<position>4</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>Diet changes during a transistion</title>
 		<text>
 
@@ -16616,6 +16621,7 @@
 	<card>
 		<position>5</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>How can I tell if a food is right for my pet?</title>
 		<text>
 
@@ -16630,6 +16636,7 @@
 	<card>
 		<position>6</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>How much food should my adult dog eat each day?</title>
 		<text>
 
@@ -16644,6 +16651,7 @@
 	<card>
 		<position>7</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>What should I do if my dog is overweight?</title>
 		<text>
 
@@ -16660,6 +16668,7 @@
 	<card>
 		<position>8</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>How often should my adult dog eat?</title>
 		<text>
 
@@ -16676,6 +16685,7 @@
 	<card>
 		<position>9</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>How much protein and fat does my dog need?</title>
 		<text>
 
@@ -16692,6 +16702,7 @@
 	<card>
 		<position>10</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>Don’t dogs choke on bones?</title>
 		<text>
 
@@ -16706,6 +16717,7 @@
 	<card>
 		<position>11</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>What about food-borne bacteria? Isn’t raw meat dangerous?</title>
 		<text>
 
@@ -16722,6 +16734,7 @@
 	<card>
 		<position>12</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>What if my dog is constipated?</title>
 		<text>
 
@@ -16736,6 +16749,7 @@
 	<card>
 		<position>13</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>How much should I feed?</title>
 		<text>
 
@@ -16750,6 +16764,7 @@
 	<card>
 		<position>14</position>
 		<classification>Diet</classification>
+		<subclassification>Diet</subclassification>
 		<title>Just meat?</title>
 		<text>
 

@@ -133,16 +133,24 @@ public class Breeds_list extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
-                breeds.clear();
-                breeds_adapter.clear();
+                if(cat_adapter.getItem(position).equals("Diet")){
+                    Intent i = new Intent(Breeds_list.this, CardsActivity.class);
+                    i.putExtra("Category", cat_adapter.getItem(position));
+                    i.putExtra("Breed", cat_adapter.getItem(position));
+                    startActivity(i);
+                }else{
+                    breeds.clear();
+                    breeds_adapter.clear();
                     breeds = getBreedsFromDb(cat_adapter.getItem(position));
                     breeds_adapter.addAll(breeds);
 
-                Category_name = cat_adapter.getItem(position);
-                breeds_list.setAdapter(breeds_adapter);
+                    Category_name = cat_adapter.getItem(position);
+                    breeds_list.setAdapter(breeds_adapter);
 
-                toolbarPanelLayout.closePanel();
+                    toolbarPanelLayout.closePanel();
+                }
+
+
 
             }
         });
