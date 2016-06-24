@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="PANEL CLOSE"
+            android:text="CARDS will come here"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp" />
 
