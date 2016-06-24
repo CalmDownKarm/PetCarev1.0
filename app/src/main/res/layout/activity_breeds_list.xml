@@ -12,7 +12,7 @@
         android:id="@+id/content_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
+        android:background="@color/list_color"
         android:outlineProvider="paddedBounds">
 
     <com.nirhart.parallaxscroll.views.ParallaxListView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,7 +21,8 @@
         android:id="@+id/breed_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
         android:layout_marginBottom="50dp"
         app:parallax_factor="1.5"
         app:circular_parallax="true"
