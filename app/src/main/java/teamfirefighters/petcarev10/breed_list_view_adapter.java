@@ -53,6 +53,7 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
         } else {
             viewHolder = (CompleteListViewHolder) rowView.getTag();
         }
+
         Typeface font = Typeface.createFromAsset(context.getAssets(), "raleway.ttf");
         viewHolder.mTVItem.setText(getItem(position));
         viewHolder.mTVItem.setTypeface(font);
