@@ -87,6 +87,13 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
 
     }
     @Override
+    public void onCancelled(){
+        SharedPreferences Flag = context.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = Flag.edit();
+        editor.putBoolean("DB_READY",false); //set flag to true in shared preferences so I don't reparse everytime
+        editor.commit();
+    }
+    @Override
     protected void  onPostExecute(Void res){
         if(pd.isShowing())
             pd.dismiss();

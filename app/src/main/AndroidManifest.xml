@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Home_Activity" />
         <activity android:name=".Breeds_list" />
-        <activity android:name=".CardsActivity"></activity>
+        <activity android:name=".CardsActivity" />
+        <activity android:name=".search"></activity>
     </application>
 
 </manifest>

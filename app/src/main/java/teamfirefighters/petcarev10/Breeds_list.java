@@ -64,6 +64,7 @@ public class Breeds_list extends AppCompatActivity {
 
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
         final ImageButton home_button = (ImageButton) findViewById(R.id.homeButton);
+        ImageButton searchButton = (ImageButton) findViewById(R.id.searchButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
@@ -89,6 +90,17 @@ public class Breeds_list extends AppCompatActivity {
         breeds_adapter = new breed_list_view_adapter(this);
         breeds_adapter.addAll(breeds);
         breeds_list.setAdapter(breeds_adapter);
+
+
+        assert searchButton!=null;
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSearch = new Intent(Breeds_list.this, search.class);
+                startActivity(toSearch);
+                overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+            }
+        });
 
 
 

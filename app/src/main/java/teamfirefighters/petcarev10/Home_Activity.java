@@ -48,6 +48,7 @@ public class Home_Activity extends AppCompatActivity {
         toolbarPanelLayout = (ToolbarPanelLayout) findViewById(R.id.sliding_down_toolbar_layout);
 
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
+        ImageButton searchButton = (ImageButton) findViewById(R.id.searchButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
@@ -68,6 +69,16 @@ public class Home_Activity extends AppCompatActivity {
             adapter.add(categories.get(i));
 
         listView.setAdapter(adapter);
+
+        assert searchButton!=null;
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSearch = new Intent(Home_Activity.this, search.class);
+                startActivity(toSearch);
+                overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+            }
+        });
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
