@@ -16,6 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class CardDataAdapter extends ArrayAdapter<Card> {
 
 
@@ -63,6 +65,9 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                     Resources res = context.getResources();
                     String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
                     int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
+
+                   //Picasso.with(context).load(resID).into(dog_img);
+
                     dog_img.setImageResource(resID);
                 }
 
@@ -132,7 +137,12 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                     Resources res = context.getResources();
                     String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
                     int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
-                    disease_img.setImageResource(resID);
+
+                    Picasso.with(context)
+                            .load(resID)
+                            .into(disease_img);
+
+                    //disease_img.setImageResource(resID);
                 }
 
                 break;

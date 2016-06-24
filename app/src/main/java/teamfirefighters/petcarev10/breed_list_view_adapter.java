@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -61,7 +62,10 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
         Resources res = context.getResources();
         String mDrawableName = getItem(position).replaceAll(" ","_").toLowerCase();
         int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
-        viewHolder.mIMGItem.setImageResource(resID);
+
+        Picasso.with(context).load(resID).resize(75,75).centerCrop().into(viewHolder.mIMGItem);
+
+       // viewHolder.mIMGItem.setImageResource(resID);
 
         return rowView;
     }
