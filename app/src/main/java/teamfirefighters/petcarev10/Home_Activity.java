@@ -74,10 +74,18 @@ public class Home_Activity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(Home_Activity.this, Breeds_list.class);
-                i.putExtra("Category", adapter.getItem(position));
-                i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
-                startActivity(i);
+                if(adapter.getItem(position).equals("Diet")){
+                    Intent i = new Intent(Home_Activity.this, CardsActivity.class);
+                    i.putExtra("Category", adapter.getItem(position));
+                    i.putExtra("Breed", adapter.getItem(position));
+                    startActivity(i);
+                }else{
+                    Intent i = new Intent(Home_Activity.this, Breeds_list.class);
+                    i.putExtra("Category", adapter.getItem(position));
+                    i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
+                    startActivity(i);
+                }
+
             }
         });
 
@@ -118,9 +126,7 @@ public class Home_Activity extends AppCompatActivity {
             @Override
             public void onPanelOpened(Toolbar toolbar, View panelView) {
 
-
                 isPanelOpen = true;
-
             }
 
             @Override
@@ -180,7 +186,6 @@ public class Home_Activity extends AppCompatActivity {
     private List<String> getCategoriesFromDb(){
         List<String> Categories = new ArrayList<String>();
         if(checkDBFLAG()){//Check Flag Again to ensure that the database is ready
-            Log.d("HELLO WORLD","IN GET CATEGORIES");
             CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
             SQLiteDatabase db = cdbhelper.getReadableDatabase();
             String[] projection={
@@ -188,9 +193,9 @@ public class Home_Activity extends AppCompatActivity {
             };
             String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION + " DESC";
             Cursor c = db.query(true, CardDBContract.CardTable.TABLE_NAME,projection,null,null,null,null,sortOrder,null);
-            Log.d("TITS Cursor","SHIT");
+
             if(c!=null){
-                Log.d("TITS Cursor",c.toString());
+
                 for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
                     String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
                     Categories.add(temp);
@@ -198,7 +203,7 @@ public class Home_Activity extends AppCompatActivity {
             }
             db.close();
         }
-        Log.d("TITS",Categories.toString());
+
 
         return Categories;
     }
@@ -219,8 +224,5 @@ public class Home_Activity extends AppCompatActivity {
         } else {
             finish();
         }
-        super.onBackPressed();
     }
-
-
 }

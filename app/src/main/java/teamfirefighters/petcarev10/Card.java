@@ -60,7 +60,7 @@ public class Card {
         else if(text==null&&image==null)
             CardLayoutType=2;//Card Layout Type 2 should have only Title and List
         else if(image==null&& List_string ==null)
-            CardLayoutType=3;//Card Layout Type 3 should have only Title and Text
+            CardLayoutType=3;//Card Layout Type 2 should have only Title and Text
         else if(List_string ==null)
             CardLayoutType=4;//Card Layout Type 4 has image, title and text
     }

@@ -11,18 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="50dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
         <!--Dog image-->
 
         <ImageView
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:transitionName="@string/transition_name_image"
-            android:layout_height="120dp"
-            android:src="@drawable/foo"
-            android:paddingTop="15dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="-30dp"
+            android:adjustViewBounds="true"
             android:id="@+id/dog_image"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignParentStart="true" />
 
         <!--dog name-->
         <TextView
@@ -30,9 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
             android:textAlignment="center"
             android:text="NAME"
+            android:layout_marginTop="-12dp"
             android:textSize="30dp"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/dog_image"
@@ -44,13 +45,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="7dp"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
+            android:textColor="@color/panel_color"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"
             android:text="Tag line"
-            android:textColor="@color/panel_color"
+
             android:layout_below="@+id/card_title"
             android:layout_centerHorizontal="true"/>
 
@@ -62,7 +64,7 @@
             android:paddingTop="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:text="Random text"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/card_text">

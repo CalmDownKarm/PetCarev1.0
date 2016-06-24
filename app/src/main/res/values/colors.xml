@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#34495e</color>
-    <color name="panel_color">#34495e</color>
     <color name="panel_color_dark">#243342</color>
+
+
+    <color name="cards_background">#514656</color>
+    <color name="panel_color">#464359</color>or
+    <color name="list_color">#514656</color>
+    <color name="list_text_color">#ffffff</color>
+
 
     <color name="black_overlay">#66000000</color>
 

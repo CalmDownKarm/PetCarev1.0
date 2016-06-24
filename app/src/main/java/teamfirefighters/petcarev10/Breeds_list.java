@@ -63,14 +63,12 @@ public class Breeds_list extends AppCompatActivity {
         toolbarPanelLayout = (ToolbarPanelLayout) findViewById(R.id.sliding_down_toolbar_layout);
 
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
+        final ImageButton home_button = (ImageButton) findViewById(R.id.homeButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
 
-        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
-        cat_tag = (TextView) findViewById(R.id.cat_tag);
-        cat_tag.setText("Breeds");
-        cat_tag.setTypeface(font);
+
 
 
 
@@ -80,7 +78,10 @@ public class Breeds_list extends AppCompatActivity {
 
         set_category_list(categories, Cat_list);
 
-
+        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
+        cat_tag = (TextView) findViewById(R.id.cat_tag);
+        cat_tag.setText(Category_name);
+        cat_tag.setTypeface(font);
 
 
         breeds_list = (ParallaxListView) findViewById(R.id.breed_list);
@@ -117,23 +118,39 @@ public class Breeds_list extends AppCompatActivity {
             }
         });
 
+
+        assert home_button != null;
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Breeds_list.this ,Home_Activity.class);
+                startActivity(i);
+            }
+        });
+
         assert Cat_list != null;
         Cat_list.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
-                breeds.clear();
-                breeds_adapter.clear();
+                if(cat_adapter.getItem(position).equals("Diet")){
+                    Intent i = new Intent(Breeds_list.this, CardsActivity.class);
+                    i.putExtra("Category", cat_adapter.getItem(position));
+                    i.putExtra("Breed", cat_adapter.getItem(position));
+                    startActivity(i);
+                }else{
+                    breeds.clear();
+                    breeds_adapter.clear();
                     breeds = getBreedsFromDb(cat_adapter.getItem(position));
                     breeds_adapter.addAll(breeds);
 
-                Log.d("sheep", "breeds is @@$$==> " + breeds);
-                Log.d("sheep", "adapter is @@$$==> " + breeds_adapter.getItem(0));
-                Category_name = cat_adapter.getItem(position);
-                breeds_list.setAdapter(breeds_adapter);
+                    Category_name = cat_adapter.getItem(position);
+                    breeds_list.setAdapter(breeds_adapter);
 
-                toolbarPanelLayout.closePanel();
+                    toolbarPanelLayout.closePanel();
+                }
+
+
 
             }
         });
@@ -186,8 +203,9 @@ public class Breeds_list extends AppCompatActivity {
 
                 findViewById(R.id.cat_list).setAlpha(slideOffset);
 
+
                 if(slideOffset<0.5){
-                    cat_tag.setText("Breeds");
+                    cat_tag.setText(Category_name);
                     cat_tag.setAlpha(1-slideOffset);}
 
 
@@ -229,7 +247,7 @@ public class Breeds_list extends AppCompatActivity {
                 }
 
                 panelView.setY((float) -(panelView.getHeight()-toolbarView.getHeight()));
-                cat_tag.setText("Breeds");
+                cat_tag.setText(Category_name);
                 cat_tag.setAlpha((float) 1.0);
                 isPanelOpen = false;
 
@@ -245,7 +263,6 @@ public class Breeds_list extends AppCompatActivity {
     private List<String> getBreedsFromDb(String foo){
         List<String> Breeds = new ArrayList<String>();
         //Check Flag Again to ensure that the database is ready
-            Log.d("HELLO WORLD","IN GET BREEDS");
             CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
             SQLiteDatabase db = cdbhelper.getReadableDatabase();
             String[] projection={
@@ -255,16 +272,15 @@ public class Breeds_list extends AppCompatActivity {
             String[] selectionArgs = {foo};
             String sortOrder = CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION + " DESC";
             Cursor c = db.query(true, CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionArgs,null,null,sortOrder,null);
-            Log.d("TITS Cursor","SHIT IN BREEDS");
+
             if(c!=null){
-                Log.d("TITS Cursor BREEDS",c.toString());
+
                 for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
                     String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
                     Breeds.add(temp);
                 }
             db.close();
         }
-        Log.d("ALL BREEDS",Breeds.toString());
         return Breeds;
     }
 

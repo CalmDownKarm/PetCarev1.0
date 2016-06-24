@@ -90,7 +90,6 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     protected void  onPostExecute(Void res){
         if(pd.isShowing())
             pd.dismiss();
-        Log.d("TAG","DB PARSING DONE");
         SharedPreferences Flag = context.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = Flag.edit();
         editor.putBoolean("DB_READY",true); //set flag to true in shared preferences so I don't reparse everytime
@@ -98,6 +97,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         Intent foo = new Intent(context,Home_Activity.class);
         foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(foo);
+        activity.finish();
     }
 
 }

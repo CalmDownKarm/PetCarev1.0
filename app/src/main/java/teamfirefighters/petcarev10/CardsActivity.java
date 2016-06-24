@@ -3,9 +3,15 @@ package teamfirefighters.petcarev10;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.wenchao.cardstack.CardStack;
 
@@ -17,7 +23,6 @@ public class CardsActivity extends AppCompatActivity {
     private  String Breed_name;
     private List<Card> getCardsFromDB(){
         List<Card> Cards = new ArrayList<Card>();
-        Log.d("HELLO WORLD","IN GET CATEGORIES");
         CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
         SQLiteDatabase db = cdbhelper.getReadableDatabase();
         String[] projection={
@@ -38,12 +43,10 @@ public class CardsActivity extends AppCompatActivity {
         String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION + " ASC";
         Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionargs,null,null,sortOrder);
         if(c!=null){
-            Log.d("CARDACTIVITYCURSOR",c.toString());
             for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
                 Card Temp = new Card(c);
                 Cards.add(Temp);
-                Log.d("RETREIVE CARD FROM DB",Temp.toString());
-                Log.d("CARD TYPE", String.valueOf(Temp.getCardLayoutType()));
+
             }
         }
         db.close();
@@ -55,17 +58,19 @@ public class CardsActivity extends AppCompatActivity {
     private CardDataAdapter mCardAdapter;
     public List<Card> cards = null;
     public int last_card_swiped = 0;
+    public TextView cardCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_cards);
         Intent foo = getIntent();
         Category_name = foo.getStringExtra("Category");
         Breed_name = foo.getStringExtra("Breed");
-        Log.d("IN CARDS",Category_name);
-        Log.d("IN CARDS",Breed_name);
-        Log.d("LIST OF CARDS BABE",getCardsFromDB().toString());
 
         cards = getCardsFromDB();
 
@@ -80,6 +85,35 @@ public class CardsActivity extends AppCompatActivity {
         mCardStack.setAdapter(mCardAdapter);
 
 
+        ImageButton backButton = (ImageButton) findViewById(R.id.backButton);
+        ImageButton homeButton = (ImageButton) findViewById(R.id.homeButton);
+        TextView breedName =(TextView) findViewById(R.id.breedName);
+        cardCount =(TextView) findViewById(R.id.cardCount);
+        Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
+        breedName.setText(Breed_name);
+        breedName.setTypeface(font);
+        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+        cardCount.setTypeface(font);
+
+
+
+        assert  backButton !=null;
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        assert homeButton != null;
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CardsActivity.this ,Home_Activity.class);
+                startActivity(i);
+            }
+        });
+
 
 
         mCardStack.setListener(new CardStack.CardEventListener() {
@@ -89,30 +123,29 @@ public class CardsActivity extends AppCompatActivity {
                 if(last_card_swiped+1 == cards.size() )
                     return false;
 
-
                 if(distance>100.0)
                     return true;
-
 
                 return false;
             }
 
             @Override
             public boolean swipeStart(int section, float distance) {
-
                 return false;
             }
 
             @Override
             public boolean swipeContinue(int section, float distanceX, float distanceY) {
-
                 return true;
             }
 
             @Override
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
-
+                cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+                //TODO ADD SHARED FLAG For first time app use
+                if(last_card_swiped == 1)
+                    Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -122,12 +155,9 @@ public class CardsActivity extends AppCompatActivity {
                 if(last_card_swiped>0){
 
                     mCardAdapter.insert(cards.get(last_card_swiped-1),0);
-
-
-
                     mCardStack.setAdapter(mCardAdapter);
                     last_card_swiped--;
-
+                    cardCount.setText(last_card_swiped+1 +"/"+cards.size());
                 }
 
             }

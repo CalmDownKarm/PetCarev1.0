@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if(checkDBFLAG()) {//Data has been parsed
-            //Log.d("DB READY", "True");
+
             Intent foo = new Intent(getApplicationContext(),Home_Activity.class);
             startActivity(foo);
+            finish();
 
         }else {
             XMLAssetHandler abc = new XMLAssetHandler(getApplicationContext(),MainActivity.this);
             abc.execute();
-            //Log.d("DB_READY", "Called ASYNC THREAD");
         }
         setContentView(R.layout.activity_main);
         //TODO Add Flag and intent to tutorial activity. Store Flag into Shared Preferences

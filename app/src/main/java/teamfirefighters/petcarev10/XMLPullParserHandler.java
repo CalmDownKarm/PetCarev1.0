@@ -59,7 +59,7 @@ public class XMLPullParserHandler {
                         if (tagname.equalsIgnoreCase("card")) {
                             // add employee object to list
                             Cards.add(card);
-                            //Log.d("Card: ",card.toString());
+
                         } else{
                             if(text!=null){
                                 if (tagname.equalsIgnoreCase("title")) {
@@ -79,7 +79,7 @@ public class XMLPullParserHandler {
                                 } else if(tagname.equalsIgnoreCase("li")){
                                     tempList+=(text.trim()+"#");
                                 } else if(tagname.equalsIgnoreCase("ul")){
-                                    tempList+=("\u2022"+text.trim());
+                                    tempList+=("\u2022"+text.trim()+"#");
                                 } else if(tagname.equalsIgnoreCase("position")){
                                     card.setCardPosition(Integer.parseInt(text));
                                 }
