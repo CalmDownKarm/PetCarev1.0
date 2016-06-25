@@ -45,11 +45,13 @@ public class search extends AppCompatActivity {
 
             for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
                 String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
-                if(!tempSubClassifications.contains(temp)){
-                tempSubClassifications.add(temp);
-                temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
-                tempClassifications.add(temp);
-                }
+                    if(!tempSubClassifications.contains(temp) && !temp.equals("Famous Dogs") && !temp.equals("Diet")){
+                        tempSubClassifications.add(temp);
+                        temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
+                        tempClassifications.add(temp);
+                    }
+
+
             }
             db.close();
         }
@@ -95,6 +97,8 @@ public class search extends AppCompatActivity {
 
                 if(string.toString().length() != 0){
                     getSearchFromDb(string.toString());
+
+                Log.i("Boobs",tempSubClassifications.toString());
                 breeds_adapter.clear();
                 breeds_adapter.addAll(tempSubClassifications);
                 breeds_list.setAdapter(breeds_adapter);

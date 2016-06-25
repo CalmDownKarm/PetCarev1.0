@@ -18,9 +18,11 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nikoyuwono.toolbarpanel.ToolbarPanelLayout;
 import com.nikoyuwono.toolbarpanel.ToolbarPanelListener;
+import com.wenchao.cardstack.CardStack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,13 @@ public class Home_Activity extends AppCompatActivity {
     public ToolbarPanelLayout toolbarPanelLayout;
     public boolean menu_button_state = true; //true: menu    false: arrow
     public TextView cat_tag;
+    private CardStack mCardStack;
+    private CardDataAdapter mCardAdapter;
+    public List<Card> cards = null;
+    private  String Category_name = "Famous Dogs";
+    private  String Breed_name = "Famous Dogs";
+    public int last_card_swiped = 0;
+    public TextView cardCount;
 
 
 
@@ -55,9 +64,11 @@ public class Home_Activity extends AppCompatActivity {
 
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
         cat_tag = (TextView) findViewById(R.id.cat_tag);
-        cat_tag.setText("Categories");
+        cat_tag.setText("Home");
         cat_tag.setTypeface(font);
-        cat_tag.setAlpha((float)0.0);
+
+        cardCount =(TextView) findViewById(R.id.cardCount);
+
 
         final cat_list_view_adapter adapter = new cat_list_view_adapter(Home_Activity.this);
 
@@ -69,6 +80,20 @@ public class Home_Activity extends AppCompatActivity {
             adapter.add(categories.get(i));
 
         listView.setAdapter(adapter);
+
+        cards = getCardsFromDB();
+        mCardStack = (CardStack)findViewById(R.id.container);
+        mCardStack.setContentResource(R.layout.card_layout);
+        mCardStack.setStackMargin(10);
+        mCardAdapter = new CardDataAdapter(Home_Activity.this);
+
+        for (int i=0; i< cards.size();i++)
+            mCardAdapter.add(cards.get(i));
+
+        mCardStack.setAdapter(mCardAdapter);
+
+        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+        cardCount.setTypeface(font);
 
         assert searchButton!=null;
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -136,7 +161,7 @@ public class Home_Activity extends AppCompatActivity {
         toolbarPanelLayout.setToolbarPanelListener(new ToolbarPanelListener() {
             @Override
             public void onPanelOpened(Toolbar toolbar, View panelView) {
-
+                cat_tag.setText("Categories");
                 isPanelOpen = true;
             }
 
@@ -147,7 +172,15 @@ public class Home_Activity extends AppCompatActivity {
                 toolbar.setY((float) 0.0);
 
                 findViewById(R.id.cat_list).setAlpha(slideOffset);
-                cat_tag.setAlpha(slideOffset);
+                if(slideOffset<0.5){
+                    cat_tag.setText("Home");
+                    cat_tag.setAlpha(1-slideOffset);}
+
+
+
+                if(slideOffset>=0.5){
+                    cat_tag.setText("Categories");
+                    cat_tag.setAlpha(slideOffset);}
 
                 if(slideOffset>0.3 && !isPanelOpen){
                     menu_button_state = false;
@@ -184,7 +217,59 @@ public class Home_Activity extends AppCompatActivity {
 
                 panelView.setY((float) -(panelView.getHeight()-toolbarView.getHeight()));
 
+                cat_tag.setText("Home");
+                cat_tag.setAlpha((float) 1.0);
+
                 isPanelOpen = false;
+
+            }
+        });
+
+
+        mCardStack.setListener(new CardStack.CardEventListener() {
+            @Override
+            public boolean swipeEnd(int section, float distance) {
+
+                if(last_card_swiped+1 == cards.size() )
+                    return false;
+
+                if(distance>100.0)
+                    return true;
+
+                return false;
+            }
+
+            @Override
+            public boolean swipeStart(int section, float distance) {
+                return false;
+            }
+
+            @Override
+            public boolean swipeContinue(int section, float distanceX, float distanceY) {
+                return true;
+            }
+
+            @Override
+            public void discarded(int mIndex, int direction) {
+                last_card_swiped++;
+                cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+                //TODO ADD SHARED FLAG For first time app use
+                if(last_card_swiped == 1)
+                    Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void topCardTapped() {
+
+                if(last_card_swiped>0){
+
+                    mCardAdapter.insert(cards.get(last_card_swiped-1),0);
+                    mCardStack.setAdapter(mCardAdapter);
+                    last_card_swiped--;
+                    cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+                    mCardStack.setStackMargin(10);
+                }
 
             }
         });
@@ -235,5 +320,37 @@ public class Home_Activity extends AppCompatActivity {
         } else {
             finish();
         }
+    }
+
+    private List<Card> getCardsFromDB(){
+        List<Card> Cards = new ArrayList<Card>();
+        CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
+        SQLiteDatabase db = cdbhelper.getReadableDatabase();
+        String[] projection={
+                CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_LIST,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION
+        };
+        String selection= CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION+" =? AND "+ CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION+" =?";
+        String[] selectionargs = {
+                Breed_name,
+                Category_name
+        };
+        String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION + " ASC";
+        Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionargs,null,null,sortOrder);
+        if(c!=null){
+            for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+                Card Temp = new Card(c);
+                Cards.add(Temp);
+
+            }
+        }
+        db.close();
+        return Cards;
     }
 }
