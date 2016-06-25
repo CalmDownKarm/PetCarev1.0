@@ -296,8 +296,10 @@ public class Breeds_list extends AppCompatActivity {
 
         cat_adapter = new cat_list_view_adapter(Breeds_list.this);
 
-        for (int i=0; i< categories.size();i++)
+        for (int i=0; i< categories.size();i++){
+            if(!categories.get(i).equalsIgnoreCase("famous dogs"))
             cat_adapter.add(categories.get(i));
+        }
 
         listView.setAdapter(cat_adapter);
 

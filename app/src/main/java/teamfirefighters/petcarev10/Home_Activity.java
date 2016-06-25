@@ -8,10 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.support.annotation.FloatRange;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -76,8 +74,10 @@ public class Home_Activity extends AppCompatActivity {
 
         final List<String> categories = getCategoriesFromDb();//Categories from DB
 
-        for (int i=0; i< categories.size();i++)
+        for (int i=0; i< categories.size();i++){
+            if(!categories.get(i).equalsIgnoreCase("famous dogs"))
             adapter.add(categories.get(i));
+        }
 
         listView.setAdapter(adapter);
 
@@ -268,9 +268,9 @@ public class Home_Activity extends AppCompatActivity {
                     mCardStack.setAdapter(mCardAdapter);
                     last_card_swiped--;
                     cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-                    mCardStack.setStackMargin(10);
-                }
 
+                }
+                mCardStack.setStackMargin(10);
             }
         });
 

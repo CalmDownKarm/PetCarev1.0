@@ -23,7 +23,7 @@
             android:paddingTop="15dp"
             android:paddingBottom="2dp"
             android:textAlignment="center"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textColor="@color/panel_color"
             android:layout_centerHorizontal="true" />
 
@@ -46,7 +46,7 @@
             android:layout_marginTop="-13dp"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/disease_image"

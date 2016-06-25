@@ -25,7 +25,7 @@
             android:layout_gravity="center_horizontal"
             android:padding="15dp"
             android:layout_marginBottom="15dp"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textAlignment="center"
             android:textColor="@color/panel_color"
             android:layout_centerHorizontal="true" />
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:text="Random text"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/card_title"

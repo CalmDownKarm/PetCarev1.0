@@ -86,7 +86,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Categories"
             android:textColor="#ffffff"
-            android:textSize="22dp"
+            android:textSize="22sp"
             android:textStyle="bold"/>
 
         <ImageButton

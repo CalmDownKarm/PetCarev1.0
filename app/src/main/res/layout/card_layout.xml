@@ -34,7 +34,7 @@
             android:textAlignment="center"
             android:text="NAME"
             android:layout_marginTop="-12dp"
-            android:textSize="30dp"
+            android:textSize="24sp"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/dog_image"
             android:layout_centerHorizontal="true" />
@@ -44,7 +44,7 @@
             android:id="@+id/card_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="17sp"
             android:layout_marginTop="7dp"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
@@ -64,7 +64,7 @@
             android:paddingTop="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="10dp"
-            android:textSize="18dp"
+            android:textSize="16sp"
             android:text="Random text"
             android:textColor="@color/panel_color"
             android:layout_below="@+id/card_text">

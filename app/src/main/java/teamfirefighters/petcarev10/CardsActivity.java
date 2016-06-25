@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -158,9 +157,9 @@ public class CardsActivity extends AppCompatActivity {
                     mCardStack.setAdapter(mCardAdapter);
                     last_card_swiped--;
                     cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-                    mCardStack.setStackMargin(10);
-                }
 
+                }
+                mCardStack.setStackMargin(10);
             }
         });
 
