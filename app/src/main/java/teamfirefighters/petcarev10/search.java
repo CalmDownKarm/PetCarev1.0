@@ -96,7 +96,7 @@ public class search extends AppCompatActivity {
                 }
 
                 if(string.toString().length() != 0){
-                    getSearchFromDb(string.toString());
+                    getSearchFromDb(string.toString().trim());
 
                 Log.i("Boobs",tempSubClassifications.toString());
                 breeds_adapter.clear();
