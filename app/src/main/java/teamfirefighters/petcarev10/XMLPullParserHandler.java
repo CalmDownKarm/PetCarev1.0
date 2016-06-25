@@ -9,6 +9,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -65,7 +66,13 @@ public class XMLPullParserHandler {
                                 if (tagname.equalsIgnoreCase("title")) {
                                     card.setTitle(text.trim());
                                 } else if (tagname.equalsIgnoreCase("text")) {
-                                    card.setText(text.trim());
+                                    String temp= text.replaceAll("(\\s)\\1","$1");
+                                    List<String> parts = new ArrayList<String>(Arrays.asList(temp.split("\n")));
+                                    temp="";
+                                    for (int i =0; i<parts.size();i++)
+                                        temp+=(parts.get(i).trim()+"\n\n");
+                                    Log.d("TITTYMONSTER",temp);
+                                    card.setText(temp.trim());
                                 } else if (tagname.equalsIgnoreCase("image")) {
                                     card.setImage(text.trim());
                                 } else if (tagname.equalsIgnoreCase("classification")) {

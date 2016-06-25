@@ -34,6 +34,7 @@ public class CardDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(SQL_DELETE_CARDS);
         db.execSQL(SQL_CREATE_CARDS);
         }
 
