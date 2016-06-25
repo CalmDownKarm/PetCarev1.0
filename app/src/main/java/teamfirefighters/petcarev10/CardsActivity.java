@@ -76,7 +76,7 @@ public class CardsActivity extends AppCompatActivity {
 
         mCardStack = (CardStack)findViewById(R.id.container);
         mCardStack.setContentResource(R.layout.card_layout);
-        mCardStack.setStackMargin(20);
+        mCardStack.setStackMargin(10);
         mCardAdapter = new CardDataAdapter(CardsActivity.this);
 
         for (int i=0; i< cards.size();i++)
@@ -158,6 +158,7 @@ public class CardsActivity extends AppCompatActivity {
                     mCardStack.setAdapter(mCardAdapter);
                     last_card_swiped--;
                     cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+                    mCardStack.setStackMargin(10);
                 }
 
             }

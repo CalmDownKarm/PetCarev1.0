@@ -13,7 +13,7 @@
         android:layout_height="27dp"
         android:id="@+id/backButton"
         android:background="@drawable/back"
-        android:layout_marginLeft="22dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="17dp"
         android:layout_alignParentLeft="true"
         android:clickable="true" />
@@ -34,7 +34,7 @@
         android:layout_height="27dp"
         android:id="@+id/homeButton"
         android:background="@drawable/home"
-        android:layout_marginRight="22dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="17dp"
         android:layout_alignParentRight="true"
         android:clickable="true" />
@@ -46,7 +46,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="12dp"
-        android:textColor="#1c7d44"
+        android:textColor="@color/card_activity_background_text"
         android:textSize="16dp" />
 
     <TextView
@@ -56,7 +56,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="FIN.."
-        android:textColor="#1c7d44"
+        android:textColor="@color/card_activity_background_text"
         android:textSize="110dp" />
 
     <com.wenchao.cardstack.CardStack
@@ -65,7 +65,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
-        android:paddingTop="63dp"
+        android:paddingTop="67dp"
         android:paddingBottom="30dp"
         android:clipChildren="false"
         android:clipToPadding="false" />

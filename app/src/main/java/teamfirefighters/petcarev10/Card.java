@@ -52,7 +52,9 @@ public class Card {
 
 
     public void setCardLayoutType(){
-        if(     text!=null   &&
+        if(classification.equals("Famous Dogs"))
+            CardLayoutType=5;
+        else if(text!=null   &&
                 title!=null  &&
                 image!=null  &&
                 List_string !=null)
@@ -63,6 +65,7 @@ public class Card {
             CardLayoutType=3;//Card Layout Type 2 should have only Title and Text
         else if(List_string ==null)
             CardLayoutType=4;//Card Layout Type 4 has image, title and text
+
     }
 
     public int getCardLayoutType(){return CardLayoutType;}

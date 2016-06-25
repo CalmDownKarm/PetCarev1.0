@@ -3,9 +3,6 @@ package teamfirefighters.petcarev10;
 import android.graphics.Typeface;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,9 +11,7 @@ import android.os.Bundle;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -64,6 +59,7 @@ public class Breeds_list extends AppCompatActivity {
 
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
         final ImageButton home_button = (ImageButton) findViewById(R.id.homeButton);
+        ImageButton searchButton = (ImageButton) findViewById(R.id.searchButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
 
@@ -89,6 +85,17 @@ public class Breeds_list extends AppCompatActivity {
         breeds_adapter = new breed_list_view_adapter(this);
         breeds_adapter.addAll(breeds);
         breeds_list.setAdapter(breeds_adapter);
+
+
+        assert searchButton!=null;
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSearch = new Intent(Breeds_list.this, search.class);
+                startActivity(toSearch);
+                overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+            }
+        });
 
 
 

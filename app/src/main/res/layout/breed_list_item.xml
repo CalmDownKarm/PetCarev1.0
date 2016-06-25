@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_horizontal"
+    android:background="@color/list_color"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -15,6 +16,7 @@
         android:transitionName="@string/transition_name_image"
         android:layout_height="70dp"
         app:civ_border_color="@color/list_color"
+        app:civ_border_width="1dp"
         app:civ_shadow="false" />
 
     <TextView
