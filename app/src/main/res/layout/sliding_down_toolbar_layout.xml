@@ -13,29 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/cards_background">
-<!--
-        <com.wenchao.cardstack.CardStack
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="4dp"
-            android:paddingRight="4dp"
-            android:paddingTop="30dp"
-            android:layout_marginBottom="50dp"
-            android:paddingBottom="30dp"
-            android:clipChildren="false"
-            android:clipToPadding="false" />
 
-        <TextView
-            android:id="@+id/cardCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="60dp"
-            android:textColor="@color/card_activity_background_text"
-            android:textSize="16dp" />
--->
 
         <com.nirhart.parallaxscroll.views.ParallaxListView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
