@@ -300,4 +300,44 @@ public class Home_Activity extends AppCompatActivity {
         db.close();
         return Cards;
     }
+
+    //TODO OVERLOAD THIS METHOD
+    private List<Card> getCardsFromDB(List<String> Categories,List<String> Breeds){
+        List<Card> Cards = new ArrayList<Card>();
+        CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
+        SQLiteDatabase db = cdbhelper.getReadableDatabase();
+        String[] projection={
+                CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_IMAGE,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_TEXT,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_LIST,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_TITLE,
+                CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION
+        };
+        String selection= CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION+
+                " =? AND "+ CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION+
+                " =? AND "+ CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION+
+                " =?";
+        for(int i=0;i<5;i++){
+            Breed_name = Breeds.get(i);
+            Category_name = Categories.get(i);
+            String[] selectionargs = {
+                    Breed_name,
+                    Category_name,
+                    String.valueOf(1)
+            };
+            Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,selection,selectionargs,null,null,null);
+            if(c!=null){
+                for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+                    Card Temp = new Card(c);
+                    Cards.add(Temp);
+
+                }
+            }
+        }
+        db.close();
+        return Cards;
+    }
 }

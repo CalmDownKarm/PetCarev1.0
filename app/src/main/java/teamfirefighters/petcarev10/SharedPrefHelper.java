@@ -55,25 +55,28 @@ public class SharedPrefHelper {
         String TempCat = Flag.getString(LAST_CATEGORY_SWIPED,EMPTY_STRING);
         String TempBreed = Flag.getString(LAST_BREED_SWIPED,EMPTY_STRING);
         boolean tempbool = false;
+        if(!TempBreed.contains(Breed_name)){
+            TempCat+=(Category_name+"#");
+            TempBreed+=(Breed_name+"#");
+            int catOc = TempCat.length()-TempCat.replace("#","").length();
+            int breOc = TempBreed.length()-TempBreed.replace("#","").length();
+            if(catOc>5&&breOc>5){
+                TempCat = TempCat.replaceFirst(TempCat.substring(0,TempCat.indexOf("#")+1),"");
+                TempBreed = TempBreed.replace(TempBreed.substring(0,TempBreed.indexOf("#")+1),"");
+                tempbool = true;
+            }
 
-        TempCat+=(Category_name+"#");
-        TempBreed+=(Breed_name+"#");
-        Log.i("boobs","CAT NAME ===="+ TempCat);
-        Log.i("boobs","Breed NAME ===="+ TempBreed);
-        int catOc = TempCat.length()-TempCat.replace("#","").length();
-        int breOc = TempBreed.length()-TempBreed.replace("#","").length();
-        if(catOc>5&&breOc>5){
-         TempCat = TempCat.replace(TempCat.substring(0,TempCat.indexOf("#")),"");
-         TempBreed = TempBreed.replace(TempBreed.substring(0,TempBreed.indexOf("#")),"");
-         tempbool = true;
+
+
+            SharedPreferences.Editor editor = Flag.edit();
+            editor.putBoolean(PUT_RECENT,tempbool);
+            editor.putString(LAST_CATEGORY_SWIPED,TempCat);
+            editor.putString(LAST_BREED_SWIPED,TempBreed);
+            editor.commit();
+
         }
-
-        SharedPreferences.Editor editor = Flag.edit();
-        editor.putBoolean(PUT_RECENT,tempbool);
-        editor.putString(LAST_CATEGORY_SWIPED,TempCat);
-        editor.putString(LAST_BREED_SWIPED,TempBreed);
-        editor.commit();
-
+        Log.i("boobs",TempBreed);
+        Log.i("boobs",TempCat);
     }
 
     public static void setDBNotReady(Context context){
