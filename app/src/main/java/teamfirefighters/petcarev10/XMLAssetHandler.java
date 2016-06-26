@@ -23,7 +23,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     MainActivity activity;
     CardDBHelper cardbhelper;
     ProgressDialog pd;
-    public static final String SHARED_PREFERENCES_KEY = "petcareflags";
+
 
     public XMLAssetHandler(Context foo, MainActivity activity){//constructor to pass it an application context
         context = foo;
@@ -88,19 +88,13 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     public void onCancelled(){
-        SharedPreferences Flag = context.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = Flag.edit();
-        editor.putBoolean("DB_READY",false); //set flag to true in shared preferences so I don't reparse everytime
-        editor.commit();
+        SharedPrefHelper.setDBNotReady(context);
     }
     @Override
     protected void  onPostExecute(Void res){
         if(pd.isShowing())
             pd.dismiss();
-        SharedPreferences Flag = context.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = Flag.edit();
-        editor.putBoolean("DB_READY",true); //set flag to true in shared preferences so I don't reparse everytime
-        editor.commit();
+        SharedPrefHelper.setDbReady(context);
         Intent foo = new Intent(context,Home_Activity.class);
         foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(foo);

@@ -39,9 +39,6 @@ public class XMLPullParserHandler {
             int eventType = parser.getEventType();
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 String tagname = parser.getName();
-                if(tagname!=null)
-                {
-                    Log.d("Tag",tagname);}
                 switch (eventType) {
                     case XmlPullParser.START_TAG:
                         if (tagname.equalsIgnoreCase("card")) {
@@ -71,7 +68,6 @@ public class XMLPullParserHandler {
                                     temp="";
                                     for (int i =0; i<parts.size();i++)
                                         temp+=(parts.get(i).trim()+"\n\n");
-                                    Log.d("TITTYMONSTER",temp);
                                     card.setText(temp.trim());
                                 } else if (tagname.equalsIgnoreCase("image")) {
                                     card.setImage(text.trim());

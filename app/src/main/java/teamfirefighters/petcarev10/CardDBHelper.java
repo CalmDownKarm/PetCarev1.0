@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by karm on 17/6/16.
  */
 public class CardDBHelper extends SQLiteOpenHelper {
+
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";
     private static final String SQL_CREATE_CARDS =

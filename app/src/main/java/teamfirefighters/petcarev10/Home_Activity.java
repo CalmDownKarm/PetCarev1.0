@@ -10,6 +10,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -22,6 +23,7 @@ import com.nikoyuwono.toolbarpanel.ToolbarPanelLayout;
 import com.nikoyuwono.toolbarpanel.ToolbarPanelListener;
 import com.wenchao.cardstack.CardStack;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +39,9 @@ public class Home_Activity extends AppCompatActivity {
     public List<Card> cards = null;
     private  String Category_name = "Famous Dogs";
     private  String Breed_name = "Famous Dogs";
+
+
+    //TODO CHECK TO SEE IF CATEGORY NAME AND BREED NAME HAVE BEEN STORED
     public int last_card_swiped = 0;
     public TextView cardCount;
 
@@ -58,16 +63,17 @@ public class Home_Activity extends AppCompatActivity {
         ImageButton searchButton = (ImageButton) findViewById(R.id.searchButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
-
-
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
         cat_tag = (TextView) findViewById(R.id.cat_tag);
         cat_tag.setText("Home");
         cat_tag.setTypeface(font);
+        if(false/*SharedPrefHelper.Checkif5Recent(getApplicationContext())*/){
+            //TODO LOAD RECENT 5
+        }
+        else{
+            /*TODO SET CATEGORY AND BREED NAME TO FAMOUS DOGS, ALREADY INITIALISED SO THIS NEED NOT DO ANYTHING*/}
 
         cardCount =(TextView) findViewById(R.id.cardCount);
-
-
         final cat_list_view_adapter adapter = new cat_list_view_adapter(Home_Activity.this);
 
         ListView listView = (ListView) findViewById(R.id.cat_list);
@@ -80,7 +86,7 @@ public class Home_Activity extends AppCompatActivity {
         }
 
         listView.setAdapter(adapter);
-
+        //check_for_last_Swiped();//Checks Shared Preferences
         cards = getCardsFromDB();
         mCardStack = (CardStack)findViewById(R.id.container);
         mCardStack.setContentResource(R.layout.card_layout);
@@ -252,10 +258,13 @@ public class Home_Activity extends AppCompatActivity {
             @Override
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
+                int num_used=SharedPrefHelper.getNumUsed(getApplicationContext());
                 cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-                //TODO ADD SHARED FLAG For first time app use
-                if(last_card_swiped == 1)
+
+                if((last_card_swiped) == 1&&(num_used<5)) {
                     Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
+                    SharedPrefHelper.incrementNumUsed(getApplicationContext());
+                }
 
             }
 
@@ -281,7 +290,7 @@ public class Home_Activity extends AppCompatActivity {
 
     private List<String> getCategoriesFromDb(){
         List<String> Categories = new ArrayList<String>();
-        if(checkDBFLAG()){//Check Flag Again to ensure that the database is ready
+        if(SharedPrefHelper.checkDBReady(getApplicationContext())){//Check Flag Again to ensure that the database is ready
             CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
             SQLiteDatabase db = cdbhelper.getReadableDatabase();
             String[] projection={
@@ -302,10 +311,6 @@ public class Home_Activity extends AppCompatActivity {
 
 
         return Categories;
-    }
-    public boolean checkDBFLAG(){
-        SharedPreferences Flag = getApplication().getSharedPreferences(CardDBContract.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
-        return Flag.getBoolean("DB_READY",false);
     }
 
 

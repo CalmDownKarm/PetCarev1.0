@@ -1,6 +1,8 @@
 package teamfirefighters.petcarev10;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
@@ -70,6 +72,8 @@ public class CardsActivity extends AppCompatActivity {
         Intent foo = getIntent();
         Category_name = foo.getStringExtra("Category");
         Breed_name = foo.getStringExtra("Breed");
+        SharedPrefHelper.storeLastSwiped(getApplicationContext(),Category_name,Breed_name);
+
 
         cards = getCardsFromDB();
 
@@ -141,10 +145,12 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
+                int num_used=SharedPrefHelper.getNumUsed(getApplicationContext());
                 cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-                //TODO ADD SHARED FLAG For first time app use
-                if(last_card_swiped == 1)
+                if((last_card_swiped == 1)&&(num_used<5)){
                     Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
+                    SharedPrefHelper.incrementNumUsed(getApplicationContext());
+                }
 
             }
 

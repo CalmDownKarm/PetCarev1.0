@@ -13,17 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    public boolean checkDBFLAG(){
-        SharedPreferences Flag = getApplication().getSharedPreferences(CardDBContract.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
-        return Flag.getBoolean("DB_READY",false);
-    }
+
 
     boolean DB_READY_FLAG = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(checkDBFLAG()) {//Data has been parsed
-
+        if(SharedPrefHelper.checkDBReady(getApplicationContext())) {//Data has been parsed
             Intent foo = new Intent(getApplicationContext(),Home_Activity.class);
             startActivity(foo);
             finish();
@@ -33,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
             abc.execute();
         }
         setContentView(R.layout.activity_main);
-        //TODO Add Flag and intent to tutorial activity. Store Flag into Shared Preferences
 
     }
 }
