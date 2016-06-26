@@ -73,7 +73,6 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
 
             if (getItem(position).getText() != null) {
 
-                Log.i("Boobs",getItem(position).getText());
                 mTVItem_1.setText(getItem(position).getText());
                 mTVItem_1.setTypeface(font_text);
                 mTVItem_1.setTextSize(20);

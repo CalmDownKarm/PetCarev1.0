@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -103,6 +106,30 @@ public class Home_Activity extends AppCompatActivity {
         }
 
         listView.setAdapter(adapter);
+
+        breeds_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(!list_adapter.getItem(position).getClassification().equalsIgnoreCase("Famous Dogs")){
+                    Intent intent = new Intent(Home_Activity.this, CardsActivity.class);
+                    intent.putExtra("Category",list_adapter.getItem(position).getClassification());
+                    intent.putExtra("Breed",list_adapter.getItem(position).getSubclassification());
+
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            // the context of the activity
+                            Home_Activity.this,
+
+
+                            new Pair<View, String>(view.findViewById(R.id.img),
+                                    getString(R.string.transition_name_image))
+
+                    );
+                    ActivityCompat.startActivity(Home_Activity.this, intent, options.toBundle());
+
+                }
+
+            }
+        });
 
 
 
