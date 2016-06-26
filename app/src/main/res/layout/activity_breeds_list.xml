@@ -23,7 +23,7 @@
         android:layout_height="match_parent"
         android:background="@color/list_color"
         android:layout_marginBottom="55dp"
-        app:parallax_factor="2.0"
+        app:parallax_factor="1.0"
         app:circular_parallax="true"
         tools:context=".Breeds_list"
         android:layout_alignParentTop="true"

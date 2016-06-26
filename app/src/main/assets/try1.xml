@@ -16774,106 +16774,103 @@
 
 	</card>
 
-    <card>
-        <position>1</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>bo</image>
-        <text>Bo, the Portuguese water dog owned by the Obama family, is perhaps most famous for being mentioned in President Barack Obama's 2008 acceptance speech.</text>
-    </card>
+	<card>
+		<position>7</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>bo</image>
+		<text>Bo, the Portuguese water dog owned by the Obama family, is perhaps most famous for being mentioned in President Barack Obama's 2008 acceptance speech.</text>
+	</card>
 
 
-    <card>
-        <classification>Famous Dogs</classification>
-        <position>2</position>
-        <subclassification>Famous Dogs</subclassification>
-        <image>sinbad</image>
-        <text>
-            Sinbad was a mixed-breed canine sailor aboard the US Coast Guard Cutter George W. Campbell.
+	<card>
+		<classification>Famous Dogs</classification>
+		<position>2</position>
+		<subclassification>Famous Dogs</subclassification>
+		<image>sinbad</image>
+		<text>
+			Sinbad was a mixed-breed canine sailor and World War 2 Veteran.
 
-            Sinbad served 11 years sea duty in the Coast Guard, including combat in World War II.
-        </text>
-    </card>
+			He served for over 11 years.
+		</text>
+	</card>
 
-    <card>
-        <position>3</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>hachiko</image>
-        <text>
-            Hachiko was an Akita dog is known as the most loyal dog. The movie "Hachiko, A Dog's Tale" is based on him. At the end of each day, Hachiko would greet his owner at nearby Shibuya Station.
+	<card>
+		<position>3</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>hachiko</image>
+		<text>
+			Hachiko was an Akita dog. The movie "Hachiko, A Dog's Tale" is based on him. At the end of each day, he would greet his owner at nearby Shibuya Station.
 
-            This daily routine was followed until one day in May of 1925, when the professor did not return home from work.
-        </text>
-    </card>
+			This daily routine was followed until one day in May of 1925, when the professor did not return home from work.
+		</text>
+	</card>
 
 
-    <card>
-        <position>4</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>fala</image>
-        <text>
-            President Franklin D. Roosevelt's Scottish terrier, Fala, traveled with the Roosevelts and was frequently covered by the media.
+	<card>
+		<position>4</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>fala</image>
+		<text>
+			President Franklin D. Roosevelt's Scottish terrier, Fala, traveled with the Roosevelts and was frequently covered by the media.
 
-            A statue of Fala is featured at the Franklin Delano Roosevelt Memorial in Washington, DC — the only presidential pet so honored.
-        </text>
-    </card>
+			He's the only presidential pet to have his own memorial statue.
+		</text>
+	</card>
 
-    <card>
-        <classification>Famous Dogs</classification>
-        <position>5</position>
-        <subclassification>Famous Dogs</subclassification>
-        <image>stubby</image>
-        <text>It's not often that a dog gets promoted to the rank of sergeant for combat duty. Stubby was one of many war dogs living in the trenches of France, but he soon distinguished himself enough to earn the official rank of sergeant.
+	<card>
+		<classification>Famous Dogs</classification>
+		<position>5</position>
+		<subclassification>Famous Dogs</subclassification>
+		<image>stubby</image>
+		<text>It's not often that a dog gets promoted to the rank of sergeant for combat duty. Stubby was one of many war dogs living in the trenches of France, but he soon distinguished himself enough to earn an official rank.
 
-            Stubby’s list of bravery is incredible.
-        </text>
-    </card>
+		</text>
+	</card>
 
-    <card>
-        <position>6</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>bob</image>
-        <text>
-            Bob, a Collie-mix, has a special distinction bestowed upon him.
+	<card>
+		<position>6</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>bob</image>
+		<text>
+			Bob, a Collie-mix, is another War Hero. During World War II, he led more forays into german territory than any other soldier, human or canine.
+		</text>
+	</card>
+	<card>
+		<position>1</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>laika</image>
+		<text>
+			This is Laika, the most famous dog in the Universe.
 
-            During World War II, Bob led more forays into German territory than any other U.S. soldier, human or canine.
-        </text>
-    </card>
-    <card>
-        <position>7</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>laika</image>
-        <text>
-            Before man ever set foot on the moon or achieved the dream of breaking the Earth’s gravity and going into space, a dog did it first!
+			On 3rd November,1957, she became the first animal in space.
+		</text>
+	</card>
+	<card>
+		<position>8</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>lucca</image>
+		<text>
+			Lucca, an amazingly brave military dog who was severely injured in the line of duty.
 
-            On 3rd November,1957, the Sovient Union launched the first ever living animal into orbit: a dog named Laika
-        </text>
-    </card>
-    <card>
-        <position>8</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>lucca</image>
-        <text>
-            Lucca, an amazingly brave military dog who was severely injured in the line of duty, is truly an inspiration.
+			In March 2012, Lucca lost her leg while protecting a platoon of Marines from a roadside bomb. Her efforts were awarded with the PDSA Dickin Medal, the highest award for animals serving in military conflict.
+		</text>
+	</card>
 
-            In March 2012, Lucca lost her leg while protecting a platoon of Marines from a roadside bomb. Her efforts were awarded with the PDSA Dickin Medal, the highest award for animals serving in military conflict.
-        </text>
-    </card>
+	<card>
+		<position>9</position>
+		<classification>Famous Dogs</classification>
+		<subclassification>Famous Dogs</subclassification>
+		<image>rags</image>
+		<text>
+			Rags, a mixed-breed terrier, fought alongside the U.S. 1st Infantry division in World War I.
 
-    <card>
-        <position>9</position>
-        <classification>Famous Dogs</classification>
-        <subclassification>Famous Dogs</subclassification>
-        <image>rags</image>
-        <text>
-            Rags, a mixed-breed terrier, fought alongside the U.S. 1st Infantry division in World War I.
-
-            He was a carrier dog, who delivered notes across dangerous fields to various posts.
-        </text>
-    </card>
-    </record>
+			He was a carrier dog, who delivered notes across dangerous fields to various posts.
+		</text>
+	</card>
+</record>

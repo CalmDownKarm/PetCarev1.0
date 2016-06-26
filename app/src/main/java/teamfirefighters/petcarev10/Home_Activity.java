@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.nikoyuwono.toolbarpanel.ToolbarPanelLayout;
 import com.nikoyuwono.toolbarpanel.ToolbarPanelListener;
+import com.nirhart.parallaxscroll.views.ParallaxListView;
 import com.wenchao.cardstack.CardStack;
 
 import java.lang.reflect.Array;
@@ -34,15 +35,17 @@ public class Home_Activity extends AppCompatActivity {
     public ToolbarPanelLayout toolbarPanelLayout;
     public boolean menu_button_state = true; //true: menu    false: arrow
     public TextView cat_tag;
-    private CardStack mCardStack;
-    private CardDataAdapter mCardAdapter;
+   // private CardStack mCardStack;
+   ParallaxListView breeds_list;
+   // private CardDataAdapter mCardAdapter;
+   private HomeScreenListAdapter list_adapter;
     public List<Card> cards = null;
     private  String Category_name = "Famous Dogs";
     private  String Breed_name = "Famous Dogs";
 
 
     //TODO CHECK TO SEE IF CATEGORY NAME AND BREED NAME HAVE BEEN STORED
-    public int last_card_swiped = 0;
+   // public int last_card_swiped = 0;
     public TextView cardCount;
 
 
@@ -88,18 +91,27 @@ public class Home_Activity extends AppCompatActivity {
         listView.setAdapter(adapter);
         //check_for_last_Swiped();//Checks Shared Preferences
         cards = getCardsFromDB();
-        mCardStack = (CardStack)findViewById(R.id.container);
-        mCardStack.setContentResource(R.layout.card_layout);
-        mCardStack.setStackMargin(10);
-        mCardAdapter = new CardDataAdapter(Home_Activity.this);
 
-        for (int i=0; i< cards.size();i++)
-            mCardAdapter.add(cards.get(i));
+        breeds_list = (ParallaxListView) findViewById(R.id.Home_cards_list);
+        list_adapter = new HomeScreenListAdapter(this);
+        for (int i=0;i<cards.size();i++)
+            list_adapter.add(cards.get(i));
+            //list_adapter.addAll(cards);
+        breeds_list.setAdapter(list_adapter);
 
-        mCardStack.setAdapter(mCardAdapter);
 
-        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-        cardCount.setTypeface(font);
+     //   mCardStack = (CardStack)findViewById(R.id.container);
+     //   mCardStack.setContentResource(R.layout.card_layout);
+     //   mCardStack.setStackMargin(10);
+    //    mCardAdapter = new CardDataAdapter(Home_Activity.this);
+
+//        for (int i=0; i< cards.size();i++)
+  //          mCardAdapter.add(cards.get(i));
+
+//        mCardStack.setAdapter(mCardAdapter);
+
+//        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+  //      cardCount.setTypeface(font);
 
         assert searchButton!=null;
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -231,7 +243,7 @@ public class Home_Activity extends AppCompatActivity {
             }
         });
 
-
+/*
         mCardStack.setListener(new CardStack.CardEventListener() {
             @Override
             public boolean swipeEnd(int section, float distance) {
@@ -283,7 +295,7 @@ public class Home_Activity extends AppCompatActivity {
             }
         });
 
-
+*/
 
     }
 

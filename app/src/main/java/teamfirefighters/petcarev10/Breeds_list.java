@@ -35,7 +35,7 @@ public class Breeds_list extends AppCompatActivity {
 
    private List<String> breeds = new ArrayList<String >();
     ParallaxListView breeds_list;
-   private breed_list_view_adapter breeds_adapter;
+    private breed_list_view_adapter breeds_adapter;
     public String Category_name;
 
     public TextView cat_tag;
