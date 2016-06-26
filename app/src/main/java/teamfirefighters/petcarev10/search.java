@@ -95,8 +95,8 @@ public class search extends AppCompatActivity {
                     clearButton.setVisibility(View.GONE);
                 }
 
-                if(string.toString().length() != 0){
-                    getSearchFromDb(string.toString().trim());
+                if(string.toString().replaceAll("\n","").trim().length() != 0){
+                    getSearchFromDb(string.toString().replaceAll("\n","").trim());
 
                 Log.i("Boobs",tempSubClassifications.toString());
                 breeds_adapter.clear();
