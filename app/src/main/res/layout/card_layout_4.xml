@@ -10,9 +10,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="247dp"
-        android:minHeight="50dp"
-        android:orientation="vertical"
-        >
+        android:gravity="center_vertical"
+        android:minHeight="50dp">
+
 
 
     <com.mikhaellopez.circularimageview.CircularImageView
