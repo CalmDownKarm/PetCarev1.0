@@ -15,10 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home_Activity" />
-        <activity android:name=".Breeds_list" />
-        <activity android:name=".CardsActivity" />
-        <activity android:name=".search"></activity>
+        <activity android:name=".Home_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Breeds_list"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CardsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".search"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
