@@ -3,6 +3,8 @@ package teamfirefighters.petcarev10;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.text.SpannableStringBuilder;
+import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,35 +41,38 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
 
             LayoutInflater inflater = context.getLayoutInflater();
 
-        if(position!=getCount()-1){
+
             Typeface font_text = Typeface.createFromAsset(context.getAssets(), "robotoregular.ttf");
             view = inflater.inflate(R.layout.card_layout_4, null, true);
 
-             TextView mTVItem = (TextView) view.findViewById(R.id.card_text);
-             ImageView mIMGItem = (ImageView) view.findViewById(R.id.card_image);
+             TextView mTVItem = (TextView) view.findViewById(R.id.txt);
+            CircularImageView mIMGItem = (CircularImageView) view.findViewById(R.id.img);
 
 
             if (getItem(position).getText() != null) {
+               /* SpannableStringBuilder builder = new SpannableStringBuilder();
+                builder.append("     ").append(getItem(position).getText());
+                builder.setSpan(new ImageSpan(context, R.drawable.test),
+                        0, 1, 0);
+
+                mTVItem.setText(builder);
+*/
+
                 mTVItem.setText(getItem(position).getText());
                 mTVItem.setTypeface(font_text);
             }
 
 
-            if (getItem(position).getImage() != null) {
+           if (getItem(position).getImage() != null) {
 
-                Resources res = context.getResources();
-                String mDrawableName = getItem(position).getImage().replaceAll(" ", "_").toLowerCase();
-                int resID = res.getIdentifier(mDrawableName, "drawable", context.getPackageName());
+               Resources res = context.getResources();
+               String mDrawableName = getItem(position).getImage().replaceAll(" ", "_").toLowerCase();
+               int resID = res.getIdentifier(mDrawableName, "drawable", context.getPackageName());
 
-                mIMGItem.setImageResource(R.drawable.german_shepherd);
-
-            }
-        }else{
-            view = inflater.inflate(R.layout.last_card_layout, null, true);
-        }
+               Picasso.with(context).load(R.drawable.test).resize(100, 100).centerCrop().into(mIMGItem);
 
 
-
+           }
             // viewHolder.mIMGItem.setImageResource(resID);
 
             return view;

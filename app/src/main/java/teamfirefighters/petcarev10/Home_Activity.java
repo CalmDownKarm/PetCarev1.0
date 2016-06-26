@@ -35,9 +35,8 @@ public class Home_Activity extends AppCompatActivity {
     public ToolbarPanelLayout toolbarPanelLayout;
     public boolean menu_button_state = true; //true: menu    false: arrow
     public TextView cat_tag;
-   // private CardStack mCardStack;
+
    ParallaxListView breeds_list;
-   // private CardDataAdapter mCardAdapter;
    private HomeScreenListAdapter list_adapter;
     public List<Card> cards = null;
     private  String Category_name = "Famous Dogs";
@@ -45,7 +44,7 @@ public class Home_Activity extends AppCompatActivity {
 
 
     //TODO CHECK TO SEE IF CATEGORY NAME AND BREED NAME HAVE BEEN STORED
-   // public int last_card_swiped = 0;
+
     public TextView cardCount;
 
 
@@ -89,29 +88,14 @@ public class Home_Activity extends AppCompatActivity {
         }
 
         listView.setAdapter(adapter);
-        //check_for_last_Swiped();//Checks Shared Preferences
+
         cards = getCardsFromDB();
 
         breeds_list = (ParallaxListView) findViewById(R.id.Home_cards_list);
         list_adapter = new HomeScreenListAdapter(this);
-        for (int i=0;i<cards.size();i++)
-            list_adapter.add(cards.get(i));
-            //list_adapter.addAll(cards);
+        list_adapter.addAll(cards);
         breeds_list.setAdapter(list_adapter);
 
-
-     //   mCardStack = (CardStack)findViewById(R.id.container);
-     //   mCardStack.setContentResource(R.layout.card_layout);
-     //   mCardStack.setStackMargin(10);
-    //    mCardAdapter = new CardDataAdapter(Home_Activity.this);
-
-//        for (int i=0; i< cards.size();i++)
-  //          mCardAdapter.add(cards.get(i));
-
-//        mCardStack.setAdapter(mCardAdapter);
-
-//        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-  //      cardCount.setTypeface(font);
 
         assert searchButton!=null;
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -242,60 +226,6 @@ public class Home_Activity extends AppCompatActivity {
 
             }
         });
-
-/*
-        mCardStack.setListener(new CardStack.CardEventListener() {
-            @Override
-            public boolean swipeEnd(int section, float distance) {
-
-                if(last_card_swiped+1 == cards.size() )
-                    return false;
-
-                if(distance>100.0)
-                    return true;
-
-                return false;
-            }
-
-            @Override
-            public boolean swipeStart(int section, float distance) {
-                return false;
-            }
-
-            @Override
-            public boolean swipeContinue(int section, float distanceX, float distanceY) {
-                return true;
-            }
-
-            @Override
-            public void discarded(int mIndex, int direction) {
-                last_card_swiped++;
-                int num_used=SharedPrefHelper.getNumUsed(getApplicationContext());
-                cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-
-                if((last_card_swiped) == 1&&(num_used<5)) {
-                    Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
-                    SharedPrefHelper.incrementNumUsed(getApplicationContext());
-                }
-
-            }
-
-            @Override
-            public void topCardTapped() {
-
-                if(last_card_swiped>0){
-
-                    mCardAdapter.insert(cards.get(last_card_swiped-1),0);
-                    mCardStack.setAdapter(mCardAdapter);
-                    last_card_swiped--;
-                    cardCount.setText(last_card_swiped+1 +"/"+cards.size());
-
-                }
-                mCardStack.setStackMargin(10);
-            }
-        });
-
-*/
 
     }
 

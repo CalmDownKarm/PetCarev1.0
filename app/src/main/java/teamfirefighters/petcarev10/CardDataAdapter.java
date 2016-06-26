@@ -165,33 +165,6 @@ public class CardDataAdapter extends ArrayAdapter<Card> {
                 break;
             }
 
-            case 5:{
-
-                Typeface font_text = Typeface.createFromAsset(context.getAssets(), "robotoregular.ttf");
-
-                contentView = inflater.inflate(R.layout.card_layout_4, null, true);
-
-                ImageView card_img= (ImageView) contentView.findViewById(R.id.card_image);
-                TextView card_text = (TextView) contentView.findViewById(R.id.card_text);
-
-
-                if(getItem(position).getText() != null){
-                    card_text.setText(getItem(position).getText());
-                    card_text.setTypeface(font_text);
-                }
-
-                if(getItem(position).getImage() !=null){
-
-                    Resources res = context.getResources();
-                    String mDrawableName = getItem(position).getImage().replaceAll(" ","_").toLowerCase();
-                    int resID = res.getIdentifier(mDrawableName , "drawable", context.getPackageName());
-
-                    card_img.setImageResource(R.drawable.german_shepherd);
-
-                }
-
-                break;
-            }
         }
 
 
