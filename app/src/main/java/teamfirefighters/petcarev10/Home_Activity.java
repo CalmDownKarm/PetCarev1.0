@@ -41,6 +41,7 @@ public class Home_Activity extends AppCompatActivity {
     public List<Card> cards = null;
     private  String Category_name = "Famous Dogs";
     private  String Breed_name = "Famous Dogs";
+    private  String nav_bar_title = "Home";
 
 
     //TODO CHECK TO SEE IF CATEGORY NAME AND BREED NAME HAVE BEEN STORED
@@ -67,14 +68,28 @@ public class Home_Activity extends AppCompatActivity {
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
         cat_tag = (TextView) findViewById(R.id.cat_tag);
-        cat_tag.setText("Home");
+
         cat_tag.setTypeface(font);
-        if(false/*SharedPrefHelper.Checkif5Recent(getApplicationContext())*/){
+        if(SharedPrefHelper.Checkif5Recent(getApplicationContext())){
             //TODO LOAD RECENT 5
+            nav_bar_title = "Recent";
+            cards = getCardsFromDB(SharedPrefHelper.ReturnRecentCategories(getApplicationContext()),SharedPrefHelper.ReturnRecentBreeds(getApplicationContext()));
+            breeds_list = (ParallaxListView) findViewById(R.id.Home_cards_list);
+            list_adapter = new HomeScreenListAdapter(this);
+            list_adapter.addAll(cards);
+
+            breeds_list.setAdapter(list_adapter);
         }
         else{
-            /*TODO SET CATEGORY AND BREED NAME TO FAMOUS DOGS, ALREADY INITIALISED SO THIS NEED NOT DO ANYTHING*/}
 
+            cards = getCardsFromDB();
+            breeds_list = (ParallaxListView) findViewById(R.id.Home_cards_list);
+            list_adapter = new HomeScreenListAdapter(this);
+            list_adapter.addAll(cards);
+
+            breeds_list.setAdapter(list_adapter);
+        }
+        cat_tag.setText(nav_bar_title);
         cardCount =(TextView) findViewById(R.id.cardCount);
         final cat_list_view_adapter adapter = new cat_list_view_adapter(Home_Activity.this);
 
@@ -89,12 +104,7 @@ public class Home_Activity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-        cards = getCardsFromDB();
 
-        breeds_list = (ParallaxListView) findViewById(R.id.Home_cards_list);
-        list_adapter = new HomeScreenListAdapter(this);
-        list_adapter.addAll(cards);
-        breeds_list.setAdapter(list_adapter);
 
 
         assert searchButton!=null;
@@ -175,7 +185,7 @@ public class Home_Activity extends AppCompatActivity {
 
                 findViewById(R.id.cat_list).setAlpha(slideOffset);
                 if(slideOffset<0.5){
-                    cat_tag.setText("Home");
+                    cat_tag.setText(nav_bar_title);
                     cat_tag.setAlpha(1-slideOffset);}
 
 
@@ -219,7 +229,7 @@ public class Home_Activity extends AppCompatActivity {
 
                 panelView.setY((float) -(panelView.getHeight()-toolbarView.getHeight()));
 
-                cat_tag.setText("Home");
+                cat_tag.setText(nav_bar_title);
                 cat_tag.setAlpha((float) 1.0);
 
                 isPanelOpen = false;
@@ -301,7 +311,7 @@ public class Home_Activity extends AppCompatActivity {
         return Cards;
     }
 
-    //TODO OVERLOAD THIS METHOD
+
     private List<Card> getCardsFromDB(List<String> Categories,List<String> Breeds){
         List<Card> Cards = new ArrayList<Card>();
         CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
@@ -320,7 +330,7 @@ public class Home_Activity extends AppCompatActivity {
                 " =? AND "+ CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION+
                 " =? AND "+ CardDBContract.CardTable.COLUMN_NAME_CARD_POSITION+
                 " =?";
-        for(int i=0;i<5;i++){
+        for(int i=Breeds.size()-1;i>=0;i--){
             Breed_name = Breeds.get(i);
             Category_name = Categories.get(i);
             String[] selectionargs = {

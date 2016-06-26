@@ -40,40 +40,52 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
 
 
             LayoutInflater inflater = context.getLayoutInflater();
-
-
-            Typeface font_text = Typeface.createFromAsset(context.getAssets(), "robotoregular.ttf");
             view = inflater.inflate(R.layout.card_layout_4, null, true);
 
-             TextView mTVItem = (TextView) view.findViewById(R.id.txt);
-            CircularImageView mIMGItem = (CircularImageView) view.findViewById(R.id.img);
+        TextView mTVItem = (TextView) view.findViewById(R.id.txt);
+        CircularImageView mIMGItem = (CircularImageView) view.findViewById(R.id.img);
 
 
-            if (getItem(position).getText() != null) {
-               /* SpannableStringBuilder builder = new SpannableStringBuilder();
-                builder.append("     ").append(getItem(position).getText());
-                builder.setSpan(new ImageSpan(context, R.drawable.test),
-                        0, 1, 0);
+        if(getItem(position).getClassification().equalsIgnoreCase("Famous Dogs")){
 
-                mTVItem.setText(builder);
-*/
-
-                mTVItem.setText(getItem(position).getText());
+                Typeface font_text = Typeface.createFromAsset(context.getAssets(), "robotoregular.ttf");
+                TextView mTVItem_1 = (TextView) view.findViewById(R.id.txt_1);
+                mTVItem_1.setVisibility(View.GONE);
+                if (getItem(position).getText() != null) {
+                    mTVItem.setText(getItem(position).getText());
+                    mTVItem.setTypeface(font_text);
+                }
+                if (getItem(position).getImage() != null) {
+                    Resources res = context.getResources();
+                    String mDrawableName = getItem(position).getImage().replaceAll(" ", "_").toLowerCase();
+                    int resID = res.getIdentifier(mDrawableName, "drawable", context.getPackageName());
+                    Picasso.with(context).load(R.drawable.test).resize(100, 100).centerCrop().into(mIMGItem);
+                }
+        }else{
+            Typeface font_text = Typeface.createFromAsset(context.getAssets(), "raleway.ttf");
+            TextView mTVItem_1 = (TextView) view.findViewById(R.id.txt_1);
+            if (getItem(position).getSubclassification() != null) {
+                mTVItem.setText(getItem(position).getSubclassification());
                 mTVItem.setTypeface(font_text);
+                mTVItem.setTextSize(30);
+
             }
 
+            if (getItem(position).getText() != null) {
 
-           if (getItem(position).getImage() != null) {
+                Log.i("Boobs",getItem(position).getText());
+                mTVItem_1.setText(getItem(position).getText());
+                mTVItem_1.setTypeface(font_text);
+                mTVItem_1.setTextSize(20);
+            }
+            if (getItem(position).getImage() != null) {
+                Resources res = context.getResources();
+                String mDrawableName = getItem(position).getImage().replaceAll(" ", "_").toLowerCase();
+                int resID = res.getIdentifier(mDrawableName, "drawable", context.getPackageName());
+                Picasso.with(context).load(resID).resize(100, 100).centerCrop().into(mIMGItem);
+            }
+        }
 
-               Resources res = context.getResources();
-               String mDrawableName = getItem(position).getImage().replaceAll(" ", "_").toLowerCase();
-               int resID = res.getIdentifier(mDrawableName, "drawable", context.getPackageName());
-
-               Picasso.with(context).load(R.drawable.test).resize(100, 100).centerCrop().into(mIMGItem);
-
-
-           }
-            // viewHolder.mIMGItem.setImageResource(resID);
 
             return view;
 

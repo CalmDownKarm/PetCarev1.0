@@ -75,8 +75,7 @@ public class SharedPrefHelper {
             editor.commit();
 
         }
-        Log.i("boobs",TempBreed);
-        Log.i("boobs",TempCat);
+
     }
 
     public static void setDBNotReady(Context context){
