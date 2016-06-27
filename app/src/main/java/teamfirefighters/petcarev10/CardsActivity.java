@@ -260,7 +260,7 @@ public class CardsActivity extends AppCompatActivity {
 
 
 
-        Animation moveup = new TranslateAnimation(0f,0f,800f,0f);
+        Animation moveup = new TranslateAnimation(0f,0f,1100f,0f);
         moveup.setDuration(700);
         Animation fadeInButtons = new AlphaAnimation(0f,1f);
         fadeInButtons.setStartOffset(300);

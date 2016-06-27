@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getSupportActionBar().hide();
+
         if(SharedPrefHelper.checkDBReady(getApplicationContext())) {//Data has been parsed
             Intent foo = new Intent(getApplicationContext(),Home_Activity.class);
             startActivity(foo);
