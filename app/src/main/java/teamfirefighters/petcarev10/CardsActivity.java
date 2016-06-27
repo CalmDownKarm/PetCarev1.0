@@ -173,7 +173,7 @@ public class CardsActivity extends AppCompatActivity {
                 int num_used=SharedPrefHelper.getNumUsed(getApplicationContext());
                 cardCount.setText(last_card_swiped+1 +"/"+cards.size());
                 if((last_card_swiped == 1)&&(num_used<5)){
-                    Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_LONG).show();
                     SharedPrefHelper.incrementNumUsed(getApplicationContext());
                 }
 
