@@ -15,6 +15,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -187,6 +188,15 @@ public class CardsActivity extends AppCompatActivity {
 
 
     void onLastCardSwiped(){
+
+        Animation fadeOut = new AlphaAnimation(1f,0f);
+        fadeOut.setDuration(700);
+        fadeOut.setFillEnabled(true);
+        homeButton.startAnimation(fadeOut);
+        backButton.startAnimation(fadeOut);
+        breedName.startAnimation(fadeOut);
+        cardCount.startAnimation(fadeOut);
+
         homeButton.setVisibility(View.GONE);
         backButton.setVisibility(View.GONE);
         breedName.setVisibility(View.GONE);
@@ -196,6 +206,10 @@ public class CardsActivity extends AppCompatActivity {
         relodeButtonlast.setVisibility(View.VISIBLE);
         backButtonlast.setVisibility(View.VISIBLE);
         homeButtonlast.setVisibility(View.VISIBLE);
+
+
+
+
 
         Animation scale = new ScaleAnimation(0f, 1.1f, 0f, 1.1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         scale.setDuration(800);
@@ -210,8 +224,23 @@ public class CardsActivity extends AppCompatActivity {
         animSet.addAnimation(scale);
         animSet.addAnimation(fadeIn);
         animSet.addAnimation(scaleDown);
-
         check.startAnimation(animSet);
+
+
+
+
+        Animation moveup = new TranslateAnimation(0f,0f,800f,0f);
+        moveup.setDuration(700);
+        Animation fadeInButtons = new AlphaAnimation(0f,1f);
+        fadeInButtons.setStartOffset(300);
+        AnimationSet buttonAnimSet = new AnimationSet(true);
+        buttonAnimSet.setFillEnabled(true);
+        buttonAnimSet.addAnimation(moveup);
+        buttonAnimSet.addAnimation(fadeInButtons);
+        buttonAnimSet.setStartOffset(1100);
+        relodeButtonlast.startAnimation(buttonAnimSet);
+        backButtonlast.startAnimation(buttonAnimSet);
+        homeButtonlast.startAnimation(buttonAnimSet);
 
 
     }
