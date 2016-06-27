@@ -6,10 +6,12 @@ package teamfirefighters.petcarev10;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -60,6 +62,10 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
 
         Picasso.with(context).load(resID).resize(90,90).centerCrop().into(viewHolder.mIMGItem);
 
+        if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            viewHolder.outer_layout.setBackgroundResource(R.drawable.ripple);
+        }
+
        // viewHolder.mIMGItem.setImageResource(resID);
 
         return rowView;
@@ -70,8 +76,10 @@ public class breed_list_view_adapter extends ArrayAdapter<String> {
 class CompleteListViewHolder {
     public TextView mTVItem;
     public CircularImageView mIMGItem;
+    public RelativeLayout outer_layout;
     public CompleteListViewHolder(View base) {
         mTVItem = (TextView) base.findViewById(R.id.txt);
         mIMGItem = (CircularImageView)base.findViewById(R.id.img);
+        outer_layout= (RelativeLayout) base.findViewById(R.id.breed_list_item);
     }
 }

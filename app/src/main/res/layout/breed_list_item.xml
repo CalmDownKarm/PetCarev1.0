@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_horizontal"
     android:background="@color/list_color"
+    android:id="@+id/breed_list_item"
+    android:foreground="?attr/selectableItemBackground"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/img"

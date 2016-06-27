@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -101,6 +102,12 @@ public class CardsActivity extends AppCompatActivity {
         backButtonlast = (LinearLayout)findViewById(R.id.backButtonlast);
         homeButtonlast = (LinearLayout)findViewById(R.id.homeButtonlast);
         final List<String> categories = getCategoriesFromDb();//Categories from DB
+
+        if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            relodeButtonlast.setBackgroundResource(R.drawable.ripple_button);
+            backButtonlast.setBackgroundResource(R.drawable.ripple_button);
+            homeButtonlast.setBackgroundResource(R.drawable.ripple_button);
+        }
 
         cards = getCardsFromDB();
 
@@ -225,7 +232,7 @@ public class CardsActivity extends AppCompatActivity {
     void onLastCardSwiped(){
 
         Animation fadeOut = new AlphaAnimation(1f,0f);
-        fadeOut.setDuration(700);
+        fadeOut.setDuration(400);
         fadeOut.setFillEnabled(true);
         homeButton.startAnimation(fadeOut);
         backButton.startAnimation(fadeOut);

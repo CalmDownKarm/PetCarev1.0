@@ -116,7 +116,7 @@
             android:id="@+id/back"
             android:textSize="20sp"
             android:layout_marginRight="10dp"
-            android:text="Back to breeds"/>
+            android:text="Back to Breeds"/>
 
     </LinearLayout>
 
