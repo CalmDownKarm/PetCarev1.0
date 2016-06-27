@@ -168,10 +168,13 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
-                if(last_card_swiped == cards.size())
+                if(last_card_swiped == cards.size()) {
                     onLastCardSwiped();
+                }else{
+                    cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+                }
                 int num_used=SharedPrefHelper.getNumUsed(getApplicationContext());
-                cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+
                 if((last_card_swiped == 1)&&(num_used<5)){
                     Toast.makeText(getApplicationContext(), "Tap to get previous card", Toast.LENGTH_LONG).show();
                     SharedPrefHelper.incrementNumUsed(getApplicationContext());
