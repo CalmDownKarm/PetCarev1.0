@@ -65,7 +65,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:background="#ffffff"
+        android:background="@drawable/ripple_button"
         android:layout_below="@+id/check"
         android:layout_marginTop="35dp">
 
@@ -85,7 +85,7 @@
             android:id="@+id/relode"
             android:textSize="20sp"
             android:layout_marginRight="10dp"
-            android:text="Relode Cards"/>
+            android:text="Reload Cards"/>
 
     </LinearLayout>
 
@@ -95,7 +95,7 @@
         android:id="@+id/backButtonlast"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#ffffff"
+        android:background="@drawable/ripple_button"
         android:layout_below="@+id/relodeButtonlast"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true">
@@ -127,7 +127,7 @@
         android:id="@+id/homeButtonlast"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#ffffff"
+        android:background="@drawable/ripple_button"
         android:layout_below="@+id/backButtonlast"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true">

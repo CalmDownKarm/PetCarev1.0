@@ -249,8 +249,7 @@ public class CardsActivity extends AppCompatActivity {
         Animation scale = new ScaleAnimation(0f, 1.1f, 0f, 1.1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         scale.setDuration(800);
         Animation fadeIn = new AlphaAnimation(0f,1f);
-        fadeIn.setDuration(300);
-        fadeIn.setStartOffset(600);
+        fadeIn.setDuration(500);
         Animation scaleDown = new ScaleAnimation(1.1f, 1f, 1.1f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         scaleDown.setDuration(100);
         scaleDown.setStartOffset(800);
