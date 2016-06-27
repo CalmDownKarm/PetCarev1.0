@@ -197,11 +197,15 @@ public class CardsActivity extends AppCompatActivity {
         backButtonlast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CardsActivity.this, Breeds_list.class);
-                i.putExtra("Category", Category_name);
-                i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
-                startActivity(i);
-                finish();
+                if (Category_name.equalsIgnoreCase("Diet")) {
+                    homeButtonlast.callOnClick();
+                } else {
+                    Intent i = new Intent(CardsActivity.this, Breeds_list.class);
+                    i.putExtra("Category", Category_name);
+                    i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
+                    startActivity(i);
+                    finish();
+                }
             }
         });
 
