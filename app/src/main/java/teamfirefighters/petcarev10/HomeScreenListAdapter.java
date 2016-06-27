@@ -63,6 +63,7 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
                 }
         }else{
             Typeface font_text = Typeface.createFromAsset(context.getAssets(), "raleway.ttf");
+            Typeface font = Typeface.createFromAsset(context.getAssets(), "robotoregular.ttf");
             TextView mTVItem_1 = (TextView) view.findViewById(R.id.txt_1);
             if (getItem(position).getSubclassification() != null) {
                 mTVItem.setText(getItem(position).getSubclassification());
@@ -74,7 +75,7 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
             if (getItem(position).getText() != null) {
 
                 mTVItem_1.setText(getItem(position).getText());
-                mTVItem_1.setTypeface(font_text);
+                mTVItem_1.setTypeface(font);
                 mTVItem_1.setTextSize(20);
             }
             if (getItem(position).getImage() != null) {

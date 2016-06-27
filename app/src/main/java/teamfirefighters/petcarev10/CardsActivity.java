@@ -8,9 +8,16 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +67,14 @@ public class CardsActivity extends AppCompatActivity {
     public List<Card> cards = null;
     public int last_card_swiped = 0;
     public TextView cardCount;
+    ImageButton backButton;
+    ImageButton homeButton ;
+    TextView breedName;
+    ImageView check;
+    LinearLayout relodeButtonlast;
+    LinearLayout backButtonlast;
+    LinearLayout homeButtonlast;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,29 +90,27 @@ public class CardsActivity extends AppCompatActivity {
         SharedPrefHelper.storeLastSwiped(getApplicationContext(),Category_name,Breed_name);
 
 
+        backButton = (ImageButton) findViewById(R.id.backButton);
+        homeButton = (ImageButton) findViewById(R.id.homeButton);
+        breedName =(TextView) findViewById(R.id.breedName);
+        cardCount =(TextView) findViewById(R.id.cardCount);
+        check = (ImageView) findViewById(R.id.check);
+        relodeButtonlast = (LinearLayout)findViewById(R.id.relodeButtonlast);
+        backButtonlast = (LinearLayout)findViewById(R.id.backButtonlast);
+        homeButtonlast = (LinearLayout)findViewById(R.id.homeButtonlast);
+
+
         cards = getCardsFromDB();
 
-        mCardStack = (CardStack)findViewById(R.id.container);
-        mCardStack.setContentResource(R.layout.card_layout);
-        mCardStack.setStackMargin(10);
-        mCardAdapter = new CardDataAdapter(CardsActivity.this);
-
-        for (int i=0; i< cards.size();i++)
-            mCardAdapter.add(cards.get(i));
-
-        mCardStack.setAdapter(mCardAdapter);
-
-
-        ImageButton backButton = (ImageButton) findViewById(R.id.backButton);
-        ImageButton homeButton = (ImageButton) findViewById(R.id.homeButton);
-        TextView breedName =(TextView) findViewById(R.id.breedName);
-        cardCount =(TextView) findViewById(R.id.cardCount);
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
         breedName.setText(Breed_name);
         breedName.setTypeface(font);
         cardCount.setText(last_card_swiped+1 +"/"+cards.size());
         cardCount.setTypeface(font);
 
+
+
+        setCards();
 
 
         assert  backButton !=null;
@@ -123,8 +136,6 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public boolean swipeEnd(int section, float distance) {
 
-                if(last_card_swiped+1 == cards.size() )
-                    return false;
 
                 if(distance>100.0)
                     return true;
@@ -145,6 +156,8 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public void discarded(int mIndex, int direction) {
                 last_card_swiped++;
+                if(last_card_swiped == cards.size())
+                    onLastCardSwiped();
                 int num_used=SharedPrefHelper.getNumUsed(getApplicationContext());
                 cardCount.setText(last_card_swiped+1 +"/"+cards.size());
                 if((last_card_swiped == 1)&&(num_used<5)){
@@ -169,5 +182,59 @@ public class CardsActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+
+    void onLastCardSwiped(){
+        homeButton.setVisibility(View.GONE);
+        backButton.setVisibility(View.GONE);
+        breedName.setVisibility(View.GONE);
+        cardCount.setVisibility(View.GONE);
+
+        check.setVisibility(View.VISIBLE);
+        relodeButtonlast.setVisibility(View.VISIBLE);
+        backButtonlast.setVisibility(View.VISIBLE);
+        homeButtonlast.setVisibility(View.VISIBLE);
+
+        Animation scale = new ScaleAnimation(0f, 1.1f, 0f, 1.1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scale.setDuration(800);
+        Animation fadeIn = new AlphaAnimation(0f,1f);
+        fadeIn.setDuration(300);
+        fadeIn.setStartOffset(600);
+        Animation scaleDown = new ScaleAnimation(1.1f, 1f, 1.1f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleDown.setDuration(100);
+        scaleDown.setStartOffset(800);
+        AnimationSet animSet = new AnimationSet(true);
+        animSet.setFillEnabled(true);
+        animSet.addAnimation(scale);
+        animSet.addAnimation(fadeIn);
+        animSet.addAnimation(scaleDown);
+
+        check.startAnimation(animSet);
+
+
+    }
+
+    void onCardsSet(){
+        homeButton.setVisibility(View.VISIBLE);
+        backButton.setVisibility(View.VISIBLE);
+        breedName.setVisibility(View.VISIBLE);
+        cardCount.setVisibility(View.VISIBLE);
+
+        check.setVisibility(View.GONE);
+        relodeButtonlast.setVisibility(View.GONE);
+        backButtonlast.setVisibility(View.GONE);
+        homeButtonlast.setVisibility(View.GONE);
+    }
+
+    void setCards(){
+        mCardStack = (CardStack)findViewById(R.id.container);
+        mCardStack.setContentResource(R.layout.card_layout);
+        mCardStack.setStackMargin(10);
+        mCardAdapter = new CardDataAdapter(CardsActivity.this);
+        mCardAdapter.addAll(cards);
+        mCardStack.setAdapter(mCardAdapter);
+        onCardsSet();
     }
 }

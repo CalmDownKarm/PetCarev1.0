@@ -52,9 +52,8 @@ public class Card {
 
 
     public void setCardLayoutType(){
-        if(classification.equals("Famous Dogs"))
-            CardLayoutType=5;
-        else if(text!=null   &&
+
+        if(text!=null   &&
                 title!=null  &&
                 image!=null  &&
                 List_string !=null)
