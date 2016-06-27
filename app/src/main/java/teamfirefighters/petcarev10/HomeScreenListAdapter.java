@@ -60,7 +60,7 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
                     Resources res = context.getResources();
                     String mDrawableName = getItem(position).getImage().replaceAll(" ", "_").toLowerCase();
                     int resID = res.getIdentifier(mDrawableName, "drawable", context.getPackageName());
-                    Picasso.with(context).load(R.drawable.test).resize(100, 100).centerCrop().into(mIMGItem);
+                    Picasso.with(context).load(resID).into(mIMGItem);
                 }
         }else{
             Typeface font_text = Typeface.createFromAsset(context.getAssets(), "raleway.ttf");
