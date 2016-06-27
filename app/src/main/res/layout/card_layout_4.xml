@@ -36,7 +36,7 @@
             android:textColor="@color/panel_color"
             android:layout_marginLeft="10dp"
             android:layout_centerHorizontal="true"
-            android:textAlignment="center"
+
             android:textSize="17sp"
             android:paddingLeft="10dp"
             android:layout_below="@+id/img" />

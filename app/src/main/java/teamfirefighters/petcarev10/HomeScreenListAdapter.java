@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +69,7 @@ public class HomeScreenListAdapter extends ArrayAdapter<Card> {
             if (getItem(position).getSubclassification() != null) {
                 mTVItem.setText(getItem(position).getSubclassification());
                 mTVItem.setTypeface(font_text);
+                mTVItem.setGravity(Gravity.CENTER);
                 mTVItem.setTextSize(30);
 
             }
