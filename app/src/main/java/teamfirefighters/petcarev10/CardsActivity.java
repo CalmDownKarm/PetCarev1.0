@@ -77,6 +77,7 @@ public class CardsActivity extends AppCompatActivity {
     LinearLayout homeButtonlast;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,18 +100,21 @@ public class CardsActivity extends AppCompatActivity {
         relodeButtonlast = (LinearLayout)findViewById(R.id.relodeButtonlast);
         backButtonlast = (LinearLayout)findViewById(R.id.backButtonlast);
         homeButtonlast = (LinearLayout)findViewById(R.id.homeButtonlast);
-
+        final List<String> categories = getCategoriesFromDb();//Categories from DB
 
         cards = getCardsFromDB();
 
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
         breedName.setText(Breed_name);
         breedName.setTypeface(font);
-        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+
         cardCount.setTypeface(font);
 
 
-
+        mCardStack = (CardStack)findViewById(R.id.container);
+        mCardStack.setContentResource(R.layout.card_layout);
+        mCardStack.setStackMargin(10);
+        mCardAdapter = new CardDataAdapter(CardsActivity.this);
         setCards();
 
 
@@ -180,6 +184,33 @@ public class CardsActivity extends AppCompatActivity {
 
                 }
                 mCardStack.setStackMargin(10);
+            }
+        });
+
+        relodeButtonlast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onRelode();
+            }
+        });
+
+        backButtonlast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CardsActivity.this, Breeds_list.class);
+                i.putExtra("Category", Category_name);
+                i.putStringArrayListExtra("Category_list", (ArrayList<String>) categories);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        homeButtonlast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CardsActivity.this ,Home_Activity.class);
+                startActivity(i);
+                finish();
             }
         });
 
@@ -258,12 +289,45 @@ public class CardsActivity extends AppCompatActivity {
     }
 
     void setCards(){
-        mCardStack = (CardStack)findViewById(R.id.container);
-        mCardStack.setContentResource(R.layout.card_layout);
-        mCardStack.setStackMargin(10);
-        mCardAdapter = new CardDataAdapter(CardsActivity.this);
+        last_card_swiped = 0;
+        cardCount.setText(last_card_swiped+1 +"/"+cards.size());
+        mCardAdapter.clear();
         mCardAdapter.addAll(cards);
         mCardStack.setAdapter(mCardAdapter);
         onCardsSet();
+    }
+
+    void onRelode(){
+        Intent i = new Intent(CardsActivity.this, CardsActivity.class);
+        i.putExtra("Category", Category_name);
+        i.putExtra("Breed", Breed_name);
+        startActivity(i);
+        finish();
+
+    }
+
+    private List<String> getCategoriesFromDb(){
+        List<String> Categories = new ArrayList<String>();
+        if(SharedPrefHelper.checkDBReady(getApplicationContext())){//Check Flag Again to ensure that the database is ready
+            CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
+            SQLiteDatabase db = cdbhelper.getReadableDatabase();
+            String[] projection={
+                    CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION
+            };
+            String sortOrder = CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION + " DESC";
+            Cursor c = db.query(true, CardDBContract.CardTable.TABLE_NAME,projection,null,null,null,null,sortOrder,null);
+
+            if(c!=null){
+
+                for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+                    String temp = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
+                    Categories.add(temp);
+                }
+            }
+            db.close();
+        }
+
+
+        return Categories;
     }
 }
