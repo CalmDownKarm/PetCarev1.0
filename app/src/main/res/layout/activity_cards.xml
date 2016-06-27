@@ -65,7 +65,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ripple_button"
+        android:background="@color/white"
         android:layout_below="@+id/check"
         android:layout_marginTop="35dp">
 
@@ -95,7 +95,7 @@
         android:id="@+id/backButtonlast"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@drawable/ripple_button"
+        android:background="@color/white"
         android:layout_below="@+id/relodeButtonlast"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true">
@@ -127,7 +127,7 @@
         android:id="@+id/homeButtonlast"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@drawable/ripple_button"
+        android:background="@color/white"
         android:layout_below="@+id/backButtonlast"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true">

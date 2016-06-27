@@ -79,6 +79,10 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     protected void onPreExecute(){
+        if(SharedPrefHelper.checkDBReady(context)){
+            SQLiteDatabase db = cardbhelper.getWritableDatabase();
+            cardbhelper.onUpgrade(db,1,1);
+        }
         pd.setMessage("Letting the Dogs out...");
         pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         pd.setIndeterminate(true);
@@ -88,6 +92,8 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     public void onCancelled(){
+        SQLiteDatabase db = cardbhelper.getWritableDatabase();
+        cardbhelper.onDelete(db);
         SharedPrefHelper.setDBNotReady(context);
     }
     @Override

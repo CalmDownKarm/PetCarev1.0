@@ -22,7 +22,7 @@ public class CardDBHelper extends SQLiteOpenHelper {
                     CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION + TEXT_TYPE + COMMA_SEP +
                     CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION + TEXT_TYPE + COMMA_SEP +
                     CardDBContract.CardTable.COLUMN_NAME_SUBSUBCLASSIFICATION + TEXT_TYPE+" )";
-    private static final String SQL_DELETE_CARDS =
+    public static final String SQL_DELETE_CARDS =
             "DROP TABLE IF EXISTS " + CardDBContract.CardTable.TABLE_NAME;
 
     public static final int DATABASE_VERSION=1;
@@ -35,7 +35,6 @@ public class CardDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SQL_DELETE_CARDS);
         db.execSQL(SQL_CREATE_CARDS);
         }
 
@@ -47,5 +46,8 @@ public class CardDBHelper extends SQLiteOpenHelper {
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion){
         onUpgrade(db,oldVersion,newVersion);
+    }
+    public void onDelete(SQLiteDatabase db){
+        db.execSQL(SQL_DELETE_CARDS);
     }
 }
