@@ -96,7 +96,6 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     protected void  onPostExecute(Void res){
-        Log.i("boobs","on postExcute");
         if(pd.isShowing())
             pd.dismiss();
         SharedPrefHelper.setDbReady(context);

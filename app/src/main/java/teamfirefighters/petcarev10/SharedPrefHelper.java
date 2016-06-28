@@ -36,6 +36,13 @@ public class SharedPrefHelper {
             tempbool = true;
         return tempbool;
     }
+    public static void clearString(Context appContext,String key){
+        SharedPreferences Flag = appContext.getSharedPreferences(SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor= Flag.edit();
+        editor.putString(key,EMPTY_STRING);
+        editor.commit();
+
+    }
     public static boolean CheckAppFirstTimeFlag(Context appContext){
         SharedPreferences Flag = appContext.getSharedPreferences(SHARED_PREFERENCES_KEY,Context.MODE_PRIVATE);
         return Flag.getBoolean(FIRSTTIME_FLAG,DEFAULT_BOOL);

@@ -402,8 +402,6 @@ public class Home_Activity extends AppCompatActivity {
 
     private void scheduleNotification(Notification notification) {
 
-
-
         Intent notificationIntent = new Intent(this, NotificationPublisher.class);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
@@ -417,7 +415,7 @@ public class Home_Activity extends AppCompatActivity {
 
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),Week_IN_MILLISEC ,pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),10000 ,pendingIntent);
     }
 
     private Notification getNotification() {
