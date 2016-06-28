@@ -440,9 +440,9 @@
 
 		<text>
 
-			Grooming your Irish Setter takes a lot of time and effort. The long and silky coat needs every day brushing to ensure that it remains soft and lustrous.
+			Grooming your Irish Setter takes a lot of time and effort. The long and silky coat needs to be brushed everyday to ensure that it remains soft and lustrous.
 
-			You need to follow the regular grooming regime in your pet i.e brushing the teeth and clipping toe nails. Clipping nails is very important as dog nails have veins in them and if they get chipped then it can be very painful for your pet.
+			You need to follow the regular grooming regime for your pet i.e brushing the teeth and clipping toe nails. Clipping nails is very important as dog nails have veins in them and if they get chipped then it can be very painful for your pet.
 
 		</text>
 
@@ -7863,13 +7863,13 @@
 
 		<list>
 
-			<li>Affectionate</li>
+			<ul>Affectionate</ul>
 
-			<li>Friendly</li>
+			<ul>Friendly</ul>
 
-			<li>Handsome</li>
+			<ul>Handsome</ul>
 
-			<li>Intelligent</li>
+			<ul>Intelligent</ul>
 
 		</list>
 
@@ -7956,11 +7956,11 @@
 
 		<list>
 
-			<li>Easily adaptable in Indian weather</li>
+			<ul>Easily adaptable in Indian weather</ul>
 
-			<li>Easy to train</li>
+			<ul>Easy to train</ul>
 
-			<li>Grooming is a breeze</li>
+			<ul>Grooming is a breeze</ul>
 
 		</list>
 
@@ -7977,7 +7977,7 @@
 
 		<list>
 
-			<li>There can be times when they can fall prey to almost any disease due to numerous reasons.</li>
+			<ul>There can be times when they can fall prey to almost any disease due to numerous reasons.</ul>
 
 		</list>
 
@@ -10804,13 +10804,13 @@
 
 		<list>
 
-			<li>Defender</li>
+			<ul>Defender</ul>
 
-			<li>Devoted</li>
+			<ul>Devoted</ul>
 
-			<li>Headstrong</li>
+			<ul>Headstrong</ul>
 
-			<li>Suspicious</li>
+			<ul>Suspicious</ul>
 
 		</list>
 
@@ -10894,11 +10894,11 @@
 
 		<list>
 
-			<li>Excellent guard dog for the family</li>
+			<ul>Excellent guard dog for the family</ul>
 
-			<li>Can make affectionate and loyal pets for the family</li>
+			<ul>Can make affectionate and loyal pets for the family</ul>
 
-			<li>You share your pet with all-time great pet Hachiko</li>
+			<ul>You share your pet with all-time great pet Hachiko</ul>
 
 		</list>
 
@@ -10914,11 +10914,11 @@
 
 		<list>
 
-			<li>This is not a good pet with small children around</li>
+			<ul>This is not a good pet with small children around</ul>
 
-			<li>Sheds a lot and fur can be seen everywhere</li>
+			<ul>Sheds a lot and fur can be seen everywhere</ul>
 
-			<li>Training is a tough task with this breed</li>
+			<ul>Training is a tough task with this breed</ul>
 
 		</list>
 
@@ -16560,7 +16560,7 @@
 		<classification>Diet</classification>
 		<subclassification>Diet</subclassification>
 
-		<title>What should I feed my Dog?</title>
+		<title>What should I feed my dog?</title>
 		<text>
 
 			The most important thing you need to know is that the diet for dogs doesn’t change much according to the breed type. All the dogs share almost a common diet plan. The only thing that varies is the quantity of food they should have depending on their age or their health conditions.
@@ -16773,7 +16773,6 @@
 		</text>
 
 	</card>
-
 	<card>
 		<position>7</position>
 		<classification>Famous Dogs</classification>
