@@ -139,7 +139,11 @@ public class Home_Activity extends AppCompatActivity {
             }
         });
 
-        scheduleNotification(getNotification("DWAG   DWAG"), 0);
+
+        if(!SharedPrefHelper.CheckAppFirstTimeFlag(getApplicationContext())){
+            scheduleNotification(getNotification());
+            SharedPrefHelper.setAppFirstTime(getApplicationContext());
+        }
 
 
 
@@ -388,13 +392,12 @@ public class Home_Activity extends AppCompatActivity {
         return Cards;
     }
 
-    private void scheduleNotification(Notification notification, int delay) {
+    private void scheduleNotification(Notification notification) {
 
-        Log.i("Boobs","Schedule fn ");
+
 
         Intent notificationIntent = new Intent(this, NotificationPublisher.class);
-
-        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);;
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -405,46 +408,22 @@ public class Home_Activity extends AppCompatActivity {
         cal.set(Calendar.DAY_OF_WEEK,Calendar.SUNDAY);
 
 
-        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        //alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),Week_IN_MILLISEC ,pendingIntent);
     }
 
-    private Notification getNotification(String content) {
-        Log.i("Boobs","Builder fn");
-        Intent mIntent = new Intent(this, Home_Activity.class);
+    private Notification getNotification() {
+        Intent mIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mIntent, 0);
-        //TODO Create Notification Content
-        //TODO Shared flag for first time
         Notification.Builder builder = new Notification.Builder(this);
-        builder.setContentTitle("Scheduled Notification");
+        builder.setContentTitle(getResources().getString(R.string.app_name));
         builder.setContentIntent(pendingIntent);
-        builder.setContentText(content);
-       //TODO make icon for notification
+        builder.setAutoCancel(true);
+        builder.setContentText("Want to learn about a new breed?");
         builder.setSmallIcon(R.drawable.notification_icon);
         return builder.build();
     }
-    public String[] getDataForNotification(){
-        /*Returns String[0] = category and String[1]=breed*/
-        CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
-        SQLiteDatabase db = cdbhelper.getReadableDatabase();
-        String[] projection={
-                CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION,
-                CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION,
-        };
-        String sortOrder = "RANDOM()";
-        String Limit = " 1 ";
-        String category = "",breed = "";
-        Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,null,null,null,null,sortOrder,Limit);
-        if(c!=null){
-            c.moveToFirst();
-            category = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
-            breed = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
-        }
-        db.close();
-        Log.d("RIBBIT",category);
-        Log.d("RIBBIT",breed);
-        return new String[]{category, breed};
-    }
+
 }
