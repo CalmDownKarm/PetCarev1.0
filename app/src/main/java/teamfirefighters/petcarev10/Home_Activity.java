@@ -1,5 +1,8 @@
 package teamfirefighters.petcarev10;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
@@ -29,6 +33,8 @@ import com.wenchao.cardstack.CardStack;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class Home_Activity extends AppCompatActivity {
@@ -50,6 +56,8 @@ public class Home_Activity extends AppCompatActivity {
     //TODO CHECK TO SEE IF CATEGORY NAME AND BREED NAME HAVE BEEN STORED
 
     public TextView cardCount;
+    public static final long Week_IN_MILLISEC = 7*1000 * 60 * 60 * 24;
+
 
 
 
@@ -130,6 +138,8 @@ public class Home_Activity extends AppCompatActivity {
 
             }
         });
+
+        scheduleNotification(getNotification("DWAG   DWAG"), 0);
 
 
 
@@ -376,5 +386,42 @@ public class Home_Activity extends AppCompatActivity {
         }
         db.close();
         return Cards;
+    }
+
+    private void scheduleNotification(Notification notification, int delay) {
+
+        Log.i("Boobs","Schedule fn ");
+
+        Intent notificationIntent = new Intent(this, NotificationPublisher.class);
+
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);;
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+
+        Calendar cal = new GregorianCalendar();
+        cal.set(Calendar.HOUR_OF_DAY, 10);
+        cal.set(Calendar.MINUTE, 00);
+        cal.set(Calendar.DAY_OF_WEEK,Calendar.SUNDAY);
+
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        //alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),Week_IN_MILLISEC ,pendingIntent);
+    }
+
+    private Notification getNotification(String content) {
+        Log.i("Boobs","Builder fn");
+        Intent mIntent = new Intent(this, Home_Activity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mIntent, 0);
+        //TODO Create Notification Content
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle("Scheduled Notification");
+        builder.setContentIntent(pendingIntent);
+        builder.setContentText(content);
+       //TODO make icon for notification
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        return builder.build();
     }
 }

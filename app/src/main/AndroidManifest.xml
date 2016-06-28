@@ -23,6 +23,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".search"
             android:screenOrientation="portrait"></activity>
+        <receiver android:name=".NotificationPublisher" />
     </application>
 
 </manifest>
