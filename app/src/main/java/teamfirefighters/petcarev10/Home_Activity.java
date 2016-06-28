@@ -416,6 +416,7 @@ public class Home_Activity extends AppCompatActivity {
         Intent mIntent = new Intent(this, Home_Activity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mIntent, 0);
         //TODO Create Notification Content
+        //TODO Shared flag for first time
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("Scheduled Notification");
         builder.setContentIntent(pendingIntent);
