@@ -75,6 +75,7 @@ public class Home_Activity extends AppCompatActivity {
 
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
         ImageButton searchButton = (ImageButton) findViewById(R.id.searchButton);
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.settingsButton);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
@@ -146,8 +147,15 @@ public class Home_Activity extends AppCompatActivity {
         }
 
 
-
-
+        assert settingsButton!=null;
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toSettings = new Intent(Home_Activity.this, settings.class);
+                startActivity(toSettings);
+                overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+            }
+        });
         assert searchButton!=null;
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -406,8 +414,6 @@ public class Home_Activity extends AppCompatActivity {
         cal.set(Calendar.HOUR_OF_DAY, 10);
         cal.set(Calendar.MINUTE, 00);
         cal.set(Calendar.DAY_OF_WEEK,Calendar.SUNDAY);
-
-
 
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
 

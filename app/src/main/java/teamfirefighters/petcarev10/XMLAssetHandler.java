@@ -79,10 +79,7 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
     }
     @Override
     protected void onPreExecute(){
-        if(SharedPrefHelper.checkDBReady(context)){
-            SQLiteDatabase db = cardbhelper.getWritableDatabase();
-            cardbhelper.onUpgrade(db,1,1);
-        }
+
         pd.setMessage("Letting the Dogs out...");
         pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         pd.setIndeterminate(true);
@@ -91,20 +88,24 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
 
     }
     @Override
-    public void onCancelled(){
-        SQLiteDatabase db = cardbhelper.getWritableDatabase();
+    protected void onCancelled(){
+        super.onCancelled();
+        Log.d("CANCELLED THREAD","CANCEL");
+        SQLiteDatabase db =cardbhelper.getWritableDatabase();
         cardbhelper.onDelete(db);
-        SharedPrefHelper.setDBNotReady(context);
     }
     @Override
     protected void  onPostExecute(Void res){
+        Log.i("boobs","on postExcute");
         if(pd.isShowing())
             pd.dismiss();
         SharedPrefHelper.setDbReady(context);
         Intent foo = new Intent(context,Home_Activity.class);
         foo.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         context.startActivity(foo);
         activity.finish();
+
     }
 
 }
