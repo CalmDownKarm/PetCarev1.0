@@ -422,7 +422,29 @@ public class Home_Activity extends AppCompatActivity {
         builder.setContentIntent(pendingIntent);
         builder.setContentText(content);
        //TODO make icon for notification
-        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setSmallIcon(R.drawable.notification_icon);
         return builder.build();
+    }
+    public String[] getDataForNotification(){
+        /*Returns String[0] = category and String[1]=breed*/
+        CardDBHelper cdbhelper=new CardDBHelper(getApplicationContext());
+        SQLiteDatabase db = cdbhelper.getReadableDatabase();
+        String[] projection={
+                CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION,
+                CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION,
+        };
+        String sortOrder = "RANDOM()";
+        String Limit = " 1 ";
+        String category = "",breed = "";
+        Cursor c = db.query(CardDBContract.CardTable.TABLE_NAME,projection,null,null,null,null,sortOrder,Limit);
+        if(c!=null){
+            c.moveToFirst();
+            category = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_CLASSIFICATION));
+            breed = c.getString(c.getColumnIndexOrThrow(CardDBContract.CardTable.COLUMN_NAME_SUBCLASSIFICATION));
+        }
+        db.close();
+        Log.d("RIBBIT",category);
+        Log.d("RIBBIT",breed);
+        return new String[]{category, breed};
     }
 }

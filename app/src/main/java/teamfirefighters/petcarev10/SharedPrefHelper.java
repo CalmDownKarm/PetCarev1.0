@@ -22,6 +22,8 @@ public class SharedPrefHelper {
     public static final boolean DEFAULT_BOOL = false;
     public static final String NUM_APP_USED = "num_app_used";
     public static final String PUT_RECENT = "put_recent";
+    public static final String NOTIFICATION_FLAG = "notify_alarm_flag";
+    public static final String FIRSTTIME_FLAG = "firsttime";
 
     public static boolean Checkif5Recent(Context appContext){
         boolean tempbool = false;
@@ -33,6 +35,30 @@ public class SharedPrefHelper {
         if(catOc>=5&&breOc>=5)
             tempbool = true;
         return tempbool;
+    }
+    public static boolean CheckAppFirstTimeFlag(Context appContext){
+        SharedPreferences Flag = appContext.getSharedPreferences(SHARED_PREFERENCES_KEY,Context.MODE_PRIVATE);
+        return Flag.getBoolean(FIRSTTIME_FLAG,DEFAULT_BOOL);
+    }
+    public static void setAppFirstTime(Context appContext){
+        SharedPreferences Flag = appContext.getSharedPreferences(SHARED_PREFERENCES_KEY,Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = Flag.edit();
+        editor.putBoolean(FIRSTTIME_FLAG,true);
+        editor.commit();
+
+    }
+
+    public static boolean CheckNotificationFlag(Context appContext){
+        SharedPreferences Flag = appContext.getSharedPreferences(SHARED_PREFERENCES_KEY,Context.MODE_PRIVATE);
+        return Flag.getBoolean(NOTIFICATION_FLAG,DEFAULT_BOOL);
+
+    }
+    public static void setNotificationFlag(Context appContext, boolean flag){
+        SharedPreferences Flag = appContext.getSharedPreferences(SHARED_PREFERENCES_KEY,Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = Flag.edit();
+        editor.putBoolean(NOTIFICATION_FLAG,flag);
+        editor.commit();
+
     }
     public static List<String> ReturnRecentCategories(Context applicationContext){
 

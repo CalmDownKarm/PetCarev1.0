@@ -40,9 +40,9 @@ public class CardDBHelper extends SQLiteOpenHelper {
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL(SQL_DELETE_CARDS);
-        //TODO SET DB READY FLAG TO FALSE
+
         onCreate(db);
-        //TODO FIX THIS SHIT
+
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion){
         onUpgrade(db,oldVersion,newVersion);
