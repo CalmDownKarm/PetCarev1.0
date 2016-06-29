@@ -20,6 +20,7 @@
         <activity
             android:name=".Home_Activity"
             android:screenOrientation="portrait"
+            android:finishOnTaskLaunch="true"
             />
         <activity
             android:name=".Breeds_list"

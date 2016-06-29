@@ -9,11 +9,12 @@
 
 
     <ImageButton
-        android:layout_width="27dp"
-        android:layout_height="27dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:id="@+id/backButton"
-        android:background="@drawable/back"
-        android:layout_marginLeft="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="@drawable/back"
+        android:layout_marginLeft="7dp"
         android:layout_marginTop="17dp"
         android:layout_alignParentLeft="true"
         android:clickable="true" />
@@ -30,10 +31,11 @@
 
 
     <ImageButton
-        android:layout_width="27dp"
-        android:layout_height="27dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:id="@+id/homeButton"
-        android:background="@drawable/home"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:foreground="@drawable/home"
         android:layout_marginRight="15dp"
         android:layout_marginTop="17dp"
         android:layout_alignParentRight="true"

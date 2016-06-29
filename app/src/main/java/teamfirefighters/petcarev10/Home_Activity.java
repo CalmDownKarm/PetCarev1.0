@@ -19,8 +19,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -76,6 +78,7 @@ public class Home_Activity extends AppCompatActivity {
         final ImageButton menu_button = (ImageButton) findViewById(R.id.imageButton);
         ImageButton searchButton = (ImageButton) findViewById(R.id.searchButton);
         ImageButton settingsButton = (ImageButton) findViewById(R.id.settingsButton);
+       // final FrameLayout settingsButtonFrame = (FrameLayout) findViewById(R.id.settingsButtonFrame);
         final Toolbar toolbarView = (Toolbar) findViewById(R.id.toolbar);
         findViewById(R.id.panel).setY((float) getResources().getDimensionPixelSize(R.dimen.abc_action_bar_default_height_material));
         Typeface font = Typeface.createFromAsset(getAssets(), "raleway.ttf");
@@ -152,9 +155,9 @@ public class Home_Activity extends AppCompatActivity {
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              //  settingsButtonFrame.performClick();
                 Intent toSettings = new Intent(Home_Activity.this, settings.class);
                 startActivity(toSettings);
-                finish();
                 overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
 
                 
@@ -328,6 +331,7 @@ public class Home_Activity extends AppCompatActivity {
             toolbarPanelLayout.closePanel();;
             return;
         } else {
+            Log.d("BOOBS","yoyooyoyooyoy");
             finish();
         }
     }

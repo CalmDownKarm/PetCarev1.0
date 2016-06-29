@@ -138,6 +138,7 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(CardsActivity.this ,Home_Activity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
             }
         });
@@ -223,6 +224,7 @@ public class CardsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(CardsActivity.this ,Home_Activity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
                 finish();
             }

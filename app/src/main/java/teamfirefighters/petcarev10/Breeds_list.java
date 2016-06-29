@@ -131,6 +131,7 @@ public class Breeds_list extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Breeds_list.this ,Home_Activity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
             }
         });

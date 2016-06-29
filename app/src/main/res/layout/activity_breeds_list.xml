@@ -85,20 +85,22 @@
             android:textStyle="bold"/>
 
         <ImageButton
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/searchButton"
-            android:background="@drawable/search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="@drawable/search"
             android:layout_marginRight="22dp"
             android:layout_gravity = "right"
             android:clickable="true"
             android:layout_centerHorizontal="true" />
 
         <ImageButton
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/homeButton"
-            android:background="@drawable/home"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="@drawable/home"
             android:layout_marginRight="20dp"
             android:layout_gravity="right"
             android:clickable="true"

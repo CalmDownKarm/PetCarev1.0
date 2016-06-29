@@ -57,6 +57,7 @@ public class settings extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPrefHelper.clearString(getApplicationContext(),SharedPrefHelper.LAST_BREED_SWIPED);
                 SharedPrefHelper.clearString(getApplicationContext(),SharedPrefHelper.LAST_CATEGORY_SWIPED);
+                Toast.makeText(getApplication(),"Cleared your Recent",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -65,7 +66,8 @@ public class settings extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toSettings = new Intent(settings.this, MainActivity.class);
+                Intent toSettings = new Intent(settings.this, Home_Activity.class);
+                toSettings.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(toSettings);
                 overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
             }
@@ -74,7 +76,8 @@ public class settings extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent toSettings = new Intent(settings.this, MainActivity.class);
+        Intent toSettings = new Intent(settings.this, Home_Activity.class);
+        toSettings.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(toSettings);
         overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
     }
