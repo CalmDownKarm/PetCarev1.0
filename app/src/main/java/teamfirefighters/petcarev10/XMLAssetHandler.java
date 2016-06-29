@@ -87,13 +87,8 @@ public class XMLAssetHandler extends AsyncTask<Void, Void, Void> {
         pd.show();
 
     }
-    @Override
-    protected void onCancelled(){
-        super.onCancelled();
-        Log.d("CANCELLED THREAD","CANCEL");
-        SQLiteDatabase db =cardbhelper.getWritableDatabase();
-        cardbhelper.onDelete(db);
-    }
+
+
     @Override
     protected void  onPostExecute(Void res){
         if(pd.isShowing())

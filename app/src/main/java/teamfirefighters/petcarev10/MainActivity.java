@@ -37,20 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.d("CANCELLED THREAD","stop");
-        if(abc!=null){
-            abc.cancel(true);
-        }
-    }
-
-
 
     @Override
     protected void onRestart(){
         super.onRestart();
+        SharedPrefHelper.setDBNotReady(getApplication());
         CardDBHelper cardDBHelper = new CardDBHelper(getApplicationContext());
         SQLiteDatabase db = cardDBHelper.getWritableDatabase();
         cardDBHelper.onUpgrade(db,1,1);
