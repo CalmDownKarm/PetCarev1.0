@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dawg</string>
+    <string name="app_name">Dog Care</string>
 
     <string name="transition_name_image">transition:IMAGE</string>
 
