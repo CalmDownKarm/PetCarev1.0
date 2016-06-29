@@ -331,7 +331,6 @@ public class Home_Activity extends AppCompatActivity {
             toolbarPanelLayout.closePanel();;
             return;
         } else {
-            Log.d("BOOBS","yoyooyoyooyoy");
             finish();
         }
     }
