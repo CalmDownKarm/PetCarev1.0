@@ -142,6 +142,7 @@ public class Home_Activity extends AppCompatActivity {
 
 
         if(!SharedPrefHelper.CheckAppFirstTimeFlag(getApplicationContext())){
+            SharedPrefHelper.setNotificationFlag(getApplicationContext(),true);
             scheduleNotification(getNotification());
             SharedPrefHelper.setAppFirstTime(getApplicationContext());
         }
@@ -153,7 +154,10 @@ public class Home_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent toSettings = new Intent(Home_Activity.this, settings.class);
                 startActivity(toSettings);
+                finish();
                 overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+
+                
             }
         });
         assert searchButton!=null;
@@ -401,7 +405,7 @@ public class Home_Activity extends AppCompatActivity {
     }
 
     private void scheduleNotification(Notification notification) {
-
+        Log.d("boobs","start");
         Intent notificationIntent = new Intent(this, NotificationPublisher.class);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
         notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
@@ -415,8 +419,11 @@ public class Home_Activity extends AppCompatActivity {
 
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),10000 ,pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),Week_IN_MILLISEC ,pendingIntent);
     }
+
+
+
 
     private Notification getNotification() {
         Intent mIntent = new Intent(this, MainActivity.class);
@@ -429,5 +436,7 @@ public class Home_Activity extends AppCompatActivity {
         builder.setSmallIcon(R.drawable.notification_icon);
         return builder.build();
     }
+
+
 
 }

@@ -38,22 +38,16 @@ public class settings extends AppCompatActivity {
         clearRecent.setTypeface(font);
         notificationSwitch.setTypeface(font);
 
-        notificationSwitch.setChecked(true);
+        notificationSwitch.setChecked(SharedPrefHelper.CheckNotificationFlag(getApplicationContext()));
 
 
         notificationSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-
-                    Toast.makeText(getApplicationContext(),"on",Toast.LENGTH_SHORT).show();
+                    SharedPrefHelper.setNotificationFlag(getApplicationContext(),true);
                 }else{
-                    Toast.makeText(getApplicationContext(),"off",Toast.LENGTH_SHORT).show();
-
-                    Intent notificationIntent = new Intent(settings.this, NotificationPublisher.class);
-                    PendingIntent pendingIntent = PendingIntent.getBroadcast(settings.this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-                    AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-                    alarmManager.cancel(pendingIntent);
+                    SharedPrefHelper.setNotificationFlag(getApplicationContext(),false);
                 }
             }
         });
@@ -63,7 +57,6 @@ public class settings extends AppCompatActivity {
             public void onClick(View v) {
                 SharedPrefHelper.clearString(getApplicationContext(),SharedPrefHelper.LAST_BREED_SWIPED);
                 SharedPrefHelper.clearString(getApplicationContext(),SharedPrefHelper.LAST_CATEGORY_SWIPED);
-                Log.i("boobs", SharedPrefHelper.ReturnRecentCategories(getApplicationContext()).toString());
             }
         });
 
@@ -72,7 +65,8 @@ public class settings extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent toSettings = new Intent(settings.this, MainActivity.class);
+                startActivity(toSettings);
                 overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
             }
         });
@@ -80,7 +74,8 @@ public class settings extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        Intent toSettings = new Intent(settings.this, MainActivity.class);
+        startActivity(toSettings);
         overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
     }
 }
