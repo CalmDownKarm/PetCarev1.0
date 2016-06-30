@@ -1,14 +1,9 @@
-package teamfirefighters.petcarev10;
+package upstairs.dogcare;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.CompoundButton;
@@ -16,9 +11,6 @@ import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class settings extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package teamfirefighters.petcarev10;
+package upstairs.dogcare;
 
 /**
  * Created by hitkul on 28/6/16.
@@ -8,7 +8,6 @@ import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
 
 public class NotificationPublisher extends BroadcastReceiver {
 

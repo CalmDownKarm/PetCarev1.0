@@ -5,7 +5,7 @@
     android:paddingTop="0dp"
     android:background="@color/cards_background"
     android:layout_height="match_parent"
-    tools:context="teamfirefighters.petcarev10.CardsActivity">
+    tools:context="upstairs.dogcare.CardsActivity">
 
 
     <ImageButton

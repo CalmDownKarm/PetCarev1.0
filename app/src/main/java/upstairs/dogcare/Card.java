@@ -1,9 +1,6 @@
-package teamfirefighters.petcarev10;
+package upstairs.dogcare;
 
 import android.database.Cursor;
-import android.util.Log;
-
-import java.util.List;
 
 /**
  * Created by karm on 17/6/16.

@@ -1,6 +1,4 @@
-package teamfirefighters.petcarev10;
-
-import android.util.Log;
+package upstairs.dogcare;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -10,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 
 /**

@@ -1,17 +1,13 @@
-package teamfirefighters.petcarev10;
+package upstairs.dogcare;
 
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Typeface;
-import android.text.SpannableStringBuilder;
-import android.text.style.ImageSpan;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mikhaellopez.circularimageview.CircularImageView;

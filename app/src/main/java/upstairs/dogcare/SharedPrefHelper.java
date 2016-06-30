@@ -1,10 +1,9 @@
-package teamfirefighters.petcarev10;
+package upstairs.dogcare;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

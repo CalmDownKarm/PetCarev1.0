@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "teamfirefighters.petcarev10"
+        applicationId "upstairs.dogcare"
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
